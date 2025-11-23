@@ -7,242 +7,80 @@
   },
   "pink": {
     "100": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.45",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 99%)",
+      "type": "color"
     },
     "150": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.40",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 95%)",
+      "type": "color"
     },
     "200": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.35",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 91%)",
+      "type": "color"
     },
     "250": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.30",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 87%)",
+      "type": "color"
     },
     "300": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.25",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 83%)",
+      "type": "color"
     },
     "350": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.20",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 79%)",
+      "type": "color"
     },
     "400": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.15",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 75%)",
+      "type": "color"
     },
     "450": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.10",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 71%)",
+      "type": "color"
     },
     "500": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "0.05",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 67%)",
+      "type": "color"
     },
     "550": {
-      "value": "{brand.pink}",
+      "value": "hsl(330, 85%, 63%)",
       "type": "color"
     },
     "600": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.05",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 59%)",
+      "type": "color"
     },
     "650": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.10",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 55%)",
+      "type": "color"
     },
     "700": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.15",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 51%)",
+      "type": "color"
     },
     "750": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.20",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 47%)",
+      "type": "color"
     },
     "800": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.25",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 43%)",
+      "type": "color"
     },
     "850": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.30",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 39%)",
+      "type": "color"
     },
     "900": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.35",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 35%)",
+      "type": "color"
     },
     "950": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.40",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 31%)",
+      "type": "color"
     },
     "1000": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "0.45",
-            "space": "hsl"
-          }
-        }
-      }
+      "value": "hsl(330, 85%, 20%)",
+      "type": "color"
     }
   }
 }
