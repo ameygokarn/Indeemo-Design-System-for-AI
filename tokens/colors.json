@@ -1,99 +1,966 @@
 {
-  "pink": {
-    "100": {
-      "value": "hsl(330, 85%, 98%)",
-      "type": "color",
-      "description": "98% lightness | vs White: 1.06 | vs Black: 19.73 | WCAG: Black AAA Normal, Black AAA Large"
+  "brand": {
+    "cream": {
+      "value": "#fffdf2",
+      "type": "color"
     },
-    "150": {
-      "value": "hsl(330, 85%, 93%)",
-      "type": "color",
-      "description": "93% lightness | vs White: 1.24 | vs Black: 16.88 | WCAG: Black AAA Normal, Black AAA Large"
+    "yellow": {
+      "value": "#ffc700",
+      "type": "color"
     },
-    "200": {
-      "value": "hsl(330, 85%, 88%)",
-      "type": "color",
-      "description": "88% lightness | vs White: 1.46 | vs Black: 14.38 | WCAG: Black AAA Normal, Black AAA Large"
+    "orange": {
+      "value": "#ff6b14",
+      "type": "color"
     },
-    "250": {
-      "value": "hsl(330, 85%, 83%)",
-      "type": "color",
-      "description": "83% lightness | vs White: 1.72 | vs Black: 12.21 | WCAG: Black AAA Normal, Black AAA Large"
+    "red": {
+      "value": "#ff2734",
+      "type": "color"
     },
-    "300": {
-      "value": "hsl(330, 85%, 78%)",
-      "type": "color",
-      "description": "78% lightness | vs White: 2.03 | vs Black: 10.36 | WCAG: Black AAA Normal, Black AAA Large"
+    "pink": {
+      "value": "#da095e",
+      "type": "color"
     },
-    "350": {
-      "value": "hsl(330, 85%, 74%)",
-      "type": "color",
-      "description": "74% lightness | vs White: 2.38 | vs Black: 8.81 | WCAG: Black AAA Normal, Black AAA Large"
+    "purple": {
+      "value": "#8b006e",
+      "type": "color"
     },
-    "400": {
-      "value": "hsl(330, 85%, 69%)",
-      "type": "color",
-      "description": "69% lightness | vs White: 2.78 | vs Black: 7.54 | WCAG: Black AAA Normal, Black AAA Large"
+    "dark-blue": {
+      "value": "#2e3059",
+      "type": "color"
     },
-    "450": {
-      "value": "hsl(330, 85%, 64%)",
-      "type": "color",
-      "description": "64% lightness | vs White: 3.21 | vs Black: 6.54 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+    "grey": {
+      "value": "#878583",
+      "type": "color"
     },
-    "500": {
-      "value": "hsl(330, 85%, 59%)",
-      "type": "color",
-      "description": "59% lightness | vs White: 3.63 | vs Black: 5.79 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+    "neutral": {
+      "Light": {
+        "value": "#ffffff",
+        "type": "color"
+      },
+      "Dark": {
+        "value": "#000000",
+        "type": "color"
+      }
+    }
+  },
+  "ramp": {
+    "cream": {
+      "100": {
+        "value": "hsl(50, 100%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.02 | vs Black: 20.66 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(50, 100%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.05 | vs Black: 19.93 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(50, 100%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.09 | vs Black: 19.25 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(50, 100%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.13 | vs Black: 18.60 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(50, 100%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.17 | vs Black: 18.00 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(50, 100%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 1.21 | vs Black: 17.43 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(50, 100%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 1.24 | vs Black: 16.89 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(50, 100%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 1.28 | vs Black: 16.39 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(50, 100%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 1.32 | vs Black: 15.92 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(50, 100%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 1.36 | vs Black: 15.49 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(50, 100%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 1.39 | vs Black: 15.07 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(50, 100%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 1.45 | vs Black: 14.47 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(50, 100%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 1.76 | vs Black: 11.93 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "750": {
+        "value": "hsl(50, 100%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 2.17 | vs Black: 9.69 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "800": {
+        "value": "hsl(50, 100%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 2.71 | vs Black: 7.75 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "850": {
+        "value": "hsl(50, 100%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 3.45 | vs Black: 6.08 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "900": {
+        "value": "hsl(50, 100%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 4.48 | vs Black: 4.69 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "950": {
+        "value": "hsl(50, 100%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 5.92 | vs Black: 3.54 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "1000": {
+        "value": "hsl(50, 100%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 7.95 | vs Black: 2.64 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(50, 100%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 10.72 | vs Black: 1.96 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "550": {
-      "value": "hsl(330, 85%, 54%)",
-      "type": "color",
-      "description": "54% lightness | vs White: 3.99 | vs Black: 5.26 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+    "yellow": {
+      "100": {
+        "value": "hsl(46, 100%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.02 | vs Black: 20.57 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(46, 100%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.07 | vs Black: 19.66 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(46, 100%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.12 | vs Black: 18.80 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(46, 100%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.17 | vs Black: 17.99 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(46, 100%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.22 | vs Black: 17.23 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(46, 100%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 1.27 | vs Black: 16.51 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(46, 100%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 1.33 | vs Black: 15.84 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(46, 100%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 1.38 | vs Black: 15.21 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(46, 100%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 1.44 | vs Black: 14.62 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(46, 100%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 1.49 | vs Black: 14.07 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(46, 100%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 1.55 | vs Black: 13.55 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(46, 100%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 1.63 | vs Black: 12.89 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(46, 100%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 1.97 | vs Black: 10.65 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "750": {
+        "value": "hsl(46, 100%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 2.42 | vs Black: 8.68 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "800": {
+        "value": "hsl(46, 100%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 3.01 | vs Black: 6.97 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "850": {
+        "value": "hsl(46, 100%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 3.82 | vs Black: 5.50 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "900": {
+        "value": "hsl(46, 100%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 4.92 | vs Black: 4.27 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "950": {
+        "value": "hsl(46, 100%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 6.44 | vs Black: 3.26 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "1000": {
+        "value": "hsl(46, 100%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 8.53 | vs Black: 2.46 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(46, 100%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 11.30 | vs Black: 1.86 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "600": {
-      "value": "hsl(330, 85%, 49%)",
-      "type": "color",
-      "description": "49% lightness | vs White: 4.37 | vs Black: 4.81 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+    "orange": {
+      "100": {
+        "value": "hsl(22, 100%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.05 | vs Black: 20.06 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(22, 100%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.16 | vs Black: 18.12 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(22, 100%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.29 | vs Black: 16.33 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(22, 100%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.43 | vs Black: 14.71 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(22, 100%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.59 | vs Black: 13.24 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(22, 100%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 1.76 | vs Black: 11.92 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(22, 100%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 1.96 | vs Black: 10.74 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(22, 100%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 2.17 | vs Black: 9.69 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(22, 100%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 2.39 | vs Black: 8.79 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(22, 100%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 2.62 | vs Black: 8.00 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(22, 100%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 2.86 | vs Black: 7.34 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(22, 100%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 3.12 | vs Black: 6.73 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(22, 100%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 3.71 | vs Black: 5.67 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "750": {
+        "value": "hsl(22, 100%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 4.44 | vs Black: 4.73 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "800": {
+        "value": "hsl(22, 100%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 5.37 | vs Black: 3.91 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "850": {
+        "value": "hsl(22, 100%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 6.55 | vs Black: 3.20 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "900": {
+        "value": "hsl(22, 100%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 8.04 | vs Black: 2.61 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(22, 100%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 9.88 | vs Black: 2.13 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(22, 100%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 12.08 | vs Black: 1.74 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(22, 100%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 14.55 | vs Black: 1.44 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "650": {
-      "value": "hsl(330, 85%, 44%)",
-      "type": "color",
-      "description": "44% lightness | vs White: 5.23 | vs Black: 4.02 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+    "red": {
+      "100": {
+        "value": "hsl(356, 100%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.07 | vs Black: 19.61 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(356, 100%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.25 | vs Black: 16.82 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(356, 100%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.46 | vs Black: 14.37 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(356, 100%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.71 | vs Black: 12.26 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(356, 100%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 2.01 | vs Black: 10.46 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(356, 100%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 2.34 | vs Black: 8.97 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(356, 100%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 2.71 | vs Black: 7.76 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(356, 100%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 3.08 | vs Black: 6.82 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(356, 100%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 3.43 | vs Black: 6.12 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(356, 100%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 3.71 | vs Black: 5.65 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(356, 100%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 3.90 | vs Black: 5.38 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(356, 100%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 4.05 | vs Black: 5.18 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(356, 100%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 4.78 | vs Black: 4.39 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "750": {
+        "value": "hsl(356, 100%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 5.69 | vs Black: 3.69 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "800": {
+        "value": "hsl(356, 100%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 6.81 | vs Black: 3.08 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "850": {
+        "value": "hsl(356, 100%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 8.18 | vs Black: 2.57 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "900": {
+        "value": "hsl(356, 100%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 9.85 | vs Black: 2.13 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(356, 100%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 11.81 | vs Black: 1.78 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(356, 100%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 14.01 | vs Black: 1.50 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(356, 100%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 16.29 | vs Black: 1.29 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "700": {
-      "value": "hsl(330, 85%, 39%)",
-      "type": "color",
-      "description": "39% lightness | vs White: 6.31 | vs Black: 3.33 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+    "pink": {
+      "100": {
+        "value": "hsl(335, 92%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.07 | vs Black: 19.69 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(335, 92%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.23 | vs Black: 17.04 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(335, 92%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.43 | vs Black: 14.70 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(335, 92%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.66 | vs Black: 12.64 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(335, 92%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.93 | vs Black: 10.87 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(335, 92%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 2.24 | vs Black: 9.37 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(335, 92%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 2.59 | vs Black: 8.12 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(335, 92%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 2.95 | vs Black: 7.12 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(335, 92%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 3.32 | vs Black: 6.33 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(335, 92%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 3.65 | vs Black: 5.75 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(335, 92%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 3.92 | vs Black: 5.36 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(335, 92%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 4.15 | vs Black: 5.06 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(335, 92%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 4.89 | vs Black: 4.30 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "750": {
+        "value": "hsl(335, 92%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 5.79 | vs Black: 3.63 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "800": {
+        "value": "hsl(335, 92%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 6.90 | vs Black: 3.04 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "850": {
+        "value": "hsl(335, 92%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 8.26 | vs Black: 2.54 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "900": {
+        "value": "hsl(335, 92%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 9.90 | vs Black: 2.12 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(335, 92%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 11.82 | vs Black: 1.78 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(335, 92%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 13.97 | vs Black: 1.50 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(335, 92%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 16.19 | vs Black: 1.30 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "750": {
-      "value": "hsl(330, 85%, 34%)",
-      "type": "color",
-      "description": "34% lightness | vs White: 7.65 | vs Black: 2.75 | WCAG: White AAA Normal, White AAA Large"
+    "purple": {
+      "100": {
+        "value": "hsl(312, 100%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.07 | vs Black: 19.71 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(312, 100%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.23 | vs Black: 17.10 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(312, 100%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.42 | vs Black: 14.81 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(312, 100%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.64 | vs Black: 12.83 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(312, 100%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.88 | vs Black: 11.14 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(312, 100%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 2.16 | vs Black: 9.73 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(312, 100%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 2.45 | vs Black: 8.59 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(312, 100%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 2.73 | vs Black: 7.69 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(312, 100%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 2.99 | vs Black: 7.02 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(312, 100%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 3.21 | vs Black: 6.55 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(312, 100%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 3.35 | vs Black: 6.27 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(312, 100%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 3.48 | vs Black: 6.03 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(312, 100%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 4.14 | vs Black: 5.08 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "750": {
+        "value": "hsl(312, 100%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 4.95 | vs Black: 4.24 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "800": {
+        "value": "hsl(312, 100%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 5.98 | vs Black: 3.51 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "850": {
+        "value": "hsl(312, 100%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 7.27 | vs Black: 2.89 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "900": {
+        "value": "hsl(312, 100%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 8.88 | vs Black: 2.37 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(312, 100%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 10.83 | vs Black: 1.94 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(312, 100%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 13.11 | vs Black: 1.60 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(312, 100%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 15.56 | vs Black: 1.35 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "800": {
-      "value": "hsl(330, 85%, 30%)",
-      "type": "color",
-      "description": "30% lightness | vs White: 9.30 | vs Black: 2.26 | WCAG: White AAA Normal, White AAA Large"
+    "dark-blue": {
+      "100": {
+        "value": "hsl(237, 31%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.06 | vs Black: 19.89 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(237, 31%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.20 | vs Black: 17.57 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(237, 31%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.36 | vs Black: 15.43 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(237, 31%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.56 | vs Black: 13.47 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(237, 31%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.80 | vs Black: 11.68 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(237, 31%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 2.09 | vs Black: 10.04 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(237, 31%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 2.45 | vs Black: 8.57 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(237, 31%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 2.89 | vs Black: 7.26 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(237, 31%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 3.45 | vs Black: 6.09 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(237, 31%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 4.14 | vs Black: 5.07 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(237, 31%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 5.01 | vs Black: 4.19 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "650": {
+        "value": "hsl(237, 31%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 6.07 | vs Black: 3.46 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "700": {
+        "value": "hsl(237, 31%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 6.94 | vs Black: 3.02 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "750": {
+        "value": "hsl(237, 31%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 7.96 | vs Black: 2.64 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "800": {
+        "value": "hsl(237, 31%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 9.14 | vs Black: 2.30 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "850": {
+        "value": "hsl(237, 31%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 10.48 | vs Black: 2.00 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "900": {
+        "value": "hsl(237, 31%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 11.98 | vs Black: 1.75 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(237, 31%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 13.61 | vs Black: 1.54 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(237, 31%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 15.31 | vs Black: 1.37 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(237, 31%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 16.98 | vs Black: 1.24 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "850": {
-      "value": "hsl(330, 85%, 25%)",
-      "type": "color",
-      "description": "25% lightness | vs White: 11.29 | vs Black: 1.86 | WCAG: White AAA Normal, White AAA Large"
+    "grey": {
+      "100": {
+        "value": "hsl(30, 1%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.04 | vs Black: 20.10 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(30, 1%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.15 | vs Black: 18.21 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(30, 1%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.28 | vs Black: 16.44 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(30, 1%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.42 | vs Black: 14.78 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(30, 1%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.59 | vs Black: 13.22 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(30, 1%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 1.78 | vs Black: 11.78 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(30, 1%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 2.01 | vs Black: 10.43 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(30, 1%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 2.28 | vs Black: 9.20 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(30, 1%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 2.61 | vs Black: 8.06 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(30, 1%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 2.99 | vs Black: 7.02 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(30, 1%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 3.46 | vs Black: 6.07 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(30, 1%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 4.02 | vs Black: 5.22 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(30, 1%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 4.71 | vs Black: 4.46 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "750": {
+        "value": "hsl(30, 1%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 5.56 | vs Black: 3.78 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "800": {
+        "value": "hsl(30, 1%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 6.59 | vs Black: 3.19 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "850": {
+        "value": "hsl(30, 1%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 7.85 | vs Black: 2.68 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "900": {
+        "value": "hsl(30, 1%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 9.37 | vs Black: 2.24 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(30, 1%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 11.16 | vs Black: 1.88 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(30, 1%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 13.20 | vs Black: 1.59 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(30, 1%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 15.37 | vs Black: 1.37 | WCAG: White AAA Normal, White AAA Large"
+      }
     },
-    "900": {
-      "value": "hsl(330, 85%, 20%)",
-      "type": "color",
-      "description": "20% lightness | vs White: 13.56 | vs Black: 1.55 | WCAG: White AAA Normal, White AAA Large"
-    },
-    "950": {
-      "value": "hsl(330, 85%, 15%)",
-      "type": "color",
-      "description": "15% lightness | vs White: 15.97 | vs Black: 1.31 | WCAG: White AAA Normal, White AAA Large"
-    },
-    "1000": {
-      "value": "hsl(330, 85%, 10%)",
-      "type": "color",
-      "description": "10% lightness | vs White: 18.22 | vs Black: 1.15 | WCAG: White AAA Normal, White AAA Large"
+    "neutral": {
+      "100": {
+        "value": "hsl(0, 0%, 98%)",
+        "type": "color",
+        "description": "98% lightness | vs White: 1.04 | vs Black: 20.10 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "150": {
+        "value": "hsl(0, 0%, 94%)",
+        "type": "color",
+        "description": "94% lightness | vs White: 1.15 | vs Black: 18.21 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "200": {
+        "value": "hsl(0, 0%, 89%)",
+        "type": "color",
+        "description": "89% lightness | vs White: 1.28 | vs Black: 16.43 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "250": {
+        "value": "hsl(0, 0%, 85%)",
+        "type": "color",
+        "description": "85% lightness | vs White: 1.42 | vs Black: 14.77 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "300": {
+        "value": "hsl(0, 0%, 80%)",
+        "type": "color",
+        "description": "80% lightness | vs White: 1.59 | vs Black: 13.21 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "350": {
+        "value": "hsl(0, 0%, 76%)",
+        "type": "color",
+        "description": "76% lightness | vs White: 1.78 | vs Black: 11.76 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "400": {
+        "value": "hsl(0, 0%, 72%)",
+        "type": "color",
+        "description": "72% lightness | vs White: 2.01 | vs Black: 10.42 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "450": {
+        "value": "hsl(0, 0%, 67%)",
+        "type": "color",
+        "description": "67% lightness | vs White: 2.29 | vs Black: 9.18 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "500": {
+        "value": "hsl(0, 0%, 63%)",
+        "type": "color",
+        "description": "63% lightness | vs White: 2.61 | vs Black: 8.04 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "550": {
+        "value": "hsl(0, 0%, 58%)",
+        "type": "color",
+        "description": "58% lightness | vs White: 3.00 | vs Black: 7.00 | WCAG: Black AAA Normal, Black AAA Large"
+      },
+      "600": {
+        "value": "hsl(0, 0%, 54%)",
+        "type": "color",
+        "description": "54% lightness | vs White: 3.47 | vs Black: 6.06 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "650": {
+        "value": "hsl(0, 0%, 50%)",
+        "type": "color",
+        "description": "50% lightness | vs White: 4.03 | vs Black: 5.21 | WCAG: White AA Large, Black AA Normal, Black AAA Large"
+      },
+      "700": {
+        "value": "hsl(0, 0%, 45%)",
+        "type": "color",
+        "description": "45% lightness | vs White: 4.72 | vs Black: 4.45 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "750": {
+        "value": "hsl(0, 0%, 41%)",
+        "type": "color",
+        "description": "41% lightness | vs White: 5.57 | vs Black: 3.77 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "800": {
+        "value": "hsl(0, 0%, 36%)",
+        "type": "color",
+        "description": "36% lightness | vs White: 6.60 | vs Black: 3.18 | WCAG: White AA Normal, White AAA Large, Black AA Large"
+      },
+      "850": {
+        "value": "hsl(0, 0%, 32%)",
+        "type": "color",
+        "description": "32% lightness | vs White: 7.86 | vs Black: 2.67 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "900": {
+        "value": "hsl(0, 0%, 28%)",
+        "type": "color",
+        "description": "28% lightness | vs White: 9.38 | vs Black: 2.24 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "950": {
+        "value": "hsl(0, 0%, 23%)",
+        "type": "color",
+        "description": "23% lightness | vs White: 11.17 | vs Black: 1.88 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1000": {
+        "value": "hsl(0, 0%, 19%)",
+        "type": "color",
+        "description": "19% lightness | vs White: 13.21 | vs Black: 1.59 | WCAG: White AAA Normal, White AAA Large"
+      },
+      "1050": {
+        "value": "hsl(0, 0%, 14%)",
+        "type": "color",
+        "description": "14% lightness | vs White: 15.38 | vs Black: 1.37 | WCAG: White AAA Normal, White AAA Large"
+      }
     }
   }
 }
