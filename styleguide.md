@@ -3,6 +3,28 @@
 Purpose
 - This document explains how to write prompts for the assistant and what style/format to expect back. Use this as the definitive prompt/style contract when asking the assistant to generate design tokens, components, docs, or code.
 
+## Token Studio Workflow (Primary Method)
+
+**Important Context:** This project uses **Tokens Studio for Figma** (free tier) as the primary method for managing design tokens.
+
+**Workflow:**
+1. Design tokens are created and managed in Figma using the Tokens Studio plugin
+2. The plugin exports tokens as JSON files
+3. These JSON files are synced to this Git repository (`tokens/` directory)
+4. The assistant helps with formatting, organizing, and consuming these tokens
+
+**When working with tokens:**
+- Tokens are stored in JSON format following the Tokens Studio structure
+- The assistant should expect Token Studio JSON format when reading token files
+- When asked to "sync tokens from Figma," expect the user to paste Token Studio JSON output
+- The assistant should help convert Token Studio JSON to other formats (CSS variables, SCSS, JS objects) as needed
+- Variables in Figma may not be directly accessible via REST API (requires Enterprise plan)
+
+**Token Studio Resources:**
+- Plugin: https://www.figma.com/community/plugin/843461159747178978/tokens-studio-for-figma
+- Documentation: https://docs.tokens.studio/
+- The plugin is free to use with basic features
+
 General principles
 - Be explicit: include desired output format (JSON/CSS/Markdown/TSX), target platform (web/mobile/react/vue), and any constraints (no Tailwind, use CSS variables, etc.).
 - Provide context: include the token file, component name, or a short design note; include the Figma node id or screenshot when relevant.
@@ -32,8 +54,10 @@ Naming conventions (assistant should follow)
 - Component names: `ComponentName/Variant/Size` in human readable kebab or Pascal depending on code target. When creating files, use kebab-case file names.
 
 Examples of good prompts
-- “Generate JSON tokens for primary, neutral, and success palettes with 5 stops each, and output CSS variables.”
-- “Create a React button component `Button` with props `variant` ('primary'|'secondary'), `size` ('small'|'medium'|'large'), and include accessible attributes. Return component file `Button.jsx` and `Button.css`.”
+- "Generate JSON tokens for primary, neutral, and success palettes with 5 stops each, and output CSS variables."
+- "Create a React button component `Button` with props `variant` ('primary'|'secondary'), `size` ('small'|'medium'|'large'), and include accessible attributes. Return component file `Button.jsx` and `Button.css`."
+- **Token Studio specific:** "Here's the Token Studio JSON export [paste JSON]. Save these tokens to the tokens/ folder organized by category."
+- **Token Studio specific:** "Convert the Token Studio tokens in `tokens/colors.json` to CSS custom properties."
 
 Validation & tests
 - When asking for code generation, ask also for a set of 3 unit or snapshot tests (optional). The assistant can generate Jest/React Testing Library snippets.
