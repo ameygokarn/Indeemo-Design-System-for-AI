@@ -52,6 +52,7 @@ Formatting expectations
 Naming conventions (assistant should follow)
 - Token names: `category.tokenName.scale` (e.g., `color.brand.500`, `spacing.8`).
 - Component names: `ComponentName/Variant/Size` in human readable kebab or Pascal depending on code target. When creating files, use kebab-case file names.
+- **Token references:** When creating semantic tokens that share the same value as another semantic token, use deep references to the semantic token (e.g., `{semantic.interactive.primary.text.default}`) rather than duplicating the foundation reference. This creates a single source of truth and allows future flexibility to change values independently if needed.
 
 Examples of good prompts
 - "Generate JSON tokens for primary, neutral, and success palettes with 5 stops each, and output CSS variables."
