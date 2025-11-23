@@ -1,0 +1,17 @@
+{
+  "name": "indeemo-design-system",
+  "version": "1.0.0",
+  "description": "Design system for Indeemo with Figma API integration",
+  "type": "module",
+  "main": "src/figma_variables_bridge.js",
+  "scripts": {
+    "start": "node src/figma_variables_bridge.js",
+    "dev": "node --watch src/figma_variables_bridge.js"
+  },
+  "keywords": ["figma", "design-system", "tokens", "variables"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

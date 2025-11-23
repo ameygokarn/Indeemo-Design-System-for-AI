@@ -1,0 +1,62 @@
+{
+  "collection": "Brand Colors",
+  "modes": ["Light", "Dark"],
+  "variables": [
+    {
+      "name": "Primary/Default",
+      "type": "COLOR",
+      "values": {
+        "Light": "#0066FF",
+        "Dark": "#3399FF"
+      }
+    },
+    {
+      "name": "Primary/Hover",
+      "type": "COLOR",
+      "values": {
+        "Light": "#0052CC",
+        "Dark": "#2A8AE6"
+      }
+    },
+    {
+      "name": "Primary/Active",
+      "type": "COLOR",
+      "values": {
+        "Light": "#0047B3",
+        "Dark": "#1F7AD9"
+      }
+    },
+    {
+      "name": "Background/Primary",
+      "type": "COLOR",
+      "values": {
+        "Light": "#FFFFFF",
+        "Dark": "#1A1A1A"
+      }
+    },
+    {
+      "name": "Background/Secondary",
+      "type": "COLOR",
+      "values": {
+        "Light": "#F5F5F5",
+        "Dark": "#2A2A2A"
+      }
+    },
+    {
+      "name": "Text/Primary",
+      "type": "COLOR",
+      "values": {
+        "Light": "#000000",
+        "Dark": "#FFFFFF"
+      }
+    },
+    {
+      "name": "Text/Secondary",
+      "type": "COLOR",
+      "values": {
+        "Light": "#666666",
+        "Dark": "#AAAAAA"
+      }
+    }
+  ]
+}

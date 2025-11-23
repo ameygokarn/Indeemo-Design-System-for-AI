@@ -1,0 +1,55 @@
+{
+  "collection": "Typography",
+  "modes": ["Base"],
+  "variables": [
+    {
+      "name": "FontSize/Heading1",
+      "type": "FLOAT",
+      "values": {
+        "Base": 32
+      }
+    },
+    {
+      "name": "FontSize/Heading2",
+      "type": "FLOAT",
+      "values": {
+        "Base": 24
+      }
+    },
+    {
+      "name": "FontSize/Heading3",
+      "type": "FLOAT",
+      "values": {
+        "Base": 20
+      }
+    },
+    {
+      "name": "FontSize/Body",
+      "type": "FLOAT",
+      "values": {
+        "Base": 16
+      }
+    },
+    {
+      "name": "FontSize/Small",
+      "type": "FLOAT",
+      "values": {
+        "Base": 14
+      }
+    },
+    {
+      "name": "FontFamily/Primary",
+      "type": "STRING",
+      "values": {
+        "Base": "Inter"
+      }
+    },
+    {
+      "name": "FontFamily/Monospace",
+      "type": "STRING",
+      "values": {
+        "Base": "Roboto Mono"
+      }
+    }
+  ]
+}

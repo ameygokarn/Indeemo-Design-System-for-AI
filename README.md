@@ -7,6 +7,10 @@ This repository contains materials, guidelines, and artifacts for creating an AI
 **Contents:**
 - `guideline.md`: Figma + Make guidelines, workflows, and resources for building design-system assets.
 - `styleguide.md`: Prompt and style guidance for interacting with the assistant and generating consistent outputs.
+- `QUICKSTART.md`: Quick start guide for syncing design tokens to Figma via the REST API.
+- `docs/figma-api-workflow.md`: Complete documentation for the Figma Variables API workflow.
+- `tokens/`: JSON files defining design tokens (colors, spacing, typography).
+- `src/figma_variables_bridge.js`: MCP bridge server for syncing tokens to Figma.
 
 **Goal:** Provide a reproducible, auditable design-system foundation (tokens, components, documentation and automation patterns) that pairs with AI-assisted workflows.
 
@@ -20,8 +24,27 @@ This project references three essential Figma files:
 
 If you don't have access to these files, contact your project administrator.
 
+## 🚀 Quick Start: Figma Variables API
+
+**New!** You can now define design tokens as JSON and sync them to Figma automatically.
+
+1. **Start the bridge:** `npm start`
+2. **Set credentials:** `export FIGMA_TOKEN="your_token"`
+3. **Ask the assistant:** "Sync `tokens/colors.json` to Figma"
+
+See `QUICKSTART.md` for full instructions and examples.
+
+**Benefits:**
+- Version-controlled design tokens (stored as JSON in this repo)
+- Automated sync to Figma Variables
+- Support for light/dark modes and multiple themes
+- Easy collaboration and code review for token changes
+
+---
+
 ## Getting Started
 
 1. Review `guideline.md` for design-system workflows
 2. Review `styleguide.md` for AI prompt patterns
 3. Access the Figma files listed above to view or edit design assets
+4. **New:** Check `QUICKSTART.md` to sync design tokens to Figma via API
