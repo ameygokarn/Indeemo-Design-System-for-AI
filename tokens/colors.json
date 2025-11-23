@@ -55,7 +55,7 @@
     "100": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "98% lightness | vs White: 1.05 | vs Black: 20.04 | WCAG: Black AAA Normal, AAA Large",
+      "description": "97% lightness | vs White: 1.10 | vs Black: 19.12 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -69,7 +69,7 @@
     "150": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "94% lightness | vs White: 1.20 | vs Black: 17.54 | WCAG: Black AAA Normal, AAA Large",
+      "description": "92% lightness | vs White: 1.29 | vs Black: 16.28 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -83,21 +83,7 @@
     "200": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "90% lightness | vs White: 1.37 | vs Black: 15.35 | WCAG: Black AAA Normal, AAA Large",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "lighten",
-            "value": "{modifier.350}",
-            "space": "hsl"
-          }
-        }
-      }
-    },
-    "250": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "description": "85% lightness | vs White: 1.57 | vs Black: 13.35 | WCAG: Black AAA Normal, AAA Large",
+      "description": "87% lightness | vs White: 1.52 | vs Black: 13.81 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -108,10 +94,10 @@
         }
       }
     },
-    "300": {
+    "250": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "81% lightness | vs White: 1.81 | vs Black: 11.63 | WCAG: Black AAA Normal, AAA Large",
+      "description": "82% lightness | vs White: 1.80 | vs Black: 11.67 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -122,10 +108,10 @@
         }
       }
     },
-    "350": {
+    "300": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "77% lightness | vs White: 2.08 | vs Black: 10.10 | WCAG: Black AAA Normal, AAA Large",
+      "description": "77% lightness | vs White: 2.13 | vs Black: 9.87 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -136,10 +122,10 @@
         }
       }
     },
-    "400": {
+    "350": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "73% lightness | vs White: 2.38 | vs Black: 8.82 | WCAG: Black AAA Normal, AAA Large",
+      "description": "72% lightness | vs White: 2.51 | vs Black: 8.37 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -150,15 +136,29 @@
         }
       }
     },
-    "450": {
+    "400": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "69% lightness | vs White: 2.72 | vs Black: 7.71 | WCAG: Black AAA Normal, AAA Large",
+      "description": "67% lightness | vs White: 2.93 | vs Black: 7.17 | WCAG: Black AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
             "type": "lighten",
             "value": "{modifier.100}",
+            "space": "hsl"
+          }
+        }
+      }
+    },
+    "450": {
+      "value": "{brand.pink}",
+      "type": "color",
+      "description": "62% lightness | vs White: 3.36 | vs Black: 6.24 | WCAG: White & Black AA Normal, AAA Large",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "lighten",
+            "value": "{modifier.50}",
             "space": "hsl"
           }
         }
@@ -167,12 +167,12 @@
     "500": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "65% lightness | vs White: 3.08 | vs Black: 6.83 | WCAG: White AA Large, Black AA Normal, AAA Large",
+      "description": "62% lightness | vs White: 3.36 | vs Black: 6.24 | WCAG: White & Black AA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
             "type": "lighten",
-            "value": "{modifier.100}",
+            "value": "{modifier.50}",
             "space": "hsl"
           }
         }
@@ -181,7 +181,7 @@
     "550": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "61% lightness | vs White: 3.44 | vs Black: 6.10 | WCAG: White AA Large, Black AA Normal, AAA Large",
+      "description": "62% lightness | vs White: 3.36 | vs Black: 6.24 | WCAG: White & Black AA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -200,35 +200,7 @@
     "650": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "51% lightness | vs White: 4.13 | vs Black: 5.08 | WCAG: White AA Large, Black AA Normal, AAA Large",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "{modifier.50}",
-            "space": "hsl"
-          }
-        }
-      }
-    },
-    "700": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "description": "46% lightness | vs White: 4.78 | vs Black: 4.39 | WCAG: White AA Normal, AAA Large, Black AA Large",
-      "$extensions": {
-        "studio.tokens": {
-          "modify": {
-            "type": "darken",
-            "value": "{modifier.100}",
-            "space": "hsl"
-          }
-        }
-      }
-    },
-    "750": {
-      "value": "{brand.pink}",
-      "type": "color",
-      "description": "41% lightness | vs White: 5.82 | vs Black: 3.61 | WCAG: White AA Normal, AAA Large, Black AA Large",
+      "description": "42% lightness | vs White: 5.69 | vs Black: 3.69 | WCAG: White & Black AA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -239,10 +211,10 @@
         }
       }
     },
-    "800": {
+    "700": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "36% lightness | vs White: 7.16 | vs Black: 2.93 | WCAG: White AAA Normal, AAA Large",
+      "description": "37% lightness | vs White: 6.91 | vs Black: 3.04 | WCAG: White AA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -253,10 +225,10 @@
         }
       }
     },
-    "850": {
+    "750": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "30% lightness | vs White: 8.82 | vs Black: 2.38 | WCAG: White AAA Normal, AAA Large",
+      "description": "32% lightness | vs White: 8.44 | vs Black: 2.49 | WCAG: White AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -267,10 +239,24 @@
         }
       }
     },
-    "900": {
+    "800": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "25% lightness | vs White: 10.84 | vs Black: 1.94 | WCAG: White AAA Normal, AAA Large",
+      "description": "32% lightness | vs White: 8.44 | vs Black: 2.49 | WCAG: White AAA Normal, AAA Large",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "darken",
+            "value": "{modifier.250}",
+            "space": "hsl"
+          }
+        }
+      }
+    },
+    "850": {
+      "value": "{brand.pink}",
+      "type": "color",
+      "description": "27% lightness | vs White: 10.30 | vs Black: 2.04 | WCAG: White AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
@@ -281,15 +267,29 @@
         }
       }
     },
-    "950": {
+    "900": {
       "value": "{brand.pink}",
       "type": "color",
-      "description": "20% lightness | vs White: 13.21 | vs Black: 1.59 | WCAG: White AAA Normal, AAA Large",
+      "description": "22% lightness | vs White: 12.50 | vs Black: 1.68 | WCAG: White AAA Normal, AAA Large",
       "$extensions": {
         "studio.tokens": {
           "modify": {
             "type": "darken",
             "value": "{modifier.350}",
+            "space": "hsl"
+          }
+        }
+      }
+    },
+    "950": {
+      "value": "{brand.pink}",
+      "type": "color",
+      "description": "17% lightness | vs White: 14.93 | vs Black: 1.41 | WCAG: White AAA Normal, AAA Large",
+      "$extensions": {
+        "studio.tokens": {
+          "modify": {
+            "type": "darken",
+            "value": "{modifier.400}",
             "space": "hsl"
           }
         }
