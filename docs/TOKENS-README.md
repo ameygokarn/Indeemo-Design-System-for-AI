@@ -55,11 +55,11 @@ Usage example:
 - `foundation.color.ramp.cream.100` returns the cream 100 color value.
 - `foundation.color.brand.yellow` returns a brand single-color entry.
 
-5. Migration (semantic tokens)
+5. Deprecation & migration
 
-- Numeric tokens remain available; semantic alias tokens are recommended for future usage.
-- A migration map is present in `typography.scale.migration` to help convert numeric names to alias tokens.
-- Example migration:
+- Numeric tokens have been removed in favor of the semantic aliases (xxs, xs, sm, md, lg, xl, xxl, 3xl, …).
+- If you still have references to numeric tokens in your code or in historical files, let me know and I can add a small script to convert them to the new semantic names automatically.
+- Example migration you should do manually or via a script:
   - `fontSize.125` -> `fontSize.xl`
   - `lineHeight.135` -> `lineHeight.comfortable`
 
