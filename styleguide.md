@@ -1,5 +1,7 @@
 # Assistant Prompt Styleguide for Indeemo Design System
 
+**⚠️ Figma Make Tailored:** This design system is now optimized for ingestion by Figma Make and other LLMs. All tokens include clear descriptions, Figma variable types, and CSS variable recommendations to ensure seamless automation and code generation.
+
 Purpose
 - This document explains how to write prompts for the assistant and what style/format to expect back. Use this as the definitive prompt/style contract when asking the assistant to generate design tokens, components, docs, or code.
 
@@ -63,6 +65,44 @@ Formatting expectations
   .link:hover { color: var(--color-ramp-purple-750); }
   .link:focus { outline: 2px solid var(--color-ramp-purple-750); outline-offset: 2px; }
   ```
+
+## Typography Styles Overview (Figma Make Optimized)
+
+All typography styles are now documented with Figma variable types and CSS variable recommendations for LLM and Figma Make ingestion.
+
+**Current Typography Styles:**
+- `headline` (large/medium/small): Section and subsection headings (16–20px, Bold)
+- `display` (large): Hero and marketing headings (28px, Bold) — *NEW*
+- `body-emphasis` (large/medium/small): Emphasized body copy (12–18px, Bold)
+- `body` (large/medium/small): Primary body text (12–18px, Regular)
+- `label` (large/medium/small): Form labels and UI labels (12–18px, Bold)
+- `caption` (small): Metadata, hints, timestamps (12px, Regular) — *NEW*
+- `link` (default/hover/visited): Interactive links with accessible underline
+
+**Token Format for Figma Make:**
+Each typography token includes:
+- `fontFamily`: Reference to brand font family (e.g., `{brand.fontFamily.a}`)
+- `fontWeight`: Regular or Bold (e.g., `{brand.fontWeight.bold}`)
+- `fontSize`: Semantic size alias (e.g., `{scale.fontSize.md}`)
+- `lineHeight`: Semantic line-height alias (e.g., `{scale.lineHeight.normal}`)
+- `description`: Purpose, Figma variable type, CSS variable name, and accessibility notes
+- `extensions.figma`: Figma Make metadata (resolved type, CSS variable, usage)
+
+**Example Token (with Figma Make metadata):**
+```json
+"headline": {
+  "large": {
+    "value": {
+      "fontFamily": "{brand.fontFamily.a}",
+      "fontWeight": "{brand.fontWeight.bold}",
+      "fontSize": "{scale.fontSize.xl}",
+      "lineHeight": "{scale.lineHeight.comfortable}"
+    },
+    "type": "typography",
+    "description": "Headline Large (20px/22px, Bold). Purpose: Section headings. Figma variable type: TYPOGRAPHY. CSS var: --typography-headline-large. Accessibility: use for prominent headings with sufficient contrast."
+  }
+}
+```
 
 - When asking for component code: specify the framework. If not specified, assistant will return plain React + CSS (no Tailwind).
 - For documentation: prefer Markdown with usage examples, props table, and code snippets.
