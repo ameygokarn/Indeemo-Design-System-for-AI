@@ -1,6 +1,49 @@
 # Tokens — Central Readme
 
-This document explains the structure of the design tokens in `tokens/tokens.json`, provides an overview of the token categories, and describes the elevation system, semantic structure, and best practices.
+This document explains the structure of the design tokens in `tokens/tokens.json`, provides an overview of the token categories, and describes the elevation system, semantic stru## 9. Migration Guide
+
+If migrating from an old token structure:
+
+- Old `typography` set → New `styles.typography`
+- Old `typography.shadow.*` → New `styles.shadow.*`
+- Old `color.*` → New `brand.color.*` (now a dedicated brand set in Token Studio)
+- Old colors in typography → New `semantic.typography.*`
+- Old `foundation.color.*` → New `brand.color.*`
+- Old `foundation.surface-fill.*` → New `semantic.surface.fill.*`
+- Old `surface.*` set → Now integrated into `semantic.surface.*`
+
+### Key Changes in Latest Structure
+
+**Before:**
+```
+styles
+├── typography
+└── shadow
+semantic
+├── typography
+├── surface
+└── interactive
+surface (standalone)
+```
+
+**After:**
+```
+styles
+├── typography
+└── shadow
+brand
+├── color
+│   ├── brand
+│   └── ramp
+semantic
+├── typography
+├── surface (now contains fills, accents, and composites)
+└── interactive
+```
+
+**All semantic colors now reference the brand set:**
+- Old: `{color.ramp.purple.850}` → New: `{brand.color.ramp.purple.850}`
+- Old: `{color.brand.pink}` → New: `{brand.color.brand.pink}` best practices.
 
 ## 1. Overview: Token File & Structure
 
@@ -8,14 +51,18 @@ This document explains the structure of the design tokens in `tokens/tokens.json
 - **Format:** JSON tokens grouped by a semantic object structure organized into minimal sets
 - **Purpose:** Central repository for design tokens used by the design system and for Figma variable exports and Figma Make integration
 
-### Token Sets:
+### Token Sets (3 Core Sets):
 - **`styles`** — Exportable styles and effects (typography, shadows). This is the ONLY place for anything that needs to be exported as a style or effect in Token Studio.
-- **`color`** — Foundational color definitions (brand palette and color ramps)
-- **`semantic`** — Semantic tokens grouped by context (typography colors, surface levels, interactive states)
-- **`surface`** — Composite surface elevation tokens (combines fills, shadows, and accents)
+- **`brand`** — Foundational color definitions (brand palette and color ramps). The source of truth for all color references in the system.
+- **`semantic`** — Semantic tokens grouped by context (typography colors, surface levels, interactive states). ALL color tokens reference the brand set.
 
 ### Philosophy
-Minimize the number of sets to reduce complexity. All colors sit in the semantic set with appropriate grouping. Shadows and effects live in the styles set for proper Token Studio export behavior.
+Minimize the number of sets to reduce complexity. Only 3 core sets:
+- **styles**: Exportable typography and effects
+- **brand**: All color foundations and ramps
+- **semantic**: All context-specific tokens that reference brand colors
+
+All surfaces, typography colors, and interactive states reference the brand set for consistency and maintainability.
 
 ## 2. Styles (Exportable Styles & Effects)
 
@@ -53,32 +100,42 @@ Located under `styles.*`, this set contains all elements meant to be exported as
   - `elevation-4` → 0px 16px 32px (Level 4 modals)
   - `elevation-inverse` → 0px 6px 16px (dark backgrounds)
 
-## 3. Color Tokens
+## 3. Brand Color Tokens
 
-Located under `color.*`, containing foundational color definitions.
+Located under `brand.color.*`, containing foundational color definitions. This is the source of truth for all colors in the system.
 
-- **`color.brand.*`** — Brand color palette
+- **`brand.color.brand.*`** — Brand color palette
   - Named colors: `cream`, `yellow`, `orange`, `red`, `pink`, `purple`, `dark-blue`, `grey`, `neutral`
-  - Example: `color.brand.pink` → #da095e
+  - Example: `brand.color.brand.pink` → #da095e
 
-- **`color.ramp.*`** — Color ramps for each brand color
+- **`brand.color.ramp.*`** — Color ramps for each brand color
   - Each color has 21 shades: `100`, `150`, `200`, ... `1000`, `1050`
   - Each shade includes HSL value and WCAG contrast information
-  - Example: `color.ramp.cream.200` → Cream 200 shade with lightness, contrast data
+  - Example: `brand.color.ramp.cream.200` → Cream 200 shade with lightness, contrast data
+
+### All Semantic Colors Reference the Brand Set
+
+Every color in the semantic set references the brand set using the pattern `{brand.color.brand.*}` or `{brand.color.ramp.*}`. This ensures:
+- Single source of truth for all colors
+- Easy color system updates (change brand colors once, update everywhere)
+- Consistent naming across the system
 
 ## 4. Semantic Tokens
 
-Located under `semantic.*`, containing context-specific token groupings.
+Located under `semantic.*`, containing context-specific token groupings. All semantic tokens reference the brand set for colors. The semantic set contains three subsections:
 
 ### 4.1 Semantic Typography Colors
 
 - **`semantic.typography.link.*`** — Link color states
-  - `default` → {color.ramp.purple.850} (primary link color)
-  - `hover` → {color.ramp.purple.750} (darker purple on hover)
-  - `visited` → {color.ramp.purple.700} (visited state)
+  - `default` → {brand.color.ramp.purple.850} (primary link color)
+  - `hover` → {brand.color.ramp.purple.750} (darker purple on hover)
+  - `visited` → {brand.color.ramp.purple.700} (visited state)
 
-### 4.2 Semantic Surface Tokens (Fills)
+### 4.2 Semantic Surface Tokens
 
+Located under `semantic.surface.*`, these contain fills, shadows, and accents organized by elevation level.
+
+**Surface Fills:**
 - **`semantic.surface.fill.*`** — Surface fill colors for each elevation level
   - `elevation-negative-1` → Cream 200 (undercanvas)
   - `elevation-0` → #FFFFFF (canvas/default)
@@ -86,91 +143,45 @@ Located under `semantic.*`, containing context-specific token groupings.
   - `elevation-inverse` → #1A1A1A (dark backgrounds)
   - **Philosophy:** All surfaces except undercanvas and inverse are white, maintaining 1:1 mapping for future dark mode support
 
-### 4.3 Semantic Surface Accents
-
-Accent tokens provide color highlighting and emphasis within surface elevations. They are available at all levels (canvas, undercanvas, and levels 1–4) and come in two variants:
-
-- **`semantic.surface.accent.strong`** → {color.brand.pink} (primary brand accent)
-  - Use for: Primary emphasis, highlighted sections, important interactive areas
-  - Provides maximum visual weight and attention
-
+**Surface Accents:**
+- **`semantic.surface.accent.strong`** → {brand.color.brand.pink} (primary brand accent)
 - **`semantic.surface.accent.subtle`** → #F5E8EC (tinted primary at reduced saturation)
-  - Use for: Secondary emphasis, gentle highlights, background accents
-  - Provides visual interest without overwhelming content
 
-**Accent availability by level:**
+Available at all levels (canvas, undercanvas, and levels 1–4).
 
-| Level | accent-strong | accent-subtle |
-|-------|---|---|
-| Undercanvas | ✓ | ✓ |
-| Canvas | ✓ | ✓ |
-| Level 1 | ✓ | ✓ |
-| Level 2 | ✓ | ✓ |
-| Level 3 | ✓ | ✓ |
-| Level 4 | ✓ | ✓ |
-
-**Usage in CSS:**
-```css
-/* Card with strong accent highlight */
-.card-highlight {
-  background-color: var(--surface-level-1-fill);
-  border-left: 4px solid var(--surface-level-1-accent-strong);
-  box-shadow: var(--shadow-elevation-1);
-}
-
-/* Card with subtle accent background */
-.card-subtle {
-  background-color: var(--surface-level-1-fill);
-  border-radius: 8px;
-  box-shadow: var(--shadow-elevation-1), 
-              inset 0 0 0 1px var(--surface-level-1-accent-subtle);
-}
-
-/* Highlighted content section */
-.content-highlight {
-  padding: 16px;
-  background-color: var(--surface-level-1-accent-subtle);
-  border-left: 4px solid var(--surface-level-1-accent-strong);
-}
-```
-
-**Design pattern:**
-- Use **strong accents** for interactive elements, call-to-action highlights, or primary focus areas
-- Use **subtle accents** for background layers, dividers, or secondary emphasis
-- Pair accents with the corresponding level's fill and shadow for consistent elevation hierarchy
-
-### 4.4 Interactive Tokens
+### 4.3 Semantic Interactive Tokens
 
 - **`semantic.interactive.*`** — Button states, form states, etc.
   - Organized by component type (primary, secondary, etc.)
   - Each includes fill, text, icon, border states for default/hover/pressed/disabled
+  - All colors reference the brand set
 
 ## 5. Surface Composite Tokens
 
-Located under `surface.*`, these combine fills, shadows, and accents for specific elevation levels. These are reference tokens that tie together all three aspects of an elevation level.
+Located under `semantic.surface.*`, these combine fills, shadows, and accents for specific elevation levels. These are reference tokens that tie together all three aspects of an elevation level.
 
-- **`surface.undercanvas.*`** → Hidden/background content (Z-index: -1)
+- **`semantic.surface.undercanvas.*`** → Hidden/background content (Z-index: -1)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
-- **`surface.canvas.*`** → Base/default level (Z-index: 0)
+- **`semantic.surface.canvas.*`** → Base/default level (Z-index: 0)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
-- **`surface.level-1.*`** → Cards, floating sections (Z-index: 1–100)
+- **`semantic.surface.level-1.*`** → Cards, floating sections (Z-index: 1–100)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
-- **`surface.level-2.*`** → Dropdowns, tooltips (Z-index: 100–500)
+- **`semantic.surface.level-2.*`** → Dropdowns, tooltips (Z-index: 100–500)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
-- **`surface.level-3.*`** → Sticky headers (Z-index: 500–1000)
+- **`semantic.surface.level-3.*`** → Sticky headers (Z-index: 500–1000)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
-- **`surface.level-4.*`** → Modals, dialogs (Z-index: 1000+)
+- **`semantic.surface.level-4.*`** → Modals, dialogs (Z-index: 1000+)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
-- **`surface.inverse.*`** → Dark backgrounds (Z-index: 2000+)
+- **`semantic.surface.inverse.*`** → Dark backgrounds (Z-index: 2000+)
   - `fill`, `shadow`
 
 **Example:**
 ```json
 {
-  "surface.level-1.fill": "{semantic.surface.fill.elevation-1}",
-  "surface.level-1.shadow": "{styles.shadow.elevation-1}",
-  "surface.level-1.accent-strong": "{semantic.surface.accent.strong}",
-  "surface.level-1.accent-subtle": "{semantic.surface.accent.subtle}"
+  "semantic.surface.level-1.fill": "{semantic.surface.fill.elevation-1}",
+  "semantic.surface.level-1.shadow": "{styles.shadow.elevation-1}",
+  "semantic.surface.level-1.accent-strong": "{semantic.surface.accent.strong}",
+  "semantic.surface.level-1.accent-subtle": "{semantic.surface.accent.subtle}"
 }
 ```
 
@@ -214,11 +225,14 @@ The elevation system creates visual hierarchy through layered surfaces paired wi
 
 ## 7. Best Practices
 
-- **For Token Studio exports:** Only styles and effects go in the `styles` set. Color tokens belong in `semantic` or `color`.
+- **Three core sets in Token Studio:** Use exactly 3 sets: `styles` (for exportable effects), `brand` (for color foundations), `semantic` (for all context-specific tokens).
+- **Brand set for all colors:** Every color in the system must be a reference to the brand set. Never hardcode colors in semantic tokens.
+- **For Token Studio exports:** Only styles and effects go in the `styles` set. All colors belong in `semantic` (which references `brand`).
 - **Use semantic tokens:** Always prefer semantic tokens (e.g., `semantic.typography.link.default`) over raw color values for maintainability.
-- **Surface elevation:** Always pair fill + shadow from the same elevation level (e.g., `surface.level-2.fill` + `surface.level-2.shadow`).
+- **Surface elevation:** Always pair fill + shadow from the same elevation level (e.g., `semantic.surface.level-2.fill` + `semantic.surface.level-2.shadow`).
 - **Color consistency:** Use `semantic.surface.fill.*` for all surface backgrounds to maintain consistent color mapping across the system.
-- **Dark mode readiness:** The 1:1 mapping between elevation levels (all white except undercanvas/inverse) ensures seamless dark mode support by changing only the fill colors.
+- **Dark mode readiness:** The 1:1 mapping between elevation levels (all white except undercanvas/inverse) ensures seamless dark mode support by changing only the fill colors in the brand set.
+- **Accent strategy:** Use `accent-strong` for primary emphasis and `accent-subtle` for secondary emphasis. All accents are sourced from the brand set.
 
 ## 8. Token References
 
@@ -227,13 +241,22 @@ Tokens reference each other using `{path.to.token}` syntax:
 ```json
 {
   "semantic.typography.link.default": {
-    "value": "{color.ramp.purple.850}"
+    "value": "{brand.color.ramp.purple.850}"
   },
-  "surface.level-1.fill": {
+  "semantic.surface.level-1.fill": {
     "value": "{semantic.surface.fill.elevation-1}"
+  },
+  "semantic.surface.level-1.accent-strong": {
+    "value": "{brand.color.brand.pink}"
   }
 }
 ```
+
+**Reference patterns:**
+- Brand colors: `{brand.color.brand.NAME}` or `{brand.color.ramp.NAME.SHADE}`
+- Semantic fills: `{semantic.surface.fill.elevation-LEVEL}`
+- Semantic shadows: `{styles.shadow.elevation-LEVEL}`
+- Semantic accents: `{semantic.surface.accent.VARIANT}` (strong or subtle)
 
 ## 9. Migration Guide
 
