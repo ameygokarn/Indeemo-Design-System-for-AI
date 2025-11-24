@@ -1,7 +1,7 @@
 /* ============================================
  * Figma Make Global CSS Variables
  * Auto-generated from tokens.json
- * Last updated: 2025-11-24T13:27:55.403Z
+ * Last updated: 2025-11-24T13:36:58.460Z
  * ============================================ */
 
 :root {
@@ -15,6 +15,7 @@
   --color-purple: #8b006e;
   --color-red: #ff2734;
   --color-white: #ffffff;
+  --color-yellow: #ffc700;
 
   /* Color Ramps */
   --color-ramp-dark-blue-100: hsl(237, 31%, 98%);
@@ -157,6 +158,26 @@
   --color-ramp-red-850: hsl(356, 100%, 32%);
   --color-ramp-red-900: hsl(356, 100%, 28%);
   --color-ramp-red-950: hsl(356, 100%, 23%);
+  --color-ramp-yellow-100: hsl(46, 100%, 98%);
+  --color-ramp-yellow-1000: hsl(46, 100%, 19%);
+  --color-ramp-yellow-1050: hsl(46, 100%, 14%);
+  --color-ramp-yellow-150: hsl(46, 100%, 94%);
+  --color-ramp-yellow-200: hsl(46, 100%, 89%);
+  --color-ramp-yellow-250: hsl(46, 100%, 85%);
+  --color-ramp-yellow-300: hsl(46, 100%, 80%);
+  --color-ramp-yellow-350: hsl(46, 100%, 76%);
+  --color-ramp-yellow-400: hsl(46, 100%, 72%);
+  --color-ramp-yellow-450: hsl(46, 100%, 67%);
+  --color-ramp-yellow-500: hsl(46, 100%, 63%);
+  --color-ramp-yellow-550: hsl(46, 100%, 58%);
+  --color-ramp-yellow-600: hsl(46, 100%, 54%);
+  --color-ramp-yellow-650: hsl(46, 100%, 50%);
+  --color-ramp-yellow-700: hsl(46, 100%, 45%);
+  --color-ramp-yellow-750: hsl(46, 100%, 41%);
+  --color-ramp-yellow-800: hsl(46, 100%, 36%);
+  --color-ramp-yellow-850: hsl(46, 100%, 32%);
+  --color-ramp-yellow-900: hsl(46, 100%, 28%);
+  --color-ramp-yellow-950: hsl(46, 100%, 23%);
 
   /* Semantic Tokens */
   --semantic-border-elevation-level-2-primary: {color.ramp.neutral.300};
@@ -167,22 +188,22 @@
   --semantic-elevation-level-4: {color.brand.white};
   --semantic-elevation-level-inverse: {color.brand.black};
   --semantic-elevation-level-negative-1: {color.brand.cream};
-  --semantic-feedback-error-border: {color.ramp.red.900};
+  --semantic-feedback-error-border: {color.ramp.red.950};
   --semantic-feedback-error-fill: {color.ramp.red.100};
-  --semantic-feedback-error-icon: {color.ramp.red.900};
-  --semantic-feedback-error-text: {color.ramp.red.900};
-  --semantic-feedback-info-border: {color.ramp.dark-blue.900};
+  --semantic-feedback-error-icon: {feedback.error.text};
+  --semantic-feedback-error-text: {color.ramp.red.800};
+  --semantic-feedback-info-border: {color.ramp.dark-blue.950};
   --semantic-feedback-info-fill: {color.ramp.dark-blue.100};
-  --semantic-feedback-info-icon: {color.ramp.dark-blue.900};
-  --semantic-feedback-info-text: {color.ramp.dark-blue.900};
-  --semantic-feedback-success-border: {color.brand.green};
+  --semantic-feedback-info-icon: {feedback.info.text};
+  --semantic-feedback-info-text: {color.ramp.dark-blue.800};
+  --semantic-feedback-success-border: {color.ramp.green.950};
   --semantic-feedback-success-fill: {color.ramp.green.100};
-  --semantic-feedback-success-icon: {color.brand.green};
-  --semantic-feedback-success-text: {color.brand.green};
-  --semantic-feedback-warning-border: {color.ramp.orange.900};
+  --semantic-feedback-success-icon: {feedback.success.text};
+  --semantic-feedback-success-text: {color.ramp.green.800};
+  --semantic-feedback-warning-border: {color.ramp.orange.950};
   --semantic-feedback-warning-fill: {color.ramp.yellow.100};
-  --semantic-feedback-warning-icon: {color.ramp.orange.900};
-  --semantic-feedback-warning-text: {color.ramp.orange.900};
+  --semantic-feedback-warning-icon: {feedback.warning.text};
+  --semantic-feedback-warning-text: {color.ramp.orange.800};
   --semantic-interactive-link-default: {color.ramp.purple.850};
   --semantic-interactive-link-hover: {color.ramp.purple.750};
   --semantic-interactive-link-visited: {color.ramp.purple.700};
