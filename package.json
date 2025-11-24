@@ -6,7 +6,9 @@
   "main": "src/figma_variables_bridge.js",
   "scripts": {
     "start": "node src/figma_variables_bridge.js",
-    "dev": "node --watch src/figma_variables_bridge.js"
+    "dev": "node --watch src/figma_variables_bridge.js",
+    "generate-css": "node scripts/generate-figma-make-globals.js",
+    "generate-css:watch": "node --watch scripts/generate-figma-make-globals.js"
   },
   "keywords": ["figma", "design-system", "tokens", "variables"],
   "author": "",

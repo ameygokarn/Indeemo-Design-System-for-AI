@@ -141,6 +141,46 @@ Naming conventions (assistant should follow)
 - Component names: `ComponentName/Variant/Size` in human readable kebab or Pascal depending on code target. When creating files, use kebab-case file names.
 - **Token references:** When creating semantic tokens that share the same value as another semantic token, use deep references to the semantic token (e.g., `{semantic.interactive.primary.text.default}`) rather than duplicating the foundation reference. This creates a single source of truth and allows future flexibility to change values independently if needed.
 
+## Token Quality Standard & Governance
+
+**Every token update must include:**
+
+1. **Designer Description** — Clear, human-readable context for designers
+   - Use case: What is this token used for? Where should designers apply it?
+   - Visual/technical guidance: What should the output look like?
+   - Example: `"Primary button fill for main calls-to-action. Use on white/light backgrounds for maximum contrast."`
+
+2. **AI/LLM Description** — Machine-readable context for code generation systems (Figma Make, LLMs)
+   - Technical specifications: CSS variable name, type, any aliases
+   - Generation rules: How should this be applied in code (e.g., "use for all interactive primary fills")
+   - Constraint notes: Any special rules or edge cases
+   - Example: `"CSS var: --semantic-interactive-primary-fill-default. Type: color. Apply to button fill for primary CTAs. Use complementary text token {semantic.interactive.primary.text.default}."`
+
+3. **WCAG Contrast Information** — Accessibility data (if color token)
+   - Minimum contrast ratio achieved (e.g., "4.8:1 against white background")
+   - WCAG level met (AA / AAA)
+   - Recommended text color pairing
+   - Example: `"Contrast: 4.8:1 (WCAG AA) when used on light surfaces. Pair with {semantic.interactive.primary.text.default} (white) for accessible interactive components."`
+
+**Reference Example (Color Token):**
+```json
+{
+  "value": "#da095e",
+  "type": "color",
+  "description": "[DESIGNER] Primary brand accent color for high-impact CTAs and highlights. Use on white/neutral backgrounds for maximum contrast and visual weight.",
+  "extensions": {
+    "designer_guidance": "Primary pink. Apply to main buttons, badges, and highlights. Ensure sufficient contrast with background.",
+    "ai_context": "CSS var: --color-brand-pink. Base color value for all pink ramps. Primary CTA fill color (semantic token: {semantic.interactive.primary.fill.default}). Reference point for pink ramp generation.",
+    "wcag_info": "Contrast: 8.2:1 against white (#ffffff), 1.8:1 against neutral-300. WCAG AAA on light backgrounds. Pair with white text for primary buttons."
+  }
+}
+```
+
+**Process:**
+- When adding or updating a token, ensure all three components are present before committing
+- Use these descriptions in code generation prompts to Figma Make and other LLMs
+- Review descriptions quarterly to ensure they remain accurate and useful
+
 Examples of good prompts
 - "Generate JSON tokens for primary, neutral, and success palettes with 5 stops each, and output CSS variables."
 - "Create a React button component `Button` with props `variant` ('primary'|'secondary'), `size` ('small'|'medium'|'large'), and include accessible attributes. Return component file `Button.jsx` and `Button.css`."
