@@ -221,7 +221,71 @@ Figma Make currently does NOT preserve complex variable syntax or token referenc
 - Info/Blue: for informational messages
 ```
 
-#### 6. Responsive & Layout Guidelines
+#### 6. Elevation & Surface System
+```markdown
+### Elevation System & Surface Layers
+
+**Philosophy:** The elevation system creates a visual hierarchy through layered surfaces, shadows, and z-index levels. Each elevation level has a corresponding shadow effect and surface fill that work together to indicate depth and interaction.
+
+**Elevation Levels (Z-Index & Mapping):**
+
+| Level | Z-Index | Use Case | Surface Fill | Shadow |
+|-------|---------|----------|--------------|--------|
+| **Undercanvas** | -1 | Hidden/background content (behind sticky headers) | Cream (from ramp) | None (0px) |
+| **Canvas** (Default) | 0 | Main page background, primary content area | White | Minimal (0px 1px 2px) |
+| **Level 1** | 1–100 | Cards, floating sections, tabs | White | Noticeable (0px 3px 8px) |
+| **Level 2** | 100–500 | Dropdowns, tooltips, popovers, context menus | White | Stronger (0px 6px 16px) |
+| **Level 3** | 500–1000 | Sticky headers, persistent navigation bars | White | Pronounced (0px 10px 24px) |
+| **Level 4** | 1000+ | Modals, dialogs, alerts, full-screen overlays | White | Maximum (0px 16px 32px) |
+| **Inverse** | 2000+ | Dark backgrounds, dark mode surfaces | Dark (#1A1A1A) | Light shadow (0px 6px 16px) |
+
+**Using Surface Tokens in Code:**
+```css
+/* Canvas level (default page background) */
+body {
+  background-color: var(--surface-canvas-fill);
+  box-shadow: var(--shadow-elevation-0);
+}
+
+/* Card at Level 1 */
+.card {
+  background-color: var(--surface-level-1-fill);
+  box-shadow: var(--shadow-elevation-1);
+  z-index: 10;
+}
+
+/* Dropdown at Level 2 */
+.dropdown {
+  background-color: var(--surface-level-2-fill);
+  box-shadow: var(--shadow-elevation-2);
+  z-index: 200;
+}
+
+/* Modal at Level 4 */
+.modal {
+  background-color: var(--surface-level-4-fill);
+  box-shadow: var(--shadow-elevation-4);
+  z-index: 1000;
+}
+```
+
+**Key Rules:**
+- Always pair a surface fill with its corresponding shadow for consistent elevation
+- Use z-index ranges rather than specific values to allow flexibility
+- Level 0 (canvas) is the default; only use higher levels when content needs to float above
+- Undercanvas (-1) should be used sparingly (e.g., content behind sticky sidebars)
+- Inverse level is reserved for dark mode and special high-contrast scenarios
+- Each level maintains a 1:1 mapping for future dark mode support (all surfaces stay white except inverse and undercanvas)
+
+**For Figma Make:**
+When generating code, apply these rules:
+- Dropdowns, popovers, tooltips: use Level 2 (--surface-level-2-fill + --shadow-elevation-2)
+- Card containers, tabs: use Level 1 (--surface-level-1-fill + --shadow-elevation-1)
+- Modal dialogs, full-screen overlays: use Level 4 (--surface-level-4-fill + --shadow-elevation-4)
+- Sticky headers/footers: use Level 3 (--surface-level-3-fill + --shadow-elevation-3)
+```
+
+#### 7. Responsive & Layout Guidelines
 ```markdown
 ### Responsive Design
 

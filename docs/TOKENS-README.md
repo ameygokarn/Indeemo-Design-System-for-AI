@@ -1,83 +1,204 @@
-Tokens — central readme
+# Tokens — Central Readme
 
-This document explains the structure of the design tokens in `tokens/tokens.json`, provides an overview of the token categories (typography, color, etc.), and shows examples and a migration guide to the new semantic typography names.
+This document explains the structure of the design tokens in `tokens/tokens.json`, provides an overview of the token categories, and describes the elevation system, semantic structure, and best practices.
 
-1. Overview: token file & structure
+## 1. Overview: Token File & Structure
 
-- Location: `tokens/tokens.json`.
-- Format: JSON tokens grouped by a semantic object structure, e.g. `typography.scale.fontSize`, `foundation.color.brand`, `foundation.color.ramp`, `typography-style`.
-- Purpose: central place for design tokens used by the system and for Figma > tokens export.
+- **Location:** `tokens/tokens.json`
+- **Format:** JSON tokens grouped by a semantic object structure organized into minimal sets
+- **Purpose:** Central repository for design tokens used by the design system and for Figma variable exports and Figma Make integration
 
-2. Typography tokens
+### Token Sets:
+- **`styles`** — Exportable styles and effects (typography, shadows). This is the ONLY place for anything that needs to be exported as a style or effect in Token Studio.
+- **`color`** — Foundational color definitions (brand palette and color ramps)
+- **`semantic`** — Semantic tokens grouped by context (typography colors, surface levels, interactive states)
+- **`surface`** — Composite surface elevation tokens (combines fills, shadows, and accents)
 
-- Top-level: `typography.brand`, `typography.scale` and `typography-style`.
-- `typography.brand`: font family and font weight tokens (e.g., `brand.fontFamily.a`, `brand.fontWeight.bold`).
-- `typography.scale`: contains `base`, `ratio` and the font size / line height numeric steps. Numeric tokens are still available but semantic aliases were added for clarity.
+### Philosophy
+Minimize the number of sets to reduce complexity. All colors sit in the semantic set with appropriate grouping. Shadows and effects live in the styles set for proper Token Studio export behavior.
 
-New semantic font-size aliases (under `typography.scale.fontSize`):
-- `xxs`  -> numeric 50 (8px)
-- `xs`   -> numeric 75 (12px)
-- `sm`   -> numeric 85 (14px)
-- `md`   -> numeric 100 (16px)
-- `lg`   -> numeric 110 (18px)
-- `xl`   -> numeric 125 (20px)
-- `xxl`  -> numeric 135 (22px)
-- `3xl`  -> numeric 150 (24px)
-- `4xl`  -> numeric 175 (28px)
-- `5xl`  -> numeric 200 (32px)
-- `6xl`  -> numeric 210 (34px)
-- `7xl`  -> numeric 225 (36px)
+## 2. Styles (Exportable Styles & Effects)
 
-New semantic line-height aliases (under `typography.scale.lineHeight`):
-- `tight`     -> numeric 100 (16px)
-- `snug`      -> numeric 110 (18px)
-- `normal`    -> numeric 125 (20px)
-- `comfortable` -> numeric 135 (22px)
-- `relaxed`   -> numeric 150 (24px)
-- `loose`     -> numeric 175 (28px)
-- `extra-loose` -> numeric 200 (32px)
+Located under `styles.*`, this set contains all elements meant to be exported as styles or effects in Token Studio.
 
-3. Typography styles
+### 2.1 Typography Styles
 
-- `typography-style` contains semantic styles like `headline`, `body`, and `label` with variants (e.g., `large`, `medium`, `small`).
-- Each style references tokens in `typography.brand` and `typography.scale` — either numeric tokens or the new semantic aliases.
-- Example:
-  - `typography-style.headline.large.value.fontSize` -> `{scale.fontSize.xl}`
-  - `typography-style.headline.large.value.lineHeight` -> `{scale.lineHeight.comfortable}`
+- **`styles.typography.brand`** — Font family and font weight tokens
+  - `brand.fontFamily.a` — IBM Plex Sans (primary font)
+  - `brand.fontWeight.regular` — Regular (400)
+  - `brand.fontWeight.bold` — Bold (700)
 
-4. Color tokens
+- **`styles.typography.scale`** — Typography scale definitions
+  - `scale.base` — Base multiplier for scaling (default: 1)
+  - `scale.ratio` — Typographic scale ratio (default: 1.125 Major Second)
+  - `scale.fontSize` — Semantic font size tokens
+    - `xxs` → 8px, `xs` → 12px, `sm` → 14px, `md` → 16px, `lg` → 18px, `xl` → 20px, etc.
+  - `scale.lineHeight` — Semantic line height tokens
+    - `tight` → 1.2, `snug` → 1.33, `normal` → 1.4, `comfortable` → 1.5, etc.
 
-- Categorized under `foundation.color`.
-  - `foundation.color.brand`: top-level named colors for brand palette (e.g., `cream`, `yellow`, `orange`, `red`, `pink`, `purple`, `dark-blue`, `grey`, `neutral`).
-  - `foundation.color.ramp`: each color has multiple shades arranged by numeric shade keys (e.g., `100`, `150`, `200`, `...`, `1050`). These include HSL values and WCAG contrast notes in the `description` field.
+- **`styles.typography.{style}`** — Typography style definitions
+  - Available styles: `headline`, `body`, `body-emphasis`, `label`, `caption`, `display`, `link`
+  - Each style has size variants: `large`, `medium`, `small`
+  - Each style value contains: `fontFamily`, `fontWeight`, `fontSize`, `lineHeight`, `textDecoration` (for links)
+  - **Important:** Link styles do NOT contain color. Link colors are defined in `semantic.typography.link`
 
-Usage example:
-- `foundation.color.ramp.cream.100` returns the cream 100 color value.
-- `foundation.color.brand.yellow` returns a brand single-color entry.
+### 2.2 Shadow & Effect Tokens
 
-5. Deprecation & migration
+- **`styles.shadow.*`** — Elevation-based shadow effects
+  - `elevation-negative-1` → 0px (no shadow, undercanvas)
+  - `elevation-0` → 0px 1px 2px (canvas/base)
+  - `elevation-1` → 0px 3px 8px (Level 1 cards)
+  - `elevation-2` → 0px 6px 16px (Level 2 dropdowns)
+  - `elevation-3` → 0px 10px 24px (Level 3 sticky elements)
+  - `elevation-4` → 0px 16px 32px (Level 4 modals)
+  - `elevation-inverse` → 0px 6px 16px (dark backgrounds)
 
-- Numeric tokens have been removed in favor of the semantic aliases (xxs, xs, sm, md, lg, xl, xxl, 3xl, …).
-- If you still have references to numeric tokens in your code or in historical files, let me know and I can add a small script to convert them to the new semantic names automatically.
-- Example migration you should do manually or via a script:
-  - `fontSize.125` -> `fontSize.xl`
-  - `lineHeight.135` -> `lineHeight.comfortable`
+## 3. Color Tokens
 
-6. Best practices
+Located under `color.*`, containing foundational color definitions.
 
-- Prefer semantic tokens (e.g., `scale.fontSize.md`, `scale.lineHeight.normal`) in code and new components for readability.
-- Use `typography-style` entries for consistent typographic application — these contain a combined set of `fontFamily`, `fontWeight`, `fontSize` and `lineHeight`.
-- Use color ramp values from `foundation.color.ramp` for accessible color choices; check `description` for WCAG details.
+- **`color.brand.*`** — Brand color palette
+  - Named colors: `cream`, `yellow`, `orange`, `red`, `pink`, `purple`, `dark-blue`, `grey`, `neutral`
+  - Example: `color.brand.pink` → #da095e
 
-7. Consumption & toolchain
+- **`color.ramp.*`** — Color ramps for each brand color
+  - Each color has 21 shades: `100`, `150`, `200`, ... `1000`, `1050`
+  - Each shade includes HSL value and WCAG contrast information
+  - Example: `color.ramp.cream.200` → Cream 200 shade with lightness, contrast data
 
-- This repo is set up for design tokens; integrate with your token transform steps (style-dictionary, Tailwind plugin, CSS variable generator, etc.) as needed.
-- If you want, we can add a simple token-to-CSS generation script or transformations.
+## 4. Semantic Tokens
 
-8. Next steps & suggestions
+Located under `semantic.*`, containing context-specific token groupings.
 
-- Standardize numeric to semantic alias tokens across existing code and other tokens (automatable with a migration script).
-- Add a simple script in `scripts/` to export CSS variables from `tokens/tokens.json`.
-- Add a `tokens-test` that validates token names and expected patterns.
+### 4.1 Semantic Typography Colors
 
-If you want this doc further expanded (e.g., examples for a specific token transformation pipeline), tell me where you will use the tokens and I'll add a snippet targeted at that stack.
+- **`semantic.typography.link.*`** — Link color states
+  - `default` → {color.ramp.purple.850} (primary link color)
+  - `hover` → {color.ramp.purple.750} (darker purple on hover)
+  - `visited` → {color.ramp.purple.700} (visited state)
+
+### 4.2 Semantic Surface Tokens (Fills)
+
+- **`semantic.surface.fill.*`** — Surface fill colors for each elevation level
+  - `elevation-negative-1` → Cream 200 (undercanvas)
+  - `elevation-0` → #FFFFFF (canvas/default)
+  - `elevation-1` through `elevation-4` → #FFFFFF (white, consistent hierarchy)
+  - `elevation-inverse` → #1A1A1A (dark backgrounds)
+  - **Philosophy:** All surfaces except undercanvas and inverse are white, maintaining 1:1 mapping for future dark mode support
+
+### 4.3 Semantic Surface Accents
+
+- **`semantic.surface.accent.strong`** → {color.brand.pink} (primary brand accent)
+- **`semantic.surface.accent.subtle`** → #F5E8EC (tinted primary at reduced saturation)
+
+### 4.4 Interactive Tokens
+
+- **`semantic.interactive.*`** — Button states, form states, etc.
+  - Organized by component type (primary, secondary, etc.)
+  - Each includes fill, text, icon, border states for default/hover/pressed/disabled
+
+## 5. Surface Composite Tokens
+
+Located under `surface.*`, these combine fills, shadows, and accents for specific elevation levels. These are reference tokens that tie together all three aspects of an elevation level.
+
+- **`surface.undercanvas.*`** → Hidden/background content (Z-index: -1)
+  - `fill`, `shadow`
+- **`surface.canvas.*`** → Base/default level (Z-index: 0)
+  - `fill`, `shadow`
+- **`surface.level-1.*`** → Cards, floating sections (Z-index: 1–100)
+  - `fill`, `shadow`, `accent-strong`, `accent-subtle`
+- **`surface.level-2.*`** → Dropdowns, tooltips (Z-index: 100–500)
+  - `fill`, `shadow`, `accent-strong`, `accent-subtle`
+- **`surface.level-3.*`** → Sticky headers (Z-index: 500–1000)
+  - `fill`, `shadow`, `accent-strong`, `accent-subtle`
+- **`surface.level-4.*`** → Modals, dialogs (Z-index: 1000+)
+  - `fill`, `shadow`, `accent-strong`, `accent-subtle`
+- **`surface.inverse.*`** → Dark backgrounds (Z-index: 2000+)
+  - `fill`, `shadow`
+
+**Example:**
+```json
+{
+  "surface.level-1.fill": "{semantic.surface.fill.elevation-1}",
+  "surface.level-1.shadow": "{styles.shadow.elevation-1}"
+}
+```
+
+## 6. Elevation System
+
+The elevation system creates visual hierarchy through layered surfaces paired with shadows and z-index levels. Each level has a corresponding shadow effect and surface fill that work together.
+
+| Level | Z-Index | Use Case | Fill | Shadow |
+|-------|---------|----------|------|--------|
+| Undercanvas | -1 | Hidden/background | Cream 200 | elevation-negative-1 |
+| Canvas | 0 | Page background | White | elevation-0 |
+| Level 1 | 1–100 | Cards, floating sections | White | elevation-1 |
+| Level 2 | 100–500 | Dropdowns, tooltips, popovers | White | elevation-2 |
+| Level 3 | 500–1000 | Sticky headers | White | elevation-3 |
+| Level 4 | 1000+ | Modals, dialogs | White | elevation-4 |
+| Inverse | 2000+ | Dark backgrounds, dark mode | #1A1A1A | elevation-inverse |
+
+### Usage in CSS:
+```css
+/* Card at Level 1 */
+.card {
+  background-color: var(--surface-level-1-fill);
+  box-shadow: var(--shadow-elevation-1);
+  z-index: 10;
+}
+
+/* Dropdown at Level 2 */
+.dropdown {
+  background-color: var(--surface-level-2-fill);
+  box-shadow: var(--shadow-elevation-2);
+  z-index: 200;
+}
+
+/* Modal at Level 4 */
+.modal {
+  background-color: var(--surface-level-4-fill);
+  box-shadow: var(--shadow-elevation-4);
+  z-index: 1000;
+}
+```
+
+## 7. Best Practices
+
+- **For Token Studio exports:** Only styles and effects go in the `styles` set. Color tokens belong in `semantic` or `color`.
+- **Use semantic tokens:** Always prefer semantic tokens (e.g., `semantic.typography.link.default`) over raw color values for maintainability.
+- **Surface elevation:** Always pair fill + shadow from the same elevation level (e.g., `surface.level-2.fill` + `surface.level-2.shadow`).
+- **Color consistency:** Use `semantic.surface.fill.*` for all surface backgrounds to maintain consistent color mapping across the system.
+- **Dark mode readiness:** The 1:1 mapping between elevation levels (all white except undercanvas/inverse) ensures seamless dark mode support by changing only the fill colors.
+
+## 8. Token References
+
+Tokens reference each other using `{path.to.token}` syntax:
+
+```json
+{
+  "semantic.typography.link.default": {
+    "value": "{color.ramp.purple.850}"
+  },
+  "surface.level-1.fill": {
+    "value": "{semantic.surface.fill.elevation-1}"
+  }
+}
+```
+
+## 9. Migration Guide
+
+If migrating from an old token structure:
+
+- Old `typography` set → New `styles.typography`
+- Old `typography.shadow.*` → New `styles.shadow.*`
+- Old colors in typography → New `semantic.typography.{context}.*`
+- Old `foundation.color.*` → New `color.*`
+- Old `foundation.surface-fill.*` → New `semantic.surface.fill.*`
+- Old `surface.*` with foundation references → Updated to reference new paths
+
+## 10. Next Steps
+
+- Integrate tokens with your build pipeline (CSS variables, Tailwind, design tokens plugin, etc.)
+- Export tokens to Figma for synchronization
+- Use elevation system in component designs
+- Set up dark mode by swapping fill colors while maintaining shadow effects

@@ -5,6 +5,23 @@
 Purpose
 - This document explains how to write prompts for the assistant and what style/format to expect back. Use this as the definitive prompt/style contract when asking the assistant to generate design tokens, components, docs, or code.
 
+## Token Structure Overview
+
+**Four Core Sets:**
+- **`styles`** — Exportable styles and effects (typography, shadows). Only place where anything is exported as a style/effect in Token Studio.
+- **`color`** — Foundational colors (brand palette and color ramps with WCAG contrast data)
+- **`semantic`** — Semantic tokens organized by context (link colors, surface fills, interactive states, accents)
+- **`surface`** — Composite tokens combining fills, shadows, and accents for each elevation level
+
+**Elevation System:**
+All surfaces follow a 1:1 elevation mapping for dark mode readiness:
+- **Level -1 (Undercanvas):** Cream fill, no shadow. Use for content behind sticky elements.
+- **Level 0 (Canvas):** White fill, subtle shadow. Default page background.
+- **Levels 1-4:** White fills with corresponding shadows. Cards, dropdowns, modals, etc.
+- **Inverse:** Dark fill (#1A1A1A), light shadow. For dark mode and special high-contrast contexts.
+
+For detailed information, see `docs/TOKENS-README.md` and `guideline.md` sections 6.
+
 ## Token Studio Workflow (Primary Method)
 
 **Important Context:** This project uses **Tokens Studio for Figma** (free tier) as the primary method for managing design tokens.
