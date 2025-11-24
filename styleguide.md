@@ -46,6 +46,24 @@ Formatting expectations
   }
   ```
 
+  ## Accessibility: Links & Underline
+
+  - Use `typography-style.link.default` for link text and `typography-style.link.hover` for interactive state. These styles include the link color and underline.
+  - Ensure link color and underline pass WCAG AA contrast requirements against their background:
+    - For normal text: contrast >= 4.5:1
+    - For large text (≥ 18px bold or 24px regular): contrast >= 3:1
+  - Do not rely solely on color to indicate links. Use underline or another clear indicator and provide a focus style for keyboard navigation (outline or highlight with at least 3:1 contrast).
+  - Example (CSS):
+
+  ```css
+  .link {
+    color: var(--color-ramp-purple-850);
+    text-decoration: underline;
+  }
+  .link:hover { color: var(--color-ramp-purple-750); }
+  .link:focus { outline: 2px solid var(--color-ramp-purple-750); outline-offset: 2px; }
+  ```
+
 - When asking for component code: specify the framework. If not specified, assistant will return plain React + CSS (no Tailwind).
 - For documentation: prefer Markdown with usage examples, props table, and code snippets.
 
