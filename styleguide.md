@@ -7,20 +7,32 @@ Purpose
 
 ## Token Structure Overview
 
-**Four Core Sets:**
+**Three Core Sets:**
+- **`brand`** — Foundational colors (brand palette and color ramps with WCAG contrast data)
+- **`semantic`** — Semantic tokens organized by context (surface fills, interactive states, feedback colors)
 - **`styles`** — Exportable styles and effects (typography, shadows). Only place where anything is exported as a style/effect in Token Studio.
-- **`color`** — Foundational colors (brand palette and color ramps with WCAG contrast data)
-- **`semantic`** — Semantic tokens organized by context (link colors, surface fills, interactive states, accents)
-- **`surface`** — Composite tokens combining fills, shadows, and accents for each elevation level
 
-**Elevation System:**
-All surfaces follow a 1:1 elevation mapping for dark mode readiness:
-- **Level -1 (Undercanvas):** Cream fill, no shadow. Use for content behind sticky elements.
-- **Level 0 (Canvas):** White fill, subtle shadow. Default page background.
-- **Levels 1-4:** White fills with corresponding shadows. Cards, dropdowns, modals, etc.
-- **Inverse:** Dark fill (#1A1A1A), light shadow. For dark mode and special high-contrast contexts.
+**Semantic Token Categories:**
 
-For detailed information, see `docs/TOKENS-README.md` and `guideline.md` sections 6.
+1. **Surface Fills** (`semantic.surface` + `semantic.elevation`)
+   - **Undercanvas:** Below-canvas level (-1). For sticky/floating elements.
+   - **Canvas:** Base level (0). Primary page/screen background.
+   - **Levels 1-4:** Progressive elevation for cards, overlays, modals, dropdowns.
+   - **Inverse:** Dark background for high-contrast sections.
+   - **Accent:** Strong (brand pink) and subtle (light pink) for badges/highlights.
+
+2. **Interactive** (`semantic.interactive`)
+   - **Primary buttons:** Fill, text, icon colors for main CTAs.
+   - **Secondary buttons:** Fill, border, text, icon colors for secondary actions.
+   - **Links:** Default, hover, visited states for hyperlinks.
+
+3. **Feedback** (`semantic.feedback`)
+   - **Error, Success, Warning, Info:** Fill, text, border, icon colors for banner/notification components.
+
+4. **Borders** (`semantic.border`)
+   - **Border.elevation.level-2.primary:** Use with level-2 surfaces for contained components.
+
+For detailed information, see `docs/TOKENS-README.md` and `docs/RESTRUCTURE-SUMMARY.md`.
 
 ## Token Studio Workflow (Primary Method)
 
