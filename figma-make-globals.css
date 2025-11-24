@@ -1,7 +1,7 @@
 /* ============================================
  * Figma Make Global CSS Variables
  * Auto-generated from tokens.json
- * Last updated: 2025-11-24T13:36:58.460Z
+ * Last updated: 2025-11-24T13:42:12.464Z
  * ============================================ */
 
 :root {
@@ -180,7 +180,7 @@
   --color-ramp-yellow-950: hsl(46, 100%, 23%);
 
   /* Semantic Tokens */
-  --semantic-border-elevation-level-2-primary: {color.ramp.neutral.300};
+  --semantic-border-elevation-primary: {color.ramp.neutral.300};
   --semantic-elevation-level-0: {color.brand.white};
   --semantic-elevation-level-1: {color.brand.white};
   --semantic-elevation-level-2: {color.brand.white};
