@@ -88,8 +88,56 @@ Located under `semantic.*`, containing context-specific token groupings.
 
 ### 4.3 Semantic Surface Accents
 
+Accent tokens provide color highlighting and emphasis within surface elevations. They are available at all levels (canvas, undercanvas, and levels 1–4) and come in two variants:
+
 - **`semantic.surface.accent.strong`** → {color.brand.pink} (primary brand accent)
+  - Use for: Primary emphasis, highlighted sections, important interactive areas
+  - Provides maximum visual weight and attention
+
 - **`semantic.surface.accent.subtle`** → #F5E8EC (tinted primary at reduced saturation)
+  - Use for: Secondary emphasis, gentle highlights, background accents
+  - Provides visual interest without overwhelming content
+
+**Accent availability by level:**
+
+| Level | accent-strong | accent-subtle |
+|-------|---|---|
+| Undercanvas | ✓ | ✓ |
+| Canvas | ✓ | ✓ |
+| Level 1 | ✓ | ✓ |
+| Level 2 | ✓ | ✓ |
+| Level 3 | ✓ | ✓ |
+| Level 4 | ✓ | ✓ |
+
+**Usage in CSS:**
+```css
+/* Card with strong accent highlight */
+.card-highlight {
+  background-color: var(--surface-level-1-fill);
+  border-left: 4px solid var(--surface-level-1-accent-strong);
+  box-shadow: var(--shadow-elevation-1);
+}
+
+/* Card with subtle accent background */
+.card-subtle {
+  background-color: var(--surface-level-1-fill);
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevation-1), 
+              inset 0 0 0 1px var(--surface-level-1-accent-subtle);
+}
+
+/* Highlighted content section */
+.content-highlight {
+  padding: 16px;
+  background-color: var(--surface-level-1-accent-subtle);
+  border-left: 4px solid var(--surface-level-1-accent-strong);
+}
+```
+
+**Design pattern:**
+- Use **strong accents** for interactive elements, call-to-action highlights, or primary focus areas
+- Use **subtle accents** for background layers, dividers, or secondary emphasis
+- Pair accents with the corresponding level's fill and shadow for consistent elevation hierarchy
 
 ### 4.4 Interactive Tokens
 
@@ -102,9 +150,9 @@ Located under `semantic.*`, containing context-specific token groupings.
 Located under `surface.*`, these combine fills, shadows, and accents for specific elevation levels. These are reference tokens that tie together all three aspects of an elevation level.
 
 - **`surface.undercanvas.*`** → Hidden/background content (Z-index: -1)
-  - `fill`, `shadow`
+  - `fill`, `shadow`, `accent-strong`, `accent-subtle`
 - **`surface.canvas.*`** → Base/default level (Z-index: 0)
-  - `fill`, `shadow`
+  - `fill`, `shadow`, `accent-strong`, `accent-subtle`
 - **`surface.level-1.*`** → Cards, floating sections (Z-index: 1–100)
   - `fill`, `shadow`, `accent-strong`, `accent-subtle`
 - **`surface.level-2.*`** → Dropdowns, tooltips (Z-index: 100–500)
@@ -120,7 +168,9 @@ Located under `surface.*`, these combine fills, shadows, and accents for specifi
 ```json
 {
   "surface.level-1.fill": "{semantic.surface.fill.elevation-1}",
-  "surface.level-1.shadow": "{styles.shadow.elevation-1}"
+  "surface.level-1.shadow": "{styles.shadow.elevation-1}",
+  "surface.level-1.accent-strong": "{semantic.surface.accent.strong}",
+  "surface.level-1.accent-subtle": "{semantic.surface.accent.subtle}"
 }
 ```
 

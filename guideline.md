@@ -277,6 +277,44 @@ body {
 - Inverse level is reserved for dark mode and special high-contrast scenarios
 - Each level maintains a 1:1 mapping for future dark mode support (all surfaces stay white except inverse and undercanvas)
 
+**Surface Accents:**
+Each elevation level (canvas, undercanvas, and levels 1–4) includes two accent color options for highlighting and emphasis:
+
+- **accent-strong** (brand pink): Use for primary emphasis, interactive highlights, call-to-action areas
+- **accent-subtle** (tinted pink): Use for secondary emphasis, background accents, dividers
+
+```css
+/* Card with strong accent border */
+.card-featured {
+  background-color: var(--surface-level-1-fill);
+  border-left: 4px solid var(--surface-level-1-accent-strong);
+  box-shadow: var(--shadow-elevation-1);
+}
+
+/* Highlighted section with subtle accent background */
+.highlight-section {
+  background-color: var(--surface-level-1-accent-subtle);
+  border-left: 4px solid var(--surface-level-1-accent-strong);
+  padding: 16px;
+}
+
+/* Dropdown with accent indicator */
+.dropdown-active {
+  background-color: var(--surface-level-2-fill);
+  border-bottom: 2px solid var(--surface-level-2-accent-strong);
+  box-shadow: var(--shadow-elevation-2);
+}
+```
+
+**For Figma Make:**
+When generating code, apply these accent rules:
+- Featured/highlighted cards: add `border-left: 4px solid var(--surface-{level}-accent-strong)`
+- Highlighted sections: use `background-color: var(--surface-{level}-accent-subtle)` with strong accent border
+- Active/selected states: add bottom or side border using accent-strong
+- Background highlights: use accent-subtle at reduced opacity (20–30%) for subtle emphasis
+
+**For Dark Mode:** Accents maintain consistent colors across light and dark modes. The accent definitions remain the same, only the surface fills change when switching theme.
+
 **For Figma Make:**
 When generating code, apply these rules:
 - Dropdowns, popovers, tooltips: use Level 2 (--surface-level-2-fill + --shadow-elevation-2)
