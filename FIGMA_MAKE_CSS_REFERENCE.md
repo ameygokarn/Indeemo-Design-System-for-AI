@@ -1,0 +1,246 @@
+# Figma Make Global CSS - Quick Reference
+
+**Copy this entire `:root { ... }` block into Figma Make's global styles section.**
+
+```css
+/* ============================================
+ * Figma Make Global CSS Variables
+ * Auto-generated from tokens.json
+ * Last updated: 2025-11-24T13:27:55.403Z
+ * ============================================ */
+
+:root {
+  /* Brand Colors */
+  --color-black: #000000;
+  --color-cream: #fffdf2;
+  --color-dark-blue: #2e3059;
+  --color-green: #2B5926;
+  --color-orange: #ff6b14;
+  --color-pink: #da095e;
+  --color-purple: #8b006e;
+  --color-red: #ff2734;
+  --color-white: #ffffff;
+
+  /* Color Ramps - Use these for all color variations */
+  
+  /* Dark Blue Ramp (Info/Secondary) */
+  --color-ramp-dark-blue-100: hsl(237, 31%, 98%);
+  --color-ramp-dark-blue-150: hsl(237, 31%, 94%);
+  --color-ramp-dark-blue-200: hsl(237, 31%, 89%);
+  --color-ramp-dark-blue-300: hsl(237, 31%, 80%);
+  --color-ramp-dark-blue-400: hsl(237, 31%, 72%);
+  --color-ramp-dark-blue-500: hsl(237, 31%, 63%);
+  --color-ramp-dark-blue-600: hsl(237, 31%, 54%);
+  --color-ramp-dark-blue-650: hsl(237, 31%, 50%);
+  --color-ramp-dark-blue-700: #2e3059;
+  --color-ramp-dark-blue-750: hsl(237, 31%, 41%);
+  --color-ramp-dark-blue-800: hsl(237, 31%, 36%);
+  --color-ramp-dark-blue-850: hsl(237, 31%, 32%);
+  --color-ramp-dark-blue-900: hsl(237, 31%, 28%);
+  --color-ramp-dark-blue-950: hsl(237, 31%, 23%);
+  --color-ramp-dark-blue-1000: hsl(237, 31%, 19%);
+  --color-ramp-dark-blue-1050: hsl(237, 31%, 14%);
+
+  /* Green Ramp (Success) */
+  --color-ramp-green-100: hsl(120, 40%, 98%);
+  --color-ramp-green-150: hsl(120, 40%, 94%);
+  --color-ramp-green-200: hsl(120, 40%, 89%);
+  --color-ramp-green-300: hsl(120, 40%, 80%);
+  --color-ramp-green-400: hsl(120, 40%, 72%);
+  --color-ramp-green-450: hsl(120, 45%, 67%);
+  --color-ramp-green-500: hsl(120, 45%, 63%);
+  --color-ramp-green-550: hsl(120, 45%, 58%);
+  --color-ramp-green-600: hsl(120, 50%, 54%);
+  --color-ramp-green-650: hsl(120, 50%, 50%);
+  --color-ramp-green-700: hsl(120, 55%, 42%);
+  --color-ramp-green-750: #2B5926;
+  --color-ramp-green-800: hsl(120, 55%, 32%);
+  --color-ramp-green-850: hsl(120, 60%, 27%);
+  --color-ramp-green-900: hsl(120, 60%, 22%);
+  --color-ramp-green-950: hsl(120, 60%, 17%);
+  --color-ramp-green-1000: hsl(120, 65%, 12%);
+  --color-ramp-green-1050: hsl(120, 65%, 7%);
+
+  /* Neutral Ramp (Base neutrals) */
+  --color-ramp-neutral-100: #ffffff;
+  --color-ramp-neutral-150: hsl(0, 0%, 95%);
+  --color-ramp-neutral-200: hsl(0, 0%, 89%);
+  --color-ramp-neutral-250: hsl(0, 0%, 84%);
+  --color-ramp-neutral-300: hsl(0, 0%, 79%);
+  --color-ramp-neutral-350: hsl(0, 0%, 74%);
+  --color-ramp-neutral-400: hsl(0, 0%, 68%);
+  --color-ramp-neutral-450: hsl(0, 0%, 63%);
+  --color-ramp-neutral-500: hsl(0, 0%, 58%);
+  --color-ramp-neutral-550: hsl(0, 0%, 53%);
+  --color-ramp-neutral-600: hsl(0, 0%, 47%);
+  --color-ramp-neutral-650: hsl(0, 0%, 42%);
+  --color-ramp-neutral-700: hsl(0, 0%, 37%);
+  --color-ramp-neutral-750: hsl(0, 0%, 32%);
+  --color-ramp-neutral-800: hsl(0, 0%, 26%);
+  --color-ramp-neutral-850: hsl(0, 0%, 21%);
+  --color-ramp-neutral-900: hsl(0, 0%, 16%);
+  --color-ramp-neutral-950: hsl(0, 0%, 11%);
+  --color-ramp-neutral-1000: hsl(0, 0%, 5%);
+  --color-ramp-neutral-1050: hsl(0, 0%, 0%);
+
+  /* Orange Ramp (Warning) */
+  --color-ramp-orange-100: hsl(22, 100%, 98%);
+  --color-ramp-orange-150: hsl(22, 100%, 94%);
+  --color-ramp-orange-200: hsl(22, 100%, 89%);
+  --color-ramp-orange-300: hsl(22, 100%, 80%);
+  --color-ramp-orange-400: hsl(22, 100%, 72%);
+  --color-ramp-orange-450: hsl(22, 100%, 67%);
+  --color-ramp-orange-500: hsl(22, 100%, 63%);
+  --color-ramp-orange-550: hsl(22, 100%, 58%);
+  --color-ramp-orange-600: hsl(22, 100%, 54%);
+  --color-ramp-orange-650: #ff6b14;
+  --color-ramp-orange-700: hsl(22, 100%, 45%);
+  --color-ramp-orange-750: hsl(22, 100%, 41%);
+  --color-ramp-orange-800: hsl(22, 100%, 36%);
+  --color-ramp-orange-850: hsl(22, 100%, 32%);
+  --color-ramp-orange-900: hsl(22, 100%, 28%);
+  --color-ramp-orange-950: hsl(22, 100%, 23%);
+  --color-ramp-orange-1000: hsl(22, 100%, 19%);
+  --color-ramp-orange-1050: hsl(22, 100%, 14%);
+
+  /* Pink Ramp (Accent/Primary) */
+  --color-ramp-pink-100: hsl(335, 92%, 98%);
+  --color-ramp-pink-150: hsl(335, 92%, 94%);
+  --color-ramp-pink-200: hsl(335, 92%, 89%);
+  --color-ramp-pink-300: hsl(335, 92%, 80%);
+  --color-ramp-pink-350: hsl(335, 92%, 76%);
+  --color-ramp-pink-400: hsl(335, 92%, 72%);
+  --color-ramp-pink-450: hsl(335, 92%, 67%);
+  --color-ramp-pink-500: hsl(335, 92%, 63%);
+  --color-ramp-pink-550: hsl(335, 92%, 58%);
+  --color-ramp-pink-600: hsl(335, 92%, 54%);
+  --color-ramp-pink-650: #da095e;
+  --color-ramp-pink-700: hsl(335, 92%, 45%);
+  --color-ramp-pink-750: hsl(335, 92%, 41%);
+  --color-ramp-pink-800: hsl(335, 92%, 36%);
+  --color-ramp-pink-850: hsl(335, 92%, 32%);
+  --color-ramp-pink-900: hsl(335, 92%, 28%);
+  --color-ramp-pink-950: hsl(335, 92%, 23%);
+  --color-ramp-pink-1000: hsl(335, 92%, 19%);
+  --color-ramp-pink-1050: hsl(335, 92%, 14%);
+
+  /* Purple Ramp (Interactive/Secondary) */
+  --color-ramp-purple-100: hsl(312, 100%, 98%);
+  --color-ramp-purple-150: hsl(312, 100%, 94%);
+  --color-ramp-purple-200: hsl(312, 100%, 89%);
+  --color-ramp-purple-300: hsl(312, 100%, 80%);
+  --color-ramp-purple-350: hsl(312, 100%, 76%);
+  --color-ramp-purple-400: hsl(312, 100%, 72%);
+  --color-ramp-purple-450: hsl(312, 100%, 67%);
+  --color-ramp-purple-500: hsl(312, 100%, 63%);
+  --color-ramp-purple-550: hsl(312, 100%, 58%);
+  --color-ramp-purple-600: hsl(312, 100%, 54%);
+  --color-ramp-purple-650: #8b006e;
+  --color-ramp-purple-700: hsl(312, 100%, 45%);
+  --color-ramp-purple-750: hsl(312, 100%, 41%);
+  --color-ramp-purple-800: hsl(312, 100%, 36%);
+  --color-ramp-purple-850: hsl(312, 100%, 32%);
+  --color-ramp-purple-900: hsl(312, 100%, 28%);
+  --color-ramp-purple-950: hsl(312, 100%, 23%);
+  --color-ramp-purple-1000: hsl(312, 100%, 19%);
+  --color-ramp-purple-1050: hsl(312, 100%, 14%);
+
+  /* Red Ramp (Error) */
+  --color-ramp-red-100: hsl(356, 100%, 98%);
+  --color-ramp-red-150: hsl(356, 100%, 94%);
+  --color-ramp-red-200: hsl(356, 100%, 89%);
+  --color-ramp-red-250: hsl(356, 100%, 85%);
+  --color-ramp-red-300: hsl(356, 100%, 80%);
+  --color-ramp-red-350: hsl(356, 100%, 76%);
+  --color-ramp-red-400: hsl(356, 100%, 72%);
+  --color-ramp-red-450: hsl(356, 100%, 67%);
+  --color-ramp-red-500: hsl(356, 100%, 63%);
+  --color-ramp-red-550: hsl(356, 100%, 58%);
+  --color-ramp-red-600: hsl(356, 100%, 54%);
+  --color-ramp-red-650: #ff2734;
+  --color-ramp-red-700: hsl(356, 100%, 45%);
+  --color-ramp-red-750: hsl(356, 100%, 41%);
+  --color-ramp-red-800: hsl(356, 100%, 36%);
+  --color-ramp-red-850: hsl(356, 100%, 32%);
+  --color-ramp-red-900: hsl(356, 100%, 28%);
+  --color-ramp-red-950: hsl(356, 100%, 23%);
+  --color-ramp-red-1000: hsl(356, 100%, 19%);
+  --color-ramp-red-1050: hsl(356, 100%, 14%);
+
+  /* Semantic Colors - Use these for component design */
+  --semantic-border-elevation-level-2-primary: {color.ramp.neutral.300};
+  --semantic-elevation-level-0: {color.brand.white};
+  --semantic-elevation-level-1: {color.brand.white};
+  --semantic-elevation-level-2: {color.brand.white};
+  --semantic-elevation-level-3: {color.brand.white};
+  --semantic-elevation-level-4: {color.brand.white};
+  --semantic-elevation-level-inverse: {color.brand.black};
+  --semantic-elevation-level-negative-1: {color.brand.cream};
+  --semantic-feedback-error-border: {color.ramp.red.900};
+  --semantic-feedback-error-fill: {color.ramp.red.100};
+  --semantic-feedback-error-icon: {color.ramp.red.900};
+  --semantic-feedback-error-text: {color.ramp.red.900};
+  --semantic-feedback-info-border: {color.ramp.dark-blue.900};
+  --semantic-feedback-info-fill: {color.ramp.dark-blue.100};
+  --semantic-feedback-info-icon: {color.ramp.dark-blue.900};
+  --semantic-feedback-info-text: {color.ramp.dark-blue.900};
+  --semantic-feedback-success-border: {color.brand.green};
+  --semantic-feedback-success-fill: {color.ramp.green.100};
+  --semantic-feedback-success-icon: {color.brand.green};
+  --semantic-feedback-success-text: {color.brand.green};
+  --semantic-feedback-warning-border: {color.ramp.orange.900};
+  --semantic-feedback-warning-fill: {color.ramp.orange.100};
+  --semantic-feedback-warning-icon: {color.ramp.orange.900};
+  --semantic-feedback-warning-text: {color.ramp.orange.900};
+  --semantic-interactive-link-default: {color.ramp.purple.850};
+  --semantic-interactive-link-hover: {color.ramp.purple.750};
+  --semantic-interactive-link-visited: {color.ramp.purple.700};
+  --semantic-interactive-primary-fill-default: {color.brand.pink};
+  --semantic-interactive-primary-fill-hover: {color.ramp.pink.750};
+  --semantic-interactive-primary-fill-pressed: {color.ramp.pink.850};
+  --semantic-interactive-primary-icon-default: {interactive.primary.text.default};
+  --semantic-interactive-primary-icon-hover: {interactive.primary.text.hover};
+  --semantic-interactive-primary-icon-pressed: {interactive.primary.text.pressed};
+  --semantic-interactive-primary-text-default: {color.brand.white};
+  --semantic-interactive-primary-text-hover: {color.ramp.neutral.200};
+  --semantic-interactive-primary-text-pressed: {color.ramp.neutral.250};
+  --semantic-interactive-secondary-border-default: {color.brand.purple};
+  --semantic-interactive-secondary-border-hover: {color.ramp.purple.750};
+  --semantic-interactive-secondary-border-pressed: {color.ramp.purple.850};
+  --semantic-interactive-secondary-fill-default: {color.brand.white};
+  --semantic-interactive-secondary-fill-hover: {color.ramp.neutral.150};
+  --semantic-interactive-secondary-fill-pressed: {color.ramp.neutral.200};
+  --semantic-interactive-secondary-icon-default: {interactive.secondary.text.default};
+  --semantic-interactive-secondary-icon-hover: {interactive.secondary.text.hover};
+  --semantic-interactive-secondary-icon-pressed: {interactive.secondary.text.pressed};
+  --semantic-interactive-secondary-text-default: {color.brand.black};
+  --semantic-interactive-secondary-text-hover: {color.brand.black};
+  --semantic-interactive-secondary-text-pressed: {color.brand.black};
+  --semantic-surface-accent-strong: {color.brand.pink};
+  --semantic-surface-accent-subtle: {color.ramp.pink.100};
+  --semantic-surface-canvas: {elevation.level-0};
+  --semantic-surface-inverse: {elevation.level-inverse};
+  --semantic-surface-level-1: {elevation.level-1};
+  --semantic-surface-level-2: {elevation.level-2};
+  --semantic-surface-level-3: {elevation.level-3};
+  --semantic-surface-level-4: {elevation.level-4};
+  --semantic-surface-undercanvas: {elevation.level-negative-1};
+}
+```
+
+## Usage Notes
+
+- **All 206 variables** are now available in Figma Make's code generation
+- **New Ramp Order:** Variables group semantically (neutral, pink, purple, dark-blue, red, orange, green)
+- **Base Colors:** Direct hex values at specific shades: neutral-100, dark-blue-700, pink-650, etc.
+- **No Grey:** All grey references removed; use `--color-ramp-neutral-300` for subtle borders
+- **Semantic Tokens:** Use these for component design (e.g., `var(--semantic-interactive-primary-fill-default)`)
+
+## Auto-Generation
+
+This file is **auto-generated**. To update:
+```bash
+npm run generate-css
+```
+
+After updating `tokens.json`, the CSS will always be in sync.
