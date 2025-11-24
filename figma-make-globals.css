@@ -1,7 +1,7 @@
 /* ============================================
  * Figma Make Global CSS Variables
  * Auto-generated from tokens.json
- * Last updated: 2025-11-24T14:36:24.272Z
+ * Last updated: 2025-11-24T14:43:13.289Z
  * ============================================ */
 
 :root {
@@ -181,9 +181,9 @@
 
   /* Semantic Tokens */
   --semantic-border-elevation-primary: hsl(0, 0%, 79%);
-  --semantic-disabled-a: hsl(0, 0%, 63%);
-  --semantic-disabled-b: hsl(0, 0%, 53%);
-  --semantic-disabled-c: hsl(0, 0%, 37%);
+  --semantic-disabled-a: hsl(0, 0%, 84%);
+  --semantic-disabled-b: hsl(0, 0%, 74%);
+  --semantic-disabled-c: hsl(0, 0%, 63%);
   --semantic-elevation-level-0: #ffffff;
   --semantic-elevation-level-1: #ffffff;
   --semantic-elevation-level-2: #ffffff;
