@@ -52,8 +52,8 @@ Always use these token categories in generated code:
 
 **Level 2:**
 - Use for dropdowns, popovers, tooltips, and context menus
-- Add border for subtle visual separation: `border: 1px solid var(--border-elevation-level-2-primary)`
-- `background-color: var(--surface-level-2); box-shadow: var(--shadow-elevation-2); border: 1px solid var(--border-elevation-level-2-primary)`
+- Add border for subtle visual separation: `border: 1px solid var(--semantic-border-elevation-primary)`
+- `background-color: var(--surface-level-2); box-shadow: var(--shadow-elevation-2); border: 1px solid var(--semantic-border-elevation-primary)`
 
 **Level 3:**
 - Use for sticky headers and persistent navigation
@@ -342,7 +342,7 @@ Use Level 2 surface for floating menus:
 ```css
 background-color: var(--surface-level-2);
 box-shadow: var(--shadow-elevation-2);
-border: 1px solid var(--border-elevation-level-2-primary);
+border: 1px solid var(--semantic-border-elevation-primary);
 z-index: 200;
 ```
 
