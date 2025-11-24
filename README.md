@@ -8,7 +8,7 @@ This repository contains materials, guidelines, and artifacts for creating an AI
 - `guideline.md`: Figma + Make guidelines, workflows, and resources for building design-system assets.
 - `styleguide.md`: Prompt and style guidance for interacting with the assistant and generating consistent outputs.
 - `QUICKSTART.md`: Quick start guide for syncing design tokens to Figma via the REST API.
-- `docs/figma-api-workflow.md`: Complete documentation for the Figma Variables API workflow.
+- `docs/TOKENS-README.md`: Central documentation for tokens (colors, typography, scales, and usage).
 - `tokens/`: JSON files defining design tokens (colors, spacing, typography).
 - `src/figma_variables_bridge.js`: MCP bridge server for syncing tokens to Figma.
 

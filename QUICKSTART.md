@@ -131,7 +131,7 @@ Expected response:
 
 ## 📖 Full Documentation
 
-See `docs/figma-api-workflow.md` for:
+See `docs/TOKENS-README.md` for:
 - Complete API reference
 - Variable types and formats
 - Troubleshooting guide
