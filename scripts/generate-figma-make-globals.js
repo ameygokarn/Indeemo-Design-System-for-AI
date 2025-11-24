@@ -79,6 +79,79 @@ try {
     }
   }
 
+  // Helper function to resolve token references recursively
+  const resolveTokenValue = (value, depth = 0, visitedRefs = new Set()) => {
+    if (depth > 10) return value; // Prevent infinite loops
+    
+    // Check if value is a token reference like {color.brand.pink} or {elevation.level-0}
+    if (typeof value === 'string' && value.startsWith('{') && value.endsWith('}')) {
+      const refPath = value.slice(1, -1);
+      
+      // Check for circular references
+      if (visitedRefs.has(refPath)) {
+        return value;
+      }
+      visitedRefs.add(refPath);
+      
+      const parts = refPath.split('.');
+      
+      // Try to resolve using brand.color path
+      if (parts[0] === 'color') {
+        let resolved = tokens.brand.color;
+        for (let i = 1; i < parts.length; i++) {
+          if (resolved && typeof resolved === 'object') {
+            resolved = resolved[parts[i]];
+          } else {
+            break;
+          }
+        }
+        if (resolved && typeof resolved === 'object' && resolved.value) {
+          return resolveTokenValue(resolved.value, depth + 1, visitedRefs);
+        }
+        if (typeof resolved === 'string' && resolved.startsWith('#')) {
+          return resolved;
+        }
+      }
+      
+      // Try to resolve using styles path (for elevation, etc.)
+      if (parts[0] === 'elevation' || parts[0] === 'feedback' || parts[0] === 'interactive') {
+        let resolved = tokens.styles;
+        for (let part of parts) {
+          if (resolved && typeof resolved === 'object') {
+            resolved = resolved[part];
+          } else {
+            break;
+          }
+        }
+        if (resolved && typeof resolved === 'object' && resolved.value) {
+          return resolveTokenValue(resolved.value, depth + 1, visitedRefs);
+        }
+        if (typeof resolved === 'string' && (resolved.startsWith('#') || resolved.startsWith('hsl'))) {
+          return resolved;
+        }
+      }
+      
+      // Try to resolve using semantic path (for icon and surface references)
+      if (parts[0] === 'interactive' || parts[0] === 'feedback' || parts[0] === 'elevation') {
+        let resolved = tokens.semantic;
+        for (let part of parts) {
+          if (resolved && typeof resolved === 'object') {
+            resolved = resolved[part];
+          } else {
+            break;
+          }
+        }
+        if (resolved && typeof resolved === 'object' && resolved.value) {
+          return resolveTokenValue(resolved.value, depth + 1, visitedRefs);
+        }
+      }
+      
+      return value; // Reference not found, return as-is
+    }
+    
+    return value;
+  };
+
   // Process semantic tokens
   const semanticVars = [];
   const processSemantic = (obj, categoryPath = []) => {
@@ -91,11 +164,12 @@ try {
         const fullPath = pathParts.length > 0 ? `${pathParts.join('-')}-${key}` : key;
 
         if (typeof current[key] === 'object' && current[key].value !== undefined) {
-          // It's a token with a value
+          // It's a token with a value - resolve references
           const varName = `--semantic-${[...categoryPath, fullPath].join('-')}`.toLowerCase().replace(/[^a-z0-9-]/g, '-');
+          const resolvedValue = resolveTokenValue(current[key].value);
           vars.push({
             name: varName,
-            value: current[key].value,
+            value: resolvedValue,
             category: 'semantic'
           });
         } else if (typeof current[key] === 'object' && current[key].value === undefined) {

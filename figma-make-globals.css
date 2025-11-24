@@ -1,7 +1,7 @@
 /* ============================================
  * Figma Make Global CSS Variables
  * Auto-generated from tokens.json
- * Last updated: 2025-11-24T13:58:01.731Z
+ * Last updated: 2025-11-24T14:06:14.162Z
  * ============================================ */
 
 :root {
@@ -180,62 +180,62 @@
   --color-ramp-yellow-950: hsl(46, 100%, 23%);
 
   /* Semantic Tokens */
-  --semantic-border-elevation-primary: {color.ramp.neutral.300};
-  --semantic-elevation-level-0: {color.brand.white};
-  --semantic-elevation-level-1: {color.brand.white};
-  --semantic-elevation-level-2: {color.brand.white};
-  --semantic-elevation-level-3: {color.brand.white};
-  --semantic-elevation-level-4: {color.brand.white};
-  --semantic-elevation-level-inverse: {color.brand.black};
-  --semantic-elevation-level-negative-1: {color.brand.cream};
-  --semantic-feedback-error-border: {color.ramp.red.950};
-  --semantic-feedback-error-fill: {color.ramp.red.100};
-  --semantic-feedback-error-icon: {feedback.error.text};
-  --semantic-feedback-error-text: {color.ramp.red.800};
-  --semantic-feedback-info-border: {color.ramp.dark-blue.950};
-  --semantic-feedback-info-fill: {color.ramp.dark-blue.100};
-  --semantic-feedback-info-icon: {feedback.info.text};
-  --semantic-feedback-info-text: {color.ramp.dark-blue.800};
-  --semantic-feedback-success-border: {color.ramp.green.950};
-  --semantic-feedback-success-fill: {color.ramp.green.100};
-  --semantic-feedback-success-icon: {feedback.success.text};
-  --semantic-feedback-success-text: {color.ramp.green.800};
-  --semantic-feedback-warning-border: {color.ramp.orange.950};
-  --semantic-feedback-warning-fill: {color.ramp.yellow.100};
-  --semantic-feedback-warning-icon: {feedback.warning.text};
-  --semantic-feedback-warning-text: {color.ramp.orange.800};
-  --semantic-interactive-link-default: {color.ramp.purple.850};
-  --semantic-interactive-link-hover: {color.ramp.purple.750};
-  --semantic-interactive-link-visited: {color.ramp.purple.700};
-  --semantic-interactive-primary-fill-default: {color.brand.pink};
-  --semantic-interactive-primary-fill-hover: {color.ramp.pink.750};
-  --semantic-interactive-primary-fill-pressed: {color.ramp.pink.850};
-  --semantic-interactive-primary-icon-default: {interactive.primary.text.default};
-  --semantic-interactive-primary-icon-hover: {interactive.primary.text.hover};
-  --semantic-interactive-primary-icon-pressed: {interactive.primary.text.pressed};
-  --semantic-interactive-primary-text-default: {color.brand.white};
-  --semantic-interactive-primary-text-hover: {color.ramp.neutral.200};
-  --semantic-interactive-primary-text-pressed: {color.ramp.neutral.250};
-  --semantic-interactive-secondary-border-default: {color.brand.purple};
-  --semantic-interactive-secondary-border-hover: {color.ramp.purple.750};
-  --semantic-interactive-secondary-border-pressed: {color.ramp.purple.850};
-  --semantic-interactive-secondary-fill-default: {color.brand.white};
-  --semantic-interactive-secondary-fill-hover: {color.ramp.neutral.150};
-  --semantic-interactive-secondary-fill-pressed: {color.ramp.neutral.200};
-  --semantic-interactive-secondary-icon-default: {interactive.secondary.text.default};
-  --semantic-interactive-secondary-icon-hover: {interactive.secondary.text.hover};
-  --semantic-interactive-secondary-icon-pressed: {interactive.secondary.text.pressed};
-  --semantic-interactive-secondary-text-default: {color.brand.black};
-  --semantic-interactive-secondary-text-hover: {color.brand.black};
-  --semantic-interactive-secondary-text-pressed: {color.brand.black};
-  --semantic-surface-accent-strong: {color.brand.pink};
-  --semantic-surface-accent-subtle: {color.ramp.pink.100};
-  --semantic-surface-canvas: {elevation.level-0};
-  --semantic-surface-inverse: {elevation.level-inverse};
-  --semantic-surface-level-1: {elevation.level-1};
-  --semantic-surface-level-2: {elevation.level-2};
-  --semantic-surface-level-3: {elevation.level-3};
-  --semantic-surface-level-4: {elevation.level-4};
-  --semantic-surface-undercanvas: {elevation.level-negative-1};
+  --semantic-border-elevation-primary: hsl(0, 0%, 79%);
+  --semantic-elevation-level-0: #ffffff;
+  --semantic-elevation-level-1: #ffffff;
+  --semantic-elevation-level-2: #ffffff;
+  --semantic-elevation-level-3: #ffffff;
+  --semantic-elevation-level-4: #ffffff;
+  --semantic-elevation-level-inverse: #000000;
+  --semantic-elevation-level-negative-1: #fffdf2;
+  --semantic-feedback-error-border: hsl(356, 100%, 23%);
+  --semantic-feedback-error-fill: hsl(356, 100%, 98%);
+  --semantic-feedback-error-icon: hsl(356, 100%, 36%);
+  --semantic-feedback-error-text: hsl(356, 100%, 36%);
+  --semantic-feedback-info-border: hsl(237, 31%, 23%);
+  --semantic-feedback-info-fill: hsl(237, 31%, 98%);
+  --semantic-feedback-info-icon: hsl(237, 31%, 36%);
+  --semantic-feedback-info-text: hsl(237, 31%, 36%);
+  --semantic-feedback-success-border: hsl(120, 60%, 17%);
+  --semantic-feedback-success-fill: hsl(120, 40%, 98%);
+  --semantic-feedback-success-icon: hsl(120, 55%, 32%);
+  --semantic-feedback-success-text: hsl(120, 55%, 32%);
+  --semantic-feedback-warning-border: hsl(22, 100%, 23%);
+  --semantic-feedback-warning-fill: hsl(46, 100%, 98%);
+  --semantic-feedback-warning-icon: hsl(22, 100%, 36%);
+  --semantic-feedback-warning-text: hsl(22, 100%, 36%);
+  --semantic-interactive-link-default: hsl(312, 100%, 32%);
+  --semantic-interactive-link-hover: hsl(312, 100%, 41%);
+  --semantic-interactive-link-visited: hsl(312, 100%, 45%);
+  --semantic-interactive-primary-fill-default: #da095e;
+  --semantic-interactive-primary-fill-hover: hsl(335, 92%, 41%);
+  --semantic-interactive-primary-fill-pressed: hsl(335, 92%, 32%);
+  --semantic-interactive-primary-icon-default: #ffffff;
+  --semantic-interactive-primary-icon-hover: hsl(0, 0%, 89%);
+  --semantic-interactive-primary-icon-pressed: hsl(0, 0%, 84%);
+  --semantic-interactive-primary-text-default: #ffffff;
+  --semantic-interactive-primary-text-hover: hsl(0, 0%, 89%);
+  --semantic-interactive-primary-text-pressed: hsl(0, 0%, 84%);
+  --semantic-interactive-secondary-border-default: #8b006e;
+  --semantic-interactive-secondary-border-hover: hsl(312, 100%, 41%);
+  --semantic-interactive-secondary-border-pressed: hsl(312, 100%, 32%);
+  --semantic-interactive-secondary-fill-default: #ffffff;
+  --semantic-interactive-secondary-fill-hover: hsl(0, 0%, 95%);
+  --semantic-interactive-secondary-fill-pressed: hsl(0, 0%, 89%);
+  --semantic-interactive-secondary-icon-default: #000000;
+  --semantic-interactive-secondary-icon-hover: #000000;
+  --semantic-interactive-secondary-icon-pressed: #000000;
+  --semantic-interactive-secondary-text-default: #000000;
+  --semantic-interactive-secondary-text-hover: #000000;
+  --semantic-interactive-secondary-text-pressed: #000000;
+  --semantic-surface-accent-strong: #da095e;
+  --semantic-surface-accent-subtle: hsl(335, 92%, 98%);
+  --semantic-surface-canvas: #ffffff;
+  --semantic-surface-inverse: #000000;
+  --semantic-surface-level-1: #ffffff;
+  --semantic-surface-level-2: #ffffff;
+  --semantic-surface-level-3: #ffffff;
+  --semantic-surface-level-4: #ffffff;
+  --semantic-surface-undercanvas: #fffdf2;
 
 }
