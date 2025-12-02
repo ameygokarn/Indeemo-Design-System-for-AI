@@ -207,9 +207,7 @@
   --semantic-feedback-warning-fill: hsl(46, 100%, 98%);
   --semantic-feedback-warning-icon: hsl(22, 100%, 36%);
   --semantic-feedback-warning-text: hsl(22, 100%, 36%);
-  --semantic-interactive-link-default: hsl(312, 100%, 32%);
-  --semantic-interactive-link-hover: hsl(312, 100%, 41%);
-  --semantic-interactive-link-visited: hsl(312, 100%, 45%);
+  --semantic-interactive-link: hsl(312, 100%, 32%);
   --semantic-interactive-primary-fill-default: #da095e;
   --semantic-interactive-primary-fill-hover: hsl(335, 92%, 41%);
   --semantic-interactive-primary-fill-pressed: hsl(335, 92%, 32%);
@@ -240,5 +238,41 @@
   --semantic-surface-level-3: #ffffff;
   --semantic-surface-level-4: #ffffff;
   --semantic-surface-undercanvas: #fffdf2;
+
+  /* Text Styles - Link */
+  --text-link-small-font-size: 14px;
+  --text-link-small-line-height: 16px;
+  --text-link-small-font-weight: 400;
+  --text-link-small-text-decoration: underline;
+  --text-link-medium-font-size: 16px;
+  --text-link-medium-line-height: 20px;
+  --text-link-medium-font-weight: 400;
+  --text-link-medium-text-decoration: underline;
+  --text-link-large-font-size: 18px;
+  --text-link-large-line-height: 22px;
+  --text-link-large-font-weight: 400;
+  --text-link-large-text-decoration: underline;
+
+  /* Text Styles - Body */
+  --text-body-small-font-size: 14px;
+  --text-body-small-line-height: 16px;
+  --text-body-small-font-weight: 400;
+  --text-body-medium-font-size: 16px;
+  --text-body-medium-line-height: 20px;
+  --text-body-medium-font-weight: 400;
+  --text-body-large-font-size: 18px;
+  --text-body-large-line-height: 22px;
+  --text-body-large-font-weight: 400;
+
+  /* Text Styles - Label */
+  --text-label-small-font-size: 14px;
+  --text-label-small-line-height: 16px;
+  --text-label-small-font-weight: 700;
+  --text-label-medium-font-size: 16px;
+  --text-label-medium-line-height: 16px;
+  --text-label-medium-font-weight: 700;
+  --text-label-large-font-size: 18px;
+  --text-label-large-line-height: 16px;
+  --text-label-large-font-weight: 700;
 
 }
