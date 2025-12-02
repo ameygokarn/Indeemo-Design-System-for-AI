@@ -131,11 +131,15 @@ Generate using semantic styles, not raw font values:
 - **Body-Emphasis.Large:** 18px Bold, 1.6 line-height — Emphasized paragraphs, strong text
 - **Body-Emphasis.Medium:** 16px Bold, 1.6 line-height — Feature callouts, highlights
 - **Body-Emphasis.Small:** 14px Bold, 1.6 line-height — Bold labels, badges
-- **Label.Large:** 18px Bold, 1.4 line-height — Form labels, large UI labels
-- **Label.Medium:** 16px Bold, 1.4 line-height — Button text, standard UI labels
-- **Label.Small:** 14px Bold, 1.2 line-height — Small UI labels, icon labels
+- **Label.Large:** 18px Bold, tight line-height (16px) — Form labels, large UI labels
+- **Label.Medium:** 16px Bold, tight line-height (16px) — Button text, standard UI labels
+- **Label.Small:** 14px Bold, tight line-height (16px) — Small UI labels, icon labels
+- **Link.Large:** 18px Regular with underline, 22px line-height — Large hyperlinks
+- **Link.Medium:** 16px Regular with underline, 20px line-height — Standard hyperlinks (most common)
+- **Link.Small:** 14px Regular with underline, 16px line-height — Small hyperlinks
 - **Caption:** 12px Regular, 1.2 line-height — Metadata, timestamps, breadcrumbs, hints
-- **Link:** Apply `text-decoration: underline` to links; use interactive color tokens for color
+
+**Important:** Link text styles align with body text sizes (14/16/18px) and always include `text-decoration: underline`. Use `var(--semantic-interactive-link)` for link color.
 
 ---
 
@@ -168,12 +172,14 @@ Generate using semantic styles, not raw font values:
 
 **Best Practice:** Pair secondary buttons with primary buttons for supporting actions.
 
-#### Link Button
-- **Color:** `var(--interactive-link-default)` (purple)
-- **Hover:** `var(--interactive-link-hover)` (darker purple)
-- **Visited:** `var(--interactive-link-visited)` (visited purple)
-- **Decoration:** `text-decoration: underline`
+#### Link Text
+- **Color:** `var(--semantic-interactive-link)` (purple)
+- **Decoration:** `text-decoration: underline` (always)
+- **Sizes:** Small (14px), Medium (16px), Large (18px)
+- **Font weight:** Regular (400)
 - **Use:** Hyperlinks, text-based navigation
+
+**Best Practice:** Links no longer have separate hover/visited color states. Use underline decoration and consistent purple color for all link states. Size should match the surrounding body text.
 
 ### Forms
 
