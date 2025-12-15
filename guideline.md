@@ -75,11 +75,34 @@ Every token update must include:
 
 ## Part 2: Token Structure Overview
 
-### Three Core Sets
+### Core Token Sets
 
-1. **`brand`** — Foundational colors (brand palette and color ramps with WCAG contrast data)
+1. **`brand`** — Foundational colors, spacing, grids, and modifiers (base design system values)
 2. **`semantic`** — Semantic tokens organized by context (surface fills, interactive states, feedback colors)
-3. **`styles`** — Exportable styles and effects (typography, shadows). Only place where anything is exported as a style/effect in Token Studio.
+3. **`styles`** — Exportable styles and effects (typography, shadows, links). Only place where anything is exported as a style/effect in Token Studio.
+4. **`viewport/large`** — Grid tokens for large viewports (1440px)
+5. **`viewport/xlarge`** — Grid tokens for extra-large viewports (1024px)
+
+### Grid System
+
+The grid system is defined in viewport-specific sets:
+
+- `viewport/large`: For large viewports (1440px) with 12 columns, 32px margin, 20px gutter
+- `viewport/xlarge`: For extra-large viewports (1024px) with 12 columns, 24px margin, 16px gutter
+
+These sets are used by Token Studio to create responsive grid variables.
+
+### Color Ramp Progression
+
+**All non-neutral color ramps (pink, purple, dark-blue, red, orange, yellow, green)** follow this consistent progression:
+
+- **First step (100)**: `lighten 950` → 99% lightness
+- **Light progression**: Steps 150-700 use decreasing `lighten` modifiers (900, 850, 800, 750, 700, 650, 600, 550, 450, 350, 250, 100)
+- **Base at 750**: No modifier (base brand color)
+- **Dark progression**: Steps 800-1050 use increasing `darken` modifiers (200, 400, 500, 600, 700, 800)
+- **Last step (1050)**: `darken 800` → 1.8% lightness
+
+**Neutral ramp** has a unique progression (white to black with half-step modifiers) and **cream ramp** uses SRGB color space.
 
 ### Semantic Token Categories
 
