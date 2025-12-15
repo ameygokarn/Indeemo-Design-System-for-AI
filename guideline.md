@@ -1,14 +1,140 @@
-# Design System Integration Guide
+# Indeemo Design System Guidelines
 
-This document provides guidance on integrating the Indeemo Design System tokens into Figma and development workflows.
+**⚠️ Figma Make Tailored:** This design system is optimized for ingestion by Figma Make and other LLMs. All tokens include clear descriptions, Figma variable types, and CSS variable recommendations for seamless automation and code generation.
 
-> **For Figma Make code generation guidance**, see **`figma-make-guidelines.md`** — This is a prompt document for Figma Make's AI to generate code that follows your design system patterns.
+## Purpose
+
+This document serves as the single source of truth for working with the Indeemo Design System. It provides:
+- Instructions for AI assistants on how to generate tokens, components, and code
+- Guidance for designers and developers on integrating tokens into Figma and codebases
+- Token structure overview and usage patterns
+- Workflow for maintaining and updating the design system
 
 ---
 
-## Figma Setup & Token Integration
+## Part 1: Assistant Prompt Styleguide
 
-### Setting Up Token Studio with Figma
+### How to Write Prompts for the Assistant
+
+When asking the assistant to work with the Indeemo Design System, follow these guidelines:
+
+**General Principles:**
+- Be explicit: Include desired output format (JSON/CSS/Markdown/TSX), target platform (web/mobile/react/vue), and any constraints (no Tailwind, use CSS variables, etc.)
+- Provide context: Include the token file, component name, or a short design note; include the Figma node id or screenshot when relevant
+- Ask for one thing at a time: Request token generation separately from component code to keep outputs small and verifiable
+
+**Tone & Verbosity:**
+- Prefer concise, technical responses for code and exact outputs
+- Use a short explanatory paragraph (2–3 sentences) when giving rationale
+
+**Formatting Expectations:**
+
+When asking for tokens, request a single canonical JSON output and optionally a CSS variables block:
+
+```json
+{
+  "color": {
+    "primary": {"100": "#fff1f5", "500": "#da095e"}
+  }
+}
+```
+
+When asking for component code: Specify the framework. If not specified, assistant will return plain React + CSS (no Tailwind).
+
+For documentation: Prefer Markdown with usage examples, props table, and code snippets.
+
+**Naming Conventions:**
+- Token names: `category.tokenName.scale` (e.g., `color.brand.500`, `spacing.8`)
+- Component names: `ComponentName/Variant/Size` in human readable kebab or Pascal depending on code target
+- File names: Use kebab-case when creating files
+- Token references: When creating semantic tokens that share the same value as another semantic token, use deep references to the semantic token (e.g., `{semantic.interactive.primary.text.default}`) rather than duplicating the foundation reference
+
+### Token Quality Standard & Governance
+
+Every token update must include:
+
+1. **Designer Description** — Clear, human-readable context for designers
+2. **AI/LLM Description** — Machine-readable context for code generation systems (Figma Make, LLMs)
+3. **WCAG Contrast Information** — Accessibility data (if color token)
+
+**Reference Example (Color Token):**
+```json
+{
+  "value": "#da095e",
+  "type": "color",
+  "description": "[DESIGNER] Primary brand accent color for high-impact CTAs and highlights. Use on white/neutral backgrounds for maximum contrast and visual weight.",
+  "extensions": {
+    "designer_guidance": "Primary pink. Apply to main buttons, badges, and highlights. Ensure sufficient contrast with background.",
+    "ai_context": "CSS var: --color-brand-pink. Base color value for all pink ramps. Primary CTA fill color (semantic token: {semantic.interactive.primary.fill.default}). Reference point for pink ramp generation.",
+    "wcag_info": "Contrast: 8.2:1 against white (#ffffff), 1.8:1 against neutral-300. WCAG AAA on light backgrounds. Pair with white text for primary buttons."
+  }
+}
+```
+
+---
+
+## Part 2: Token Structure Overview
+
+### Three Core Sets
+
+1. **`brand`** — Foundational colors (brand palette and color ramps with WCAG contrast data)
+2. **`semantic`** — Semantic tokens organized by context (surface fills, interactive states, feedback colors)
+3. **`styles`** — Exportable styles and effects (typography, shadows). Only place where anything is exported as a style/effect in Token Studio.
+
+### Semantic Token Categories
+
+**Surface Fills** (`semantic.surface` + `semantic.elevation`):
+- **Undercanvas:** Below-canvas level (-1). For sticky/floating elements
+- **Canvas:** Base level (0). Primary page/screen background
+- **Levels 1-4:** Progressive elevation for cards, overlays, modals, dropdowns
+- **Inverse:** Dark background for high-contrast sections
+- **Accent:** Strong (brand pink) and subtle (light pink) for badges/highlights
+
+**Interactive** (`semantic.interactive`):
+- **Primary buttons:** Fill, text, icon colors for main CTAs
+- **Secondary buttons:** Fill, border, text, icon colors for secondary actions
+- **Links:** Default, hover, visited states for hyperlinks
+
+**Feedback** (`semantic.feedback`):
+- **Error, Success, Warning, Info:** Fill, text, border, icon colors for banner/notification components
+
+**Borders** (`semantic.border`):
+- **Border.elevation.level-2.primary:** Use with level-2 surfaces for contained components
+
+**Disabled States** (`semantic.disabled`):
+- **A, B, C:** Three shades for flexible disabled state combinations
+
+---
+
+## Part 3: Token Studio Workflow (Primary Method)
+
+### Important Context
+
+This project uses **Tokens Studio for Figma** (free tier) as the primary method for managing design tokens.
+
+**Workflow:**
+1. Design tokens are created and managed in Figma using the Tokens Studio plugin
+2. The plugin exports tokens as JSON files
+3. These JSON files are synced to this Git repository (`tokens/` directory)
+4. The assistant helps with formatting, organizing, and consuming these tokens
+
+**When working with tokens:**
+- Tokens are stored in JSON format following the Tokens Studio structure
+- The assistant should expect Token Studio JSON format when reading token files
+- When asked to "sync tokens from Figma," expect the user to paste Token Studio JSON output
+- The assistant should help convert Token Studio JSON to other formats (CSS variables, SCSS, JS objects) as needed
+- Variables in Figma may not be directly accessible via REST API (requires Enterprise plan)
+
+**Token Studio Resources:**
+- Plugin: https://www.figma.com/community/plugin/843461159747178978/tokens-studio-for-figma
+- Documentation: https://docs.tokens.studio/
+- The plugin is free to use with basic features
+
+---
+
+## Part 4: Design System Integration Guide
+
+### Figma Setup & Token Integration
 
 **Prerequisites:**
 - Install the Token Studio plugin in Figma
@@ -39,52 +165,7 @@ Once tokens are synced to Figma via Token Studio:
 - Design variables (from all sets)
 - Shadows and effects (from styles set)
 
-**Important:** Figma Make simplifies complex variable syntax into raw CSS values. To guide code generation behavior, use the `figma-make-guidelines.md` file.
-
----
-
-## Figma Make Integration
-
-### Understanding Figma Make Guidelines
-
-The **`figma-make-guidelines.md`** file is your primary tool for controlling how Figma Make generates code from the design system.
-
-**This file is a PROMPT for Figma Make's AI.** It is NOT documentation on how to use Figma Make, but rather instructions for how Figma Make should behave when generating code.
-
-**Guidelines include:**
-- General coding standards (semantic HTML, accessibility, responsive design)
-- Token usage rules (which surface to use when, accent patterns, etc.)
-- Typography system (font sizes, weights, line heights, styles)
-- Interactive component rules (buttons, forms, links, navigation)
-- Feedback & messaging patterns (error, success, warning, info)
-- Do's and Don'ts for consistent code generation
-- Component-specific guidance (cards, modals, dropdowns, navigation)
-
-### Re-Exporting to Figma Make
-
-**When to Re-Export:**
-- After adding new typography styles or modifying font sizes
-- After updating color palette or adding new colors
-- After modifying surface elevation or shadow values
-- After adjusting spacing scale
-- After changing accessibility or contrast requirements
-- After adding new feedback states or interactive patterns
-
-**Re-Export Process:**
-1. In Figma Design file, update your library (tokens, styles, components)
-2. Click **Publish** to publish changes to the library
-3. Go to **Assets** → **Libraries** → Find your library
-4. Click **Export for Make** (this will replace the previous export)
-5. Click **Go to Figma Make**
-6. In Figma Make, your updated `globals.css` and token definitions will be available
-7. Update `figma-make-guidelines.md` if new rules or patterns were added
-8. Test generated code to verify styles applied correctly
-
----
-
-## Surface Tokens & Elevation System
-
-### Elevation Levels Reference
+### Surface Tokens & Elevation System
 
 The elevation system creates visual hierarchy. Always pair surface fills with corresponding shadows.
 
@@ -98,7 +179,68 @@ The elevation system creates visual hierarchy. Always pair surface fills with co
 | **Level 4** | 1000+ | Modals, dialogs, alerts, full-screen overlays | {surface.level-4} | elevation-4 |
 | **Inverse** | 2000+ | Dark backgrounds, dark mode surfaces | {surface.inverse} | elevation-inverse |
 
-### CSS Implementation
+### Key Rules
+
+- Always pair a surface fill with its corresponding shadow (same elevation level)
+- Use z-index ranges rather than specific values to allow flexibility
+- Level 0 (canvas) is the default; only use higher levels when content needs to float above
+- Undercanvas (-1) should be used sparingly (e.g., content behind sticky sidebars)
+- Inverse level is reserved for dark mode and special high-contrast scenarios
+- Level 2 surfaces can include an optional border using `{border.elevation.level-2.primary}`
+- Each level maintains a 1:1 mapping for future dark mode support (all surfaces stay white except inverse and undercanvas)
+
+### Surface Accents
+
+All elevation levels include two accent color options for highlighting and emphasis:
+
+- **accent.strong** ({color.brand.pink}): Use for primary emphasis, interactive highlights, call-to-action areas
+- **accent.subtle** ({color.ramp.pink.100}): Use for secondary emphasis, background accents, dividers
+
+---
+
+## Part 5: Typography Styles Overview (Figma Make Optimized)
+
+All typography styles are now documented with Figma variable types and CSS variable recommendations for LLM and Figma Make ingestion.
+
+**Current Typography Styles:**
+- `headline` (large/medium/small): Section and subsection headings (16–20px, Bold)
+- `display` (large): Hero and marketing headings (28px, Bold) — *NEW*
+- `body-emphasis` (large/medium/small): Emphasized body copy (12–18px, Bold)
+- `body` (large/medium/small): Primary body text (12–18px, Regular)
+- `label` (large/medium/small): Form labels and UI labels (12–18px, Bold)
+- `caption` (small): Metadata, hints, timestamps (12px, Regular) — *NEW*
+- `link` (default/hover/visited): Interactive links with accessible underline
+
+**Token Format for Figma Make:**
+Each typography token includes:
+- `fontFamily`: Reference to brand font family (e.g., `{brand.fontFamily.a}`)
+- `fontWeight`: Regular or Bold (e.g., `{brand.fontWeight.bold}`)
+- `fontSize`: Semantic size alias (e.g., `{scale.fontSize.md}`)
+- `lineHeight`: Semantic line-height alias (e.g., `{scale.lineHeight.normal}`)
+- `description`: Purpose, Figma variable type, CSS variable name, and accessibility notes
+- `extensions.figma`: Figma Make metadata (resolved type, CSS variable, usage)
+
+**Example Token (with Figma Make metadata):**
+```json
+"headline": {
+  "large": {
+    "value": {
+      "fontFamily": "{brand.fontFamily.a}",
+      "fontWeight": "{brand.fontWeight.bold}",
+      "fontSize": "{scale.fontSize.xl}",
+      "lineHeight": "{scale.lineHeight.comfortable}"
+    },
+    "type": "typography",
+    "description": "Headline Large (20px/22px, Bold). Purpose: Section headings. Figma variable type: TYPOGRAPHY. CSS var: --typography-headline-large. Accessibility: use for prominent headings with sufficient contrast."
+  }
+}
+```
+
+---
+
+## Part 6: Working with Tokens in Development
+
+### CSS Implementation Example
 
 ```css
 /* Canvas level (default page background) */
@@ -130,59 +272,27 @@ body {
 }
 ```
 
-### Key Rules
+### Accessibility: Links & Underline
 
-- Always pair a surface fill with its corresponding shadow (same elevation level)
-- Use z-index ranges rather than specific values to allow flexibility
-- Level 0 (canvas) is the default; only use higher levels when content needs to float above
-- Undercanvas (-1) should be used sparingly (e.g., content behind sticky sidebars)
-- Inverse level is reserved for dark mode and special high-contrast scenarios
-- Level 2 surfaces can include an optional border using `{border.elevation.level-2.primary}`
-- Each level maintains a 1:1 mapping for future dark mode support (all surfaces stay white except inverse and undercanvas)
+- Use `typography-style.link.default` for link text and `typography-style.link.hover` for interactive state
+- Ensure link color and underline pass WCAG AA contrast requirements against their background:
+  - For normal text: contrast >= 4.5:1
+  - For large text (≥ 18px bold or 24px regular): contrast >= 3:1
+- Do not rely solely on color to indicate links. Use underline or another clear indicator and provide a focus style for keyboard navigation (outline or highlight with at least 3:1 contrast)
 
-### Surface Accents
-
-All elevation levels include two accent color options for highlighting and emphasis:
-
-- **accent.strong** ({color.brand.pink}): Use for primary emphasis, interactive highlights, call-to-action areas
-- **accent.subtle** ({color.ramp.pink.100}): Use for secondary emphasis, background accents, dividers
-
+Example (CSS):
 ```css
-/* Card with strong accent border */
-.card-featured {
-  background-color: var(--surface-level-1);
-  border-left: 4px solid var(--surface-accent-strong);
-  box-shadow: var(--shadow-elevation-1);
+.link {
+  color: var(--color-ramp-purple-850);
+  text-decoration: underline;
 }
-
-/* Highlighted section with subtle accent background */
-.highlight-section {
-  background-color: var(--surface-accent-subtle);
-  border-left: 4px solid var(--surface-accent-strong);
-  padding: 16px;
-}
-
-/* Dropdown with accent indicator and border */
-.dropdown-active {
-  background-color: var(--surface-level-2);
-  border-bottom: 2px solid var(--surface-accent-strong);
-  border: 1px solid var(--border-elevation-level-2-primary);
-  box-shadow: var(--shadow-elevation-2);
-}
+.link:hover { color: var(--color-ramp-purple-750); }
+.link:focus { outline: 2px solid var(--color-ramp-purple-750); outline-offset: 2px; }
 ```
 
 ---
 
-## Working with Tokens in Development
-
-For **detailed token descriptions** (use cases, WCAG contrast info, component guidance), see:
-- **`docs/TOKENS-README.md`** — Complete token reference with examples and usage patterns
-- **`docs/RESTRUCTURE-SUMMARY.md`** — Token structure decisions and rationale
-- **`figma-make-guidelines.md`** — Prompts for Figma Make code generation
-
----
-
-## Maintenance Workflow
+## Part 7: Maintenance Workflow
 
 ### On Every Token Release
 
@@ -192,13 +302,30 @@ For **detailed token descriptions** (use cases, WCAG contrast info, component gu
 4. Publish Figma library
 5. If exporting to Figma Make: Click **Export for Make** to update library
 6. Run accessibility tests (contrast ratios, focus states)
-7. Update documentation in `docs/TOKENS-README.md`
+7. Update documentation in `TOKEN_DOCUMENTATION.md`
 8. Test generated code in Figma Make (if applicable)
 
-### Documentation References
+### Re-Exporting to Figma Make
+
+**When to Re-Export:**
+- After adding new typography styles or modifying font sizes
+- After updating color palette or adding new colors
+- After modifying surface elevation or shadow values
+- After adjusting spacing scale
+- After changing accessibility or contrast requirements
+- After adding new feedback states or interactive patterns
+
+---
+
+## References
 
 - **Token Studio:** https://docs.tokens.studio/
 - **Figma Design Systems:** https://www.figma.com/design-systems/
 - **Figma Make:** https://help.figma.com/hc/en-us/articles/33665861260823-Add-guidelines-to-Figma-Make
 - **WCAG Accessibility:** https://www.w3.org/WAI/WCAG21/quickref/
 - **Design Systems by Brad Frost:** Structure and reasoning behind atomic design
+
+---
+
+*This document consolidates and replaces the previous `styleguide.md` and `guideline.md` files.*
+*For detailed token documentation, see `TOKEN_DOCUMENTATION.md`.*

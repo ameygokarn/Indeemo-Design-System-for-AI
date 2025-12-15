@@ -5,10 +5,9 @@ This repository contains materials, guidelines, and artifacts for creating an AI
 **Project:** Indeemo — https://indeemo.com/
 
 **Contents:**
-- `guideline.md`: Figma + Make guidelines, workflows, and resources for building design-system assets.
-- `styleguide.md`: Prompt and style guidance for interacting with the assistant and generating consistent outputs.
+- `GUIDELINE.md`: Consolidated guidelines for Figma + Make workflows, AI prompt patterns, and design system integration.
+- `TOKEN_DOCUMENTATION.md`: Comprehensive documentation for all design tokens (colors, typography, scales, and usage).
 - `QUICKSTART.md`: Quick start guide for syncing design tokens to Figma via the REST API.
-- `docs/TOKENS-README.md`: Central documentation for tokens (colors, typography, scales, and usage).
 - `tokens/`: JSON files defining design tokens (colors, spacing, typography).
 - `src/figma_variables_bridge.js`: MCP bridge server for syncing tokens to Figma.
 
@@ -44,7 +43,7 @@ See `QUICKSTART.md` for full instructions and examples.
 
 ## Getting Started
 
-1. Review `guideline.md` for design-system workflows
-2. Review `styleguide.md` for AI prompt patterns
+1. Review `GUIDELINE.md` for design-system workflows and AI prompt patterns
+2. Review `TOKEN_DOCUMENTATION.md` for comprehensive token reference
 3. Access the Figma files listed above to view or edit design assets
 4. **New:** Check `QUICKSTART.md` to sync design tokens to Figma via API
