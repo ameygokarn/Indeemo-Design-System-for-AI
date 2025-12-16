@@ -456,18 +456,25 @@ Input tokens provide semantic styling for form fields and input components acros
 | **Border Tokens** | | | |
 | `input.border.default` | `{color.ramp.neutral.950}` | 5.25:1 | Border color for input fields in their standard state (15% lightness, WCAG AA compliant). |
 | `input.border.hover` | `{color.ramp.neutral.1000}` | 7.0:1 | Border color for input fields when hovered by the user (10% lightness, enhanced contrast). |
-| `input.border.active` | `{color.brand.purple}` | 9.9:1 | Border color for input fields when active (pressed) or focused. |
+| `input.border.active` | `{color.ramp.pink.650}` | 8.2:1 | Border color for input fields when active (pressed) or focused. Uses brand pink for clear visual indication. |
 | `input.border.success` | `{color.ramp.green.950}` | 15:1 | Border color for input fields in a success validation state. |
 | `input.border.error` | `{color.ramp.red.950}` | 15:1 | Border color for input fields in an error validation state. |
 | **Icon Tokens** | | | |
-| `input.icon.default` | `{color.ramp.neutral.450}` | 2.6:1 | Icon color for input fields in their standard state. |
-| `input.icon.hover` | `{color.ramp.neutral.550}` | 4:1 | Icon color for input fields when hovered by the user. |
-| `input.icon.active` | `{color.brand.purple}` | 9.9:1 | Icon color for input fields when active (pressed) or focused. |
-| `input.icon.success` | `{color.ramp.green.800}` | 12:1 | Icon color for input fields in a success validation state. |
-| `input.icon.error` | `{color.ramp.red.800}` | 12:1 | Icon color for input fields in an error validation state. |
+| `input.icon.default` | `{input.text.default}` | 8:1 | Icon color for input fields in their standard state. References input.text.default for consistency. |
+| `input.icon.hover` | `{input.text.hover}` | 11:1 | Icon color for input fields when hovered by the user. References input.text.hover for consistency. |
+| `input.icon.active` | `{input.text.active}` | 21:1 | Icon color for input fields when active (pressed) or focused. References input.text.active for consistency. |
+| `input.icon.success` | `{input.text.success}` | 12:1 | Icon color for input fields in a success validation state. References input.text.success for consistency. |
+| `input.icon.error` | `{input.text.error}` | 12:1 | Icon color for input fields in an error validation state. References input.text.error for consistency. |
 | `input.icon.disabled` | `{disabled.c}` | Not required (disabled) | Icon color for input fields when disabled. |
 
 #### Usage Notes
+- **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
+- **Disabled States**: Removed from input grouping - use universal `disabled.a`, `disabled.b`, `disabled.c` tokens instead
+- **Validation States**: Success/error fills use `green.150` and `red.150` for better visibility
+- **Border Contrast**: `input.border.default` (`neutral.950`, 5.25:1) and `input.border.hover` (`neutral.1000`, 7:1) meet WCAG AA requirements
+- **Border Active**: `input.border.active` now uses `color.ramp.pink.650` (brand pink, 8.2:1 contrast) for clear focus indication
+- **Icon Tokens**: Icon colors now reference their corresponding text tokens for consistency and easier maintenance
+- **Focus State**: Active state uses brand pink for clear visual indication### Usage Notes
 - **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
 - **Disabled States**: Removed from input grouping - use universal `disabled.a`, `disabled.b`, `disabled.c` tokens instead
 - **Validation States**: Success/error fills use `green.150` and `red.150` for better visibility
