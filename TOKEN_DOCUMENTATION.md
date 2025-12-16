@@ -419,9 +419,9 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 
 Three flexible shades for disabled components:
 
-- `disabled.a`: `{color.ramp.neutral.250}` (84% lightness) - Light grey
-- `disabled.b`: `{color.ramp.neutral.350}` (74% lightness) - Light-mid grey  
-- `disabled.c`: `{color.ramp.neutral.450}` (63% lightness) - Mid grey
+- `disabled.a`: `{color.ramp.neutral.1000}` (10% lightness) - Dark grey for flexible component combinations
+- `disabled.b`: `{color.ramp.neutral.900}` (20% lightness) - Dark-mid grey for contrast and emphasis
+- `disabled.c`: `{color.ramp.neutral.800}` (30% lightness) - Mid grey for critical text/borders
 
 **Usage:** Combine A, B, and/or C based on component aesthetics and contrast needs.
 
@@ -442,8 +442,8 @@ Input tokens provide semantic styling for form fields and input components acros
 | `input.fill.default` | `{color.ramp.neutral.100}` | 1:1 | Default background for input fields in their standard state. |
 | `input.fill.hover` | `{color.ramp.neutral.150}` | 1.2:1 | Background for input fields when hovered by the user. |
 | `input.fill.active` | `{color.ramp.neutral.200}` | 1.5:1 | Background for input fields when active (pressed) or focused. |
-| `input.fill.success` | `{color.ramp.green.100}` | 1.5:1 | Background for input fields in a success validation state. |
-| `input.fill.error` | `{color.ramp.red.100}` | 1.5:1 | Background for input fields in an error validation state. |
+| `input.fill.success` | `{color.ramp.green.150}` | 2.0:1 | Background for input fields in a success validation state (darker green for better visibility). |
+| `input.fill.error` | `{color.ramp.red.150}` | 2.0:1 | Background for input fields in an error validation state (darker red for better visibility). |
 | `input.fill.disabled` | `{disabled.a}` | Not required (disabled) | Background for input fields when disabled. |
 | **Text Tokens** | | | |
 | `input.text.default` | `{color.ramp.neutral.850}` | 8:1 | Primary text color for input fields in their standard state. |
@@ -454,12 +454,11 @@ Input tokens provide semantic styling for form fields and input components acros
 | `input.text.disabled` | `{disabled.c}` | Not required (disabled) | Text color for input fields when disabled. |
 | `input.text.secondary` | `{color.ramp.neutral.450}` | 2.6:1 | Text color for placeholder or secondary text in input fields. |
 | **Border Tokens** | | | |
-| `input.border.default` | `{color.ramp.neutral.300}` | 2.3:1 | Border color for input fields in their standard state. |
-| `input.border.hover` | `{color.ramp.neutral.400}` | 3.2:1 | Border color for input fields when hovered by the user. |
+| `input.border.default` | `{color.ramp.neutral.950}` | 5.25:1 | Border color for input fields in their standard state (15% lightness, WCAG AA compliant). |
+| `input.border.hover` | `{color.ramp.neutral.1000}` | 7.0:1 | Border color for input fields when hovered by the user (10% lightness, enhanced contrast). |
 | `input.border.active` | `{color.brand.purple}` | 9.9:1 | Border color for input fields when active (pressed) or focused. |
 | `input.border.success` | `{color.ramp.green.950}` | 15:1 | Border color for input fields in a success validation state. |
 | `input.border.error` | `{color.ramp.red.950}` | 15:1 | Border color for input fields in an error validation state. |
-| `input.border.disabled` | `{disabled.b}` | Not required (disabled) | Border color for input fields when disabled. |
 | **Icon Tokens** | | | |
 | `input.icon.default` | `{color.ramp.neutral.450}` | 2.6:1 | Icon color for input fields in their standard state. |
 | `input.icon.hover` | `{color.ramp.neutral.550}` | 4:1 | Icon color for input fields when hovered by the user. |
@@ -470,6 +469,10 @@ Input tokens provide semantic styling for form fields and input components acros
 
 #### Usage Notes
 - **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
+- **Disabled States**: Removed from input grouping - use universal `disabled.a`, `disabled.b`, `disabled.c` tokens instead
+- **Validation States**: Success/error fills use `green.150` and `red.150` for better visibility
+- **Border Contrast**: `input.border.default` (`neutral.950`, 5.25:1) and `input.border.hover` (`neutral.1000`, 7:1) meet WCAG AA requirements
+- **Focus State**: Active state uses `color.brand.purple` for clear visual indication
 - **Disabled States**: Do not require contrast compliance; use `disabled.a`, `disabled.b`, `disabled.c` palette
 - **Validation States**: Success/error states reference established feedback color ramps
 - **Focus State**: Active state uses `color.brand.purple` for clear visual indication
