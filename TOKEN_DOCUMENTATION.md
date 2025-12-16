@@ -419,9 +419,9 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 
 Three flexible shades for disabled components:
 
-- `disabled.a`: `{color.ramp.neutral.1000}` (10% lightness) - Dark grey for flexible component combinations
-- `disabled.b`: `{color.ramp.neutral.900}` (20% lightness) - Dark-mid grey for contrast and emphasis
-- `disabled.c`: `{color.ramp.neutral.800}` (30% lightness) - Mid grey for critical text/borders
+- `disabled.a`: `{color.ramp.neutral.200}` (89% lightness ≈ 90%) - Light grey for flexible component combinations
+- `disabled.b`: `{color.ramp.neutral.300}` (79% lightness ≈ 80%) - Light-mid grey for contrast and emphasis
+- `disabled.c`: `{color.ramp.neutral.400}` (69% lightness ≈ 70%) - Mid grey for critical text/borders
 
 **Usage:** Combine A, B, and/or C based on component aesthetics and contrast needs.
 
