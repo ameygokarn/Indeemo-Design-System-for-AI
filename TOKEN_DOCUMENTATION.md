@@ -415,7 +415,26 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 - `feedback.info.border`: `{color.ramp.dark-blue.950}` - Border
 - `feedback.info.icon`: References text color
 
-### Disabled States
+#### Border Tokens (Non-Interactive)
+
+General border tokens for UI separation, containers, and visual hierarchy. These are for non-interactive elements (for interactive borders, see the appropriate semantic token groups).
+
+| Token | Reference | Contrast (vs white) | Purpose & Usage |
+|-------|-----------|---------------------|-----------------|
+| `border.primary` | `{color.ramp.neutral.950}` | 5.25:1 | Primary border for UI separation and container outlines. Use for card borders, section dividers, and strong visual separation. |
+| `border.secondary` | `{color.ramp.neutral.300}` | 2.3:1 | Secondary border for nested containers or less important separation. Use for nested cards, form field groups, and subtle dividers. |
+| `border.tertiary` | `{color.ramp.neutral.200}` | 1.5:1 | Tertiary border for minimal visual distinction. Use for grid lines and subtle separators in dense interfaces. |
+| `border.elevation` | `{color.ramp.neutral.300}` | 2.3:1 | Border for elevated surfaces (cards, modals, popovers) to enhance depth perception. Use with surface elevation levels 1-4. |
+| `border.inverse` | `{color.ramp.neutral.100}` (white) | 21:1 | Border for use on dark or inverse-colored backgrounds. Use on surface.inverse or dark sections. |
+| `border.on-accent` | `{color.ramp.neutral.100}` (white) | 8.2:1 (on brand pink) | Border on top of accent-colored surfaces. Use for badges, labels, or containers on accent backgrounds. |
+
+**Usage Notes:**
+- **Hierarchy:** Use `border.primary` for main separation, `border.secondary` for nested elements, and `border.tertiary` for minimal distinction.
+- **Elevation:** The `border.elevation` token replaces the previous `border.elevation.primary` token for consistency.
+- **Accessibility:** All tokens meet WCAG AA requirements for non-text contrast (3:1) except `border.tertiary` which is intentionally subtle for visual cues only.
+- **Contrast:** `border.inverse` and `border.on-accent` use white for maximum contrast on dark or colored backgrounds.
+
+## Disabled States
 
 Three flexible shades for disabled components:
 
