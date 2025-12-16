@@ -11,19 +11,20 @@ This document provides comprehensive documentation for all design tokens in the 
 ## Table of Contents
 
 1. [Token Structure Overview](#token-structure-overview)
-2. [Brand Colors](#brand-colors)
-3. [Color Ramps](#color-ramps)
-4. [Semantic Tokens](#semantic-tokens)
+2. [Token Naming Conventions](#token-naming-conventions)
+3. [Brand Colors](#brand-colors)
+4. [Color Ramps](#color-ramps)
+5. [Semantic Tokens](#semantic-tokens)
    - [Surface & Elevation](#surface--elevation)
    - [Interactive Components](#interactive-components)
    - [Feedback States](#feedback-states)
    - [Disabled States](#disabled-states)
    - [Border Tokens](#border-tokens)
-5. [Typography Styles](#typography-styles)
-6. [Shadow & Elevation Effects](#shadow--elevation-effects)
-7. [CSS Variable Reference](#css-variable-reference)
-8. [Accessibility Information](#accessibility-information)
-9. [Usage Examples](#usage-examples)
+6. [Typography Styles](#typography-styles)
+7. [Shadow & Elevation Effects](#shadow--elevation-effects)
+8. [CSS Variable Reference](#css-variable-reference)
+9. [Accessibility Information](#accessibility-information)
+10. [Usage Examples](#usage-examples)
 
 ---
 
@@ -40,6 +41,60 @@ The Indeemo Design System uses a three-tier token architecture:
 - **Base Tokens:** Raw values (hex colors, font sizes, etc.)
 - **Semantic Tokens:** Named by purpose (e.g., `surface.canvas`, `interactive.primary.fill.default`)
 - **Alias References:** Tokens that reference other tokens using `{ }` syntax
+
+---
+
+## Token Naming Conventions
+
+### Overview
+Token names in the Indeemo Design System follow a structured taxonomy that ensures consistency, clarity, and scalability. Each token name is built by combining specific attributes in a defined order, creating self-documenting identifiers that communicate both purpose and context.
+
+### Naming Structure
+Tokens follow this general pattern (not all attributes are required for every token):
+
+```
+[Sentiment]-[Type]-[Context]-[Grouping]-[Option]-[Modifier]-[Scale]-[Role]-[State]
+```
+
+### Token Attributes Reference
+
+| Attribute | Description | Example Values |
+|:----------|:------------|:---------------|
+| **Sentiment** | The abstraction layer of the token, distinguishing between foundational values and semantic purpose. | `semantic`, `foundation`, `brand`, `ramp` |
+| **Type** | The category of design property being defined. Determines what aspect of the UI the token controls. In Token Studio, this maps to the token `type` property. | `color`, `typography`, `spacing`, `dimension`, `sizing`, `border-radius`, `shadow`, `opacity` |
+| **Context** | The domain or usage context for the token. Provides high-level categorization of where tokens are applied. | `brand`, `utility`, `product` |
+| **Grouping** | The semantic context or functional area where the token is used. Primary organizational layer that describes the UI pattern or component family. | `interactive`, `feedback`, `text`, `icon`, `border`, `surface`, `input`, `tag`, `navigation` |
+| **Option** | Behavioral characteristics of the token. For typography, defines whether values are static or fluid. For other types, may indicate variants like `solid`, `dashed`, `gradient`. | `static`, `fluid`, `solid`, `dashed`, `gradient`, `inner`, `outer` |
+| **Modifier** | Visual weight, style variation, or emphasis level. Describes how the token differs from the base version. | `light`, `regular`, `bold`, `black`, `subtle`, `strong`, `medium`, `semibold`, `muted`, `vibrant` |
+| **Scale** | Hierarchical level, severity, or size within a grouping. Provides ordering and relative importance. | `primary`, `secondary`, `tertiary`, `critical`, `success`, `warning`, `info`, `2xs`, `xs`, `s`, `m`, `l`, `xl`, `2xl`, `level-1`, `level-2` |
+| **Role** | The specific UI property or element the token applies to. Describes what is being styled. | `fill`, `text`, `icon`, `border`, `stroke`, `background`, `foreground`, `overlay`, `underlay` |
+| **State** | The interaction or validation state of the element. Applied primarily to interactive components. | `default`, `hover`, `pressed`, `focus`, `active`, `disabled`, `error`, `success`, `loading`, `selected` |
+
+### Token Studio Considerations
+- **Token Sets as Top-Level Organization**: Use Token Studio's set feature to organize tokens (e.g., `semantic`, `brand`, `ramp`).
+- **Type Property Alignment**: Ensure the `type` property in your JSON matches Token Studio's supported types.
+- **Reference Tokens**: Use Token Studio's `{token.reference}` syntax to build semantic tokens from foundation tokens.
+- **Composite Tokens**: For complex properties like typography or elevation, use Token Studio's composite token types that bundle multiple properties together.
+
+### Best Practices for Creating New Tokens
+1. **Start with Sentiment**: Determine if this is a `semantic` (purpose-driven), `foundation` (base value), or specialized token.
+2. **Define the Grouping**: Identify the semantic context first (`interactive`, `feedback`, `text`, `surface`, etc.).
+3. **Specify the Role**: Determine what UI property it controls (`fill`, `text`, `border`, `icon`).
+4. **Add Scale when needed**: Include hierarchy or severity (`primary`, `secondary`, `error`, `success`).
+5. **Include State for interactive elements**: Add interaction states (`default`, `hover`, `pressed`, `focus`, `disabled`).
+6. **Keep it semantic**: Name tokens by purpose, not by visual appearance.
+7. **Maintain consistency**: Follow existing patterns in the system.
+8. **Avoid redundancy**: Don't repeat information already implied by other attributes.
+9. **Use Token Studio features**: Leverage sets, descriptions, and token references.
+10. **Document as you go**: Add clear descriptions to each token explaining its purpose and usage context.
+
+### Naming Examples
+| Token Name | Breakdown | Usage |
+|:-----------|:----------|:------|
+| `semantic.interactive.primary.fill.default` | **Sentiment**: `semantic`<br>**Grouping**: `interactive`<br>**Scale**: `primary`<br>**Role**: `fill`<br>**State**: `default` | Default background color for primary buttons or CTAs |
+| `semantic.feedback.text.error` | **Sentiment**: `semantic`<br>**Grouping**: `feedback`<br>**Role**: `text`<br>**Scale**: `error` | Text color for error messages and validation feedback |
+| `semantic.text.primary` | **Sentiment**: `semantic`<br>**Grouping**: `text`<br>**Scale**: `primary` | Primary body text color for main content |
+| `foundation.typography.heading.fluid.bold.xl` | **Sentiment**: `foundation`<br>**Type**: `typography`<br>**Grouping**: `heading`<br>**Option**: `fluid`<br>**Modifier**: `bold`<br>**Scale**: `xl` | Composite typography token for large bold headings |
 
 ---
 
@@ -181,6 +236,24 @@ Each brand color has a corresponding ramp with 11 shades (100-1050) for creating
 - **Orange Ramp:** Warning states, highlights
 - **Yellow Ramp:** Caution, warnings
 - **Green Ramp:** Success states, confirmations
+
+### Color Ramp Methodology
+
+The Indeemo Design System uses a scientifically-grounded approach to color ramp generation:
+
+**Linear Lightness Distribution:** Color ramps are generated using linear lightness progression (98% to 10% lightness) while maintaining constant hue and saturation. This creates mathematically predictable, visually harmonious scales with equal perceptual steps.
+
+**Built-in Accessibility:** Every color token includes calculated WCAG contrast ratios against white and black backgrounds, with explicit compliance levels (AA/AAA for Normal/Large text). Designers immediately know which colors work on which backgrounds.
+
+**Systematic Design:** All non-neutral color ramps follow a consistent 20-step progression (100 to 1050 with 50-point increments) using Token Studio's modifier tokens for lighten/darken operations.
+
+**Key Algorithm:**
+- Base colors anchored at their natural lightness positions
+- Linear distribution: `lightness = 98% - (progress × 88%)` for steps 0-19
+- Constant hue and saturation to maintain brand color identity
+- Automatic WCAG contrast calculations and documentation
+
+This methodology ensures color ramps are visually harmonious, accessible by default, and systematically scalable across all brand colors.
 
 ### WCAG Contrast Information
 Each color ramp token includes detailed WCAG contrast data:
@@ -356,6 +429,50 @@ Three flexible shades for disabled components:
 
 - `border.elevation.primary`: `{color.ramp.neutral.300}` - Default border for elevated surfaces
 - Use with `surface.level-2` and above for visual separation
+
+### Input Tokens
+
+Input tokens provide semantic styling for form fields and input components across all states, following the simplified naming pattern `input.[property].[state]`.
+
+#### Token Reference Table
+
+| Token | Reference Token | Contrast Ratio (vs White) | Description |
+|-------|----------------|---------------------------|-------------|
+| **Fill Tokens** | | | |
+| `input.fill.default` | `{color.ramp.neutral.100}` | 1:1 | Default background for input fields in their standard state. |
+| `input.fill.hover` | `{color.ramp.neutral.150}` | 1.2:1 | Background for input fields when hovered by the user. |
+| `input.fill.active` | `{color.ramp.neutral.200}` | 1.5:1 | Background for input fields when active (pressed) or focused. |
+| `input.fill.success` | `{color.ramp.green.100}` | 1.5:1 | Background for input fields in a success validation state. |
+| `input.fill.error` | `{color.ramp.red.100}` | 1.5:1 | Background for input fields in an error validation state. |
+| `input.fill.disabled` | `{disabled.a}` | Not required (disabled) | Background for input fields when disabled. |
+| **Text Tokens** | | | |
+| `input.text.default` | `{color.ramp.neutral.850}` | 8:1 | Primary text color for input fields in their standard state. |
+| `input.text.hover` | `{color.ramp.neutral.900}` | 11:1 | Text color for input fields when hovered by the user. |
+| `input.text.active` | `{color.ramp.neutral.1050}` | 21:1 | Text color for input fields when active (pressed) or focused. |
+| `input.text.success` | `{color.ramp.green.800}` | 12:1 | Text color for input fields in a success validation state. |
+| `input.text.error` | `{color.ramp.red.800}` | 12:1 | Text color for input fields in an error validation state. |
+| `input.text.disabled` | `{disabled.c}` | Not required (disabled) | Text color for input fields when disabled. |
+| `input.text.secondary` | `{color.ramp.neutral.450}` | 2.6:1 | Text color for placeholder or secondary text in input fields. |
+| **Border Tokens** | | | |
+| `input.border.default` | `{color.ramp.neutral.300}` | 2.3:1 | Border color for input fields in their standard state. |
+| `input.border.hover` | `{color.ramp.neutral.400}` | 3.2:1 | Border color for input fields when hovered by the user. |
+| `input.border.active` | `{color.brand.purple}` | 9.9:1 | Border color for input fields when active (pressed) or focused. |
+| `input.border.success` | `{color.ramp.green.950}` | 15:1 | Border color for input fields in a success validation state. |
+| `input.border.error` | `{color.ramp.red.950}` | 15:1 | Border color for input fields in an error validation state. |
+| `input.border.disabled` | `{disabled.b}` | Not required (disabled) | Border color for input fields when disabled. |
+| **Icon Tokens** | | | |
+| `input.icon.default` | `{color.ramp.neutral.450}` | 2.6:1 | Icon color for input fields in their standard state. |
+| `input.icon.hover` | `{color.ramp.neutral.550}` | 4:1 | Icon color for input fields when hovered by the user. |
+| `input.icon.active` | `{color.brand.purple}` | 9.9:1 | Icon color for input fields when active (pressed) or focused. |
+| `input.icon.success` | `{color.ramp.green.800}` | 12:1 | Icon color for input fields in a success validation state. |
+| `input.icon.error` | `{color.ramp.red.800}` | 12:1 | Icon color for input fields in an error validation state. |
+| `input.icon.disabled` | `{disabled.c}` | Not required (disabled) | Icon color for input fields when disabled. |
+
+#### Usage Notes
+- **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
+- **Disabled States**: Do not require contrast compliance; use `disabled.a`, `disabled.b`, `disabled.c` palette
+- **Validation States**: Success/error states reference established feedback color ramps
+- **Focus State**: Active state uses `color.brand.purple` for clear visual indication
 
 ---
 
