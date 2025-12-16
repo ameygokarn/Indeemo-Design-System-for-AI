@@ -355,6 +355,10 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 - `surface.level-1` to `surface.level-4`: Corresponding elevation levels
 - `surface.inverse`: Dark background for high-contrast sections
 
+
+
+**Note:** The `semantic.elevation` tokens have been removed. All surface tokens now directly reference brand colors (`color.brand.white`, `color.brand.cream`, `color.brand.black`) for simplicity and maintainability.
+
 #### Surface Accents
 - `surface.accent.strong`: `{color.brand.pink}` - Strong highlights
 - `surface.accent.subtle`: `{color.ramp.pink.100}` - Subtle backgrounds
@@ -421,31 +425,18 @@ General border tokens for UI separation, containers, and visual hierarchy. These
 
 | Token | Reference | Contrast (vs white) | Purpose & Usage |
 |-------|-----------|---------------------|-----------------|
-| `border.primary` | `{color.ramp.neutral.950}` | 5.25:1 | Primary border for UI separation and container outlines. Use for card borders, section dividers, and strong visual separation. |
-| `border.secondary` | `{color.ramp.neutral.300}` | 2.3:1 | Secondary border for nested containers or less important separation. Use for nested cards, form field groups, and subtle dividers. |
-| `border.tertiary` | `{color.ramp.neutral.200}` | 1.5:1 | Tertiary border for minimal visual distinction. Use for grid lines and subtle separators in dense interfaces. |
+| `border.primary` | `{color.ramp.neutral.750}` | 3.2:1 | Primary border for UI separation and container outlines. Use for card borders, section dividers, and strong visual separation. (35% lightness) |
+| `border.secondary` | `{color.ramp.neutral.700}` | 2.8:1 | Secondary border for nested containers or less important separation. Use for nested cards, form field groups, and subtle dividers. (40% lightness) |
+| `border.tertiary` | `{color.ramp.neutral.650}` | 2.5:1 | Tertiary border for minimal visual distinction. Use for grid lines and subtle separators in dense interfaces. (45% lightness) |
 | `border.elevation` | `{color.ramp.neutral.300}` | 2.3:1 | Border for elevated surfaces (cards, modals, popovers) to enhance depth perception. Use with surface elevation levels 1-4. |
-| `border.inverse` | `{color.ramp.neutral.100}` (white) | 21:1 | Border for use on dark or inverse-colored backgrounds. Use on surface.inverse or dark sections. |
 | `border.on-accent` | `{color.ramp.neutral.100}` (white) | 8.2:1 (on brand pink) | Border on top of accent-colored surfaces. Use for badges, labels, or containers on accent backgrounds. |
 
 **Usage Notes:**
 - **Hierarchy:** Use `border.primary` for main separation, `border.secondary` for nested elements, and `border.tertiary` for minimal distinction.
-- **Elevation:** The `border.elevation` token replaces the previous `border.elevation.primary` token for consistency.
-- **Accessibility:** All tokens meet WCAG AA requirements for non-text contrast (3:1) except `border.tertiary` which is intentionally subtle for visual cues only.
-- **Contrast:** `border.inverse` and `border.on-accent` use white for maximum contrast on dark or colored backgrounds.
-
-## Disabled States
-
-Three flexible shades for disabled components:
-
-- `disabled.a`: `{color.ramp.neutral.200}` (89% lightness ≈ 90%) - Light grey for flexible component combinations
-- `disabled.b`: `{color.ramp.neutral.300}` (79% lightness ≈ 80%) - Light-mid grey for contrast and emphasis
-- `disabled.c`: `{color.ramp.neutral.400}` (69% lightness ≈ 70%) - Mid grey for critical text/borders
-
-**Usage:** Combine A, B, and/or C based on component aesthetics and contrast needs.
-
-### Border Tokens
-
+- **Lightness:** Primary (35%), Secondary (40%), Tertiary (45%) for progressive visual weight.
+- **Elevation:** The `border.elevation` token is used for elevated surfaces.
+- **Accessibility:** All tokens meet WCAG AA requirements for non-text contrast (3:1).
+- **Note:** 
 - `border.elevation.primary`: `{color.ramp.neutral.300}` - Default border for elevated surfaces
 - Use with `surface.level-2` and above for visual separation
 
@@ -465,7 +456,7 @@ Input tokens provide semantic styling for form fields and input components acros
 | `input.fill.error` | `{color.ramp.red.150}` | 2.0:1 | Background for input fields in an error validation state (darker red for better visibility). |
 | `input.fill.disabled` | `{disabled.a}` | Not required (disabled) | Background for input fields when disabled. |
 | **Text Tokens** | | | |
-| `input.text.default` | `{color.ramp.neutral.850}` | 8:1 | Primary text color for input fields in their standard state. |
+| `input.text.primary` | `{color.ramp.neutral.850}` | 8:1 | Primary text color for input fields in their standard state. |
 | `input.text.hover` | `{color.ramp.neutral.900}` | 11:1 | Text color for input fields when hovered by the user. |
 | `input.text.active` | `{color.ramp.neutral.1050}` | 21:1 | Text color for input fields when active (pressed) or focused. |
 | `input.text.success` | `{color.ramp.green.800}` | 12:1 | Text color for input fields in a success validation state. |
@@ -479,8 +470,9 @@ Input tokens provide semantic styling for form fields and input components acros
 | `input.border.success` | `{color.ramp.green.950}` | 15:1 | Border color for input fields in a success validation state. |
 | `input.border.error` | `{color.ramp.red.950}` | 15:1 | Border color for input fields in an error validation state. |
 | **Icon Tokens** | | | |
-| `input.icon.default` | `{input.text.default}` | 8:1 | Icon color for input fields in their standard state. References input.text.default for consistency. |
+| `input.icon.primary` | `{input.text.primary}` | 8:1 | Primary icon color for input fields. References input.text.primary for consistency. |
 | `input.icon.hover` | `{input.text.hover}` | 11:1 | Icon color for input fields when hovered by the user. References input.text.hover for consistency. |
+| `input.icon.secondary` | `{input.text.secondary}` | 3.5:1 | Secondary icon color for input fields (e.g., placeholder icons). References input.text.secondary for consistency. |
 | `input.icon.active` | `{input.text.active}` | 21:1 | Icon color for input fields when active (pressed) or focused. References input.text.active for consistency. |
 | `input.icon.success` | `{input.text.success}` | 12:1 | Icon color for input fields in a success validation state. References input.text.success for consistency. |
 | `input.icon.error` | `{input.text.error}` | 12:1 | Icon color for input fields in an error validation state. References input.text.error for consistency. |
