@@ -360,9 +360,9 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 **Note:** The `semantic.elevation` tokens have been removed. All surface tokens now directly reference brand colors (`color.brand.white`, `color.brand.cream`, `color.brand.black`) for simplicity and maintainability.
 
 #### Surface Accents
-- `surface.accent.strong`: `{color.brand.pink}` - Strong highlights
-- `surface.accent.subtle`: `{color.ramp.pink.100}` - Subtle backgrounds
-
+- `surface.accent.low`: `{color.ramp.pink.400}` (approx 82.5% lightness) - Low intensity accent for subtle highlights or backgrounds.
+- `surface.accent.medium`: `{color.ramp.pink.600}` (approx 67.5% lightness) - Medium intensity accent for moderate highlights.
+- `surface.accent.high`: `{color.ramp.pink.650}` (approx 62.5% lightness) - High intensity accent for strong highlights or badges.
 ### Interactive Components
 
 #### Primary Buttons
@@ -439,6 +439,21 @@ General border tokens for UI separation, containers, and visual hierarchy. These
 - **Note:** 
 - `border.elevation.primary`: `{color.ramp.neutral.300}` - Default border for elevated surfaces
 - Use with `surface.level-2` and above for visual separation
+
+
+
+### Focus Tokens
+
+Focus tokens provide consistent styling for keyboard navigation and accessibility focus indicators.
+
+| Token | Reference | Contrast (vs white) | Purpose & Usage |
+|-------|-----------|---------------------|-----------------|
+| `focus.border` | `{color.ramp.dark-blue.950}` | 4.5:1 | Focus border color for keyboard navigation. Uses dark blue ramp for high contrast (4.5:1 on white). Meets WCAG AA requirements for focus indicators. |
+
+**Usage Notes:**
+- **Accessibility:** Use `focus.border` for all focus indicators to ensure 4.5:1 contrast ratio on white backgrounds.
+- **Implementation:** Apply as `outline: 2px solid var(--focus-border)` with `outline-offset: 2px` for visible focus indicators.
+- **Consistency:** This token should be used across all interactive components for keyboard navigation focus states.
 
 ### Input Tokens
 
@@ -640,8 +655,9 @@ CSS variables follow kebab-case derived from token paths:
 --surface-level-3: var(--color-brand-white);
 --surface-level-4: var(--color-brand-white);
 --surface-inverse: var(--color-brand-black);
---surface-accent-strong: var(--color-brand-pink);
---surface-accent-subtle: var(--color-ramp-pink-100);
+--surface-accent-low: var(--color-ramp-pink-400);
+--surface-accent-medium: var(--color-ramp-pink-600);
+--surface-accent-high: var(--color-ramp-pink-650);
 
 /* Interactive */
 --interactive-primary-fill-default: var(--color-brand-pink);
@@ -667,7 +683,9 @@ CSS variables follow kebab-case derived from token paths:
 
 /* Border */
 --border-elevation-primary: var(--color-ramp-neutral-300);
-```
+
+/* Focus */
+--focus-border: var(--color-ramp-dark-blue-950);```
 
 #### Typography Variables
 ```css
