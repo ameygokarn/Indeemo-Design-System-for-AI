@@ -19,6 +19,7 @@ This document provides comprehensive documentation for all design tokens in the 
    - [Typography](#typography)
    - [Spacing](#spacing)
    - [Border](#border)
+   - [Dynamic Relationships in Interactive Tokens](#dynamic-relationships-in-interactive-tokens)
 6. [Shadow & Elevation Effects](#shadow--elevation-effects)
 7. [CSS Variable Reference](#css-variable-reference)
 8. [Accessibility Information](#accessibility-information)
@@ -563,6 +564,145 @@ General border tokens for UI separation, containers, and visual hierarchy. These
 - `border.elevation.primary`: `{color.ramp.neutral.300}` - Default border for elevated surfaces
 - Use with `surface.level-2` and above for visual separation
 
+### Dynamic Relationships in Interactive Tokens
+
+The Indeemo Design System employs a **dynamic relationship approach** for interactive tokens that creates maintainable, consistent state transitions through calculated modifications rather than static values. This approach ensures that interactive states (hover, pressed) are mathematically derived from their default states using the modifier system.
+
+#### Core Concept: Calculated State Transitions
+
+Instead of defining each interactive state with a static color value, the system establishes dynamic relationships:
+
+```
+Default State → [Modifier Calculation] → Hover/Pressed State
+```
+
+This creates a **single source of truth** where changing the default state automatically updates all dependent states, ensuring visual consistency and reducing maintenance overhead.
+
+#### Implementation: The Modifier System
+
+Interactive states use Token Studio's `$extensions.studio.tokens.modify` feature to apply calculated transformations:
+
+| Modifier Token | Value | Purpose |
+|----------------|-------|---------|
+| `{modifier.interactive.hover}` | `{modifier.150}` (0.15) | Standard hover state transformation |
+| `{modifier.interactive.pressed}` | `{modifier.250}` (0.25) | Standard pressed state transformation |
+
+These modifiers represent proportional adjustments applied to the base color in HSL color space, creating predictable visual feedback.
+
+#### Example: Interactive Secondary Border
+
+**Before (Static Values):**
+```json
+"hover": {
+  "value": "{color.ramp.purple.750}",
+  "type": "color",
+  "description": "..."
+},
+"pressed": {
+  "value": "{color.ramp.purple.850}",
+  "type": "color",
+  "description": "..."
+}
+```
+
+**After (Dynamic Relationships):**
+```json
+"hover": {
+  "value": "{interactive.secondary.border.default}",
+  "type": "color",
+  "$extensions": {
+    "studio.tokens": {
+      "modify": {
+        "type": "darken",
+        "value": "{modifier.interactive.hover}",
+        "space": "hsl"
+      }
+    }
+  },
+  "description": "Secondary button border - hover state. 41% lightness, darker purple for emphasis."
+},
+"pressed": {
+  "value": "{interactive.secondary.border.default}",
+  "type": "color",
+  "$extensions": {
+    "studio.tokens": {
+      "modify": {
+        "type": "darken",
+        "value": "{modifier.interactive.pressed}",
+        "space": "hsl"
+      }
+    }
+  },
+  "description": "Secondary button border - pressed state. 32% lightness, darkest purple for pressed state."
+}
+```
+
+#### Benefits for Humans and LLMs
+
+**For Designers & Developers:**
+1. **Maintainability**: Change the default color once, and all states update automatically
+2. **Consistency**: All hover/pressed states use the same proportional adjustments
+3. **Predictability**: Visual feedback follows consistent rules across the system
+4. **Documentation**: The relationships are self-documenting in the token structure
+
+**For AI/LLM Systems:**
+1. **Pattern Recognition**: Clear, predictable relationships between tokens
+2. **Inference Capability**: Can deduce hover/pressed states from default states
+3. **System Understanding**: Recognizes the modifier system as a design principle
+4. **Code Generation**: Can generate consistent state logic based on patterns
+
+#### Application Across Interactive Tokens
+
+This pattern is applied consistently across all interactive token groups:
+
+1. **Primary Buttons**: Fill, text, and icon states
+2. **Secondary Buttons**: Fill, border, text, and icon states  
+3. **Links**: Color states for default, hover, visited
+4. **Input Fields**: Border, text, and icon states for various states
+
+#### How to Use This Pattern
+
+When creating or modifying interactive tokens:
+
+1. **Establish Default First**: Define the `default` state token with clear semantic meaning
+2. **Reference Default**: Set hover/pressed states to reference the default: `"{token.group.property.default}"`
+3. **Apply Modifier**: Use `$extensions.studio.tokens.modify` with appropriate modifier token
+4. **Choose Operation**: Use `darken`, `lighten`, or other supported operations
+5. **Select Color Space**: Use `hsl` for perceptual consistency or `srgb` for specific cases
+
+#### Mathematical Relationship
+
+The system creates a predictable visual progression:
+- **Default State**: Base color (e.g., `purple.850` at 32% lightness)
+- **Hover State**: Default darkened by 15% (e.g., 32% → 27% lightness)
+- **Pressed State**: Default darkened by 25% (e.g., 32% → 24% lightness)
+
+This creates a clear visual hierarchy: `Pressed > Hover > Default` in terms of color intensity.
+
+#### Maintenance Advantages
+
+1. **Global Updates**: Changing `{modifier.interactive.hover}` updates all hover states system-wide
+2. **Color Harmony**: All state transitions maintain consistent perceptual relationships
+3. **Accessibility**: Contrast ratios remain predictable across states
+4. **Theme Support**: Easy to create dark/light mode variations using the same relationships
+
+#### Token Studio Integration
+
+This approach leverages Token Studio's advanced features:
+- **Reference Chains**: Tokens can reference other tokens with modifications
+- **Modifier Tokens**: Centralized control over transformation amounts
+- **Color Space Awareness**: Transformations respect perceptual color spaces
+- **Export Compatibility**: Maintains relationships in generated code (CSS, JS, etc.)
+
+#### Future Extensions
+
+The dynamic relationship pattern can be extended to:
+- **Focus states** using different modifier values
+- **Disabled states** with lightness/opacity adjustments
+- **Success/error states** with hue shifts while maintaining lightness relationships
+- **Animation curves** by applying the modifier system to timing/duration tokens
+
+This approach represents a mature design token architecture that balances flexibility with consistency, making the system more maintainable for humans while being more interpretable for AI systems.
 
 
 ### Input Components
