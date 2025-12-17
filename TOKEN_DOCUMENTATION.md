@@ -15,16 +15,14 @@ This document provides comprehensive documentation for all design tokens in the 
 3. [Brand Colors](#brand-colors)
 4. [Color Ramps](#color-ramps)
 5. [Semantic Tokens](#semantic-tokens)
-   - [Surface & Elevation](#surface--elevation)
-   - [Interactive Components](#interactive-components)
-   - [Feedback States](#feedback-states)
-   - [Disabled States](#disabled-states)
-   - [Border Tokens](#border-tokens)
-6. [Typography Styles](#typography-styles)
-7. [Shadow & Elevation Effects](#shadow--elevation-effects)
-8. [CSS Variable Reference](#css-variable-reference)
-9. [Accessibility Information](#accessibility-information)
-10. [Usage Examples](#usage-examples)
+   - [Colour](#colour)
+   - [Typography](#typography)
+   - [Spacing](#spacing)
+   - [Border](#border)
+6. [Shadow & Elevation Effects](#shadow--elevation-effects)
+7. [CSS Variable Reference](#css-variable-reference)
+8. [Accessibility Information](#accessibility-information)
+9. [Usage Examples](#usage-examples)
 
 ---
 
@@ -101,10 +99,12 @@ Tokens follow this general pattern (not all attributes are required for every to
 ## Design System Philosophy & Reference Format
 
 ### Philosophy
-- **Minimal sets:** Only 3 sets to reduce Token Studio complexity
-- **Semantic grouping:** Tokens organized by context and use case
-- **Brand references:** ALL semantic colors reference the brand palette
+- **Viewport-scaled architecture:** 4 sets (brand, semantic, viewport, styles) with comprehensive responsive scaling
+- **Mathematical scaling:** Typography and spacing use multipliers for consistent viewport-based scaling
+- **Semantic grouping:** Tokens organized by context and use case across all breakpoints
+- **Brand references:** ALL semantic colors reference the brand palette with global updates
 - **Designer-ready:** All tokens include clear descriptions for Figma Make and designer understanding
+- **No duplication:** Existing tokens moved rather than duplicated to maintain clean architecture
 
 ### Token Reference Format
 
@@ -160,9 +160,13 @@ Token Studio uses a flattened reference model where:
 | semantic | Border | 1 | border.elevation.level-2.primary |
 | semantic | Interactive | 12 | 3 groups × 4 properties (primary, secondary, link) |
 | semantic | Feedback | 16 | 4 types × 4 properties (error, success, warning, info) |
-| styles | Typography | ~50 | Styles, scales, font definitions |
+| viewport | Typography | 4 × 48 = 192 | 4 viewports × 12 font sizes + 4 line heights each |
+| viewport | Grid | 4 × 4 = 16 | 4 viewports × 4 grid properties (column, margin, gutter, viewport) |
+| viewport | Spacing Static | 4 × 22 = 88 | 4 viewports × 22 static spacing tokens each |
+| viewport | Spacing Fluid | 4 × 10 = 40 | 4 viewports × 10 fluid spacing tokens each |
+| styles | Typography | 9 | 3 sizes × 3 styles (link, body, label) |
 | styles | Shadows | 7 | Elevation shadows negative-1 through 4, inverse |
-| **Total** | | **~270+** | Comprehensive token system |
+| **Total** | | **~550+** | Comprehensive viewport-scaled token system |
 
 ---
 
@@ -336,33 +340,108 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 
 ## Semantic Tokens
 
-### Surface & Elevation
+### Colour
 
-#### Elevation Levels
-| Level | Token | Value Reference | Use Case |
-|-------|-------|----------------|----------|
-| -1 | `elevation.level-negative-1` | `{color.brand.cream}` | Undercanvas (behind content) |
-| 0 | `elevation.level-0` | `{color.brand.white}` | Canvas (main background) |
-| 1 | `elevation.level-1` | `{color.brand.white}` | Cards, basic containers |
-| 2 | `elevation.level-2` | `{color.brand.white}` | Dropdowns, tooltips |
-| 3 | `elevation.level-3` | `{color.brand.white}` | Modals, sticky headers |
-| 4 | `elevation.level-4` | `{color.brand.white}` | Top-level overlays |
-| Inverse | `elevation.level-inverse` | `{color.brand.black}` | Dark mode surfaces |
+#### Surface & Elevation Tokens
+Surface and elevation tokens define the background layers and hierarchy of the interface. They are organized by elevation level (z-index depth) and include accent variations.
 
-#### Surface Tokens
-- `surface.undercanvas`: References `elevation.level-negative-1`
-- `surface.canvas`: References `elevation.level-0`
-- `surface.level-1` to `surface.level-4`: Corresponding elevation levels
-- `surface.inverse`: Dark background for high-contrast sections
+| Token | Reference | Description |
+|-------|-----------|-------------|
+| `surface.undercanvas` | `{color.brand.cream}` | Undercanvas (elevation -1). Base layer behind the main canvas. |
+| `surface.canvas` | `{color.brand.white}` | Canvas (elevation 0). Primary background for page content. |
+| `surface.level-1` | `{color.brand.white}` | Level 1 (elevation 1). Cards and containers. |
+| `surface.level-2` | `{color.brand.white}` | Level 2 (elevation 2). Dropdowns, popovers, tooltips. |
+| `surface.level-3` | `{color.brand.white}` | Level 3 (elevation 3). Modals, sticky headers. |
+| `surface.level-4` | `{color.brand.white}` | Level 4 (elevation 4). Top-level overlays. |
+| `surface.inverse` | `{color.brand.black}` | Inverse surface. Dark background for high-contrast sections. |
+| `surface.accent.low` | `{color.ramp.pink.400}` | Low intensity accent (82.5% lightness). Subtle highlights. |
+| `surface.accent.medium` | `{color.ramp.pink.600}` | Medium intensity accent (67.5% lightness). Moderate highlights. |
+| `surface.accent.high` | `{color.ramp.pink.650}` | High intensity accent (62.5% lightness). Strong highlights/badges. |
 
+#### Interactive Components
+Interactive tokens define the states (default, hover, pressed) for primary and secondary actions.
 
+| Component | State | Fill/Border | Text/Icon |
+|-----------|-------|-------------|-----------|
+| **Primary Button** | Default | `{color.brand.pink}` | `{color.brand.white}` |
+| | Hover | `{color.ramp.pink.750}` | `{color.ramp.neutral.200}` |
+| | Pressed | `{color.ramp.pink.850}` | `{color.ramp.neutral.250}` |
+| **Secondary Button** | Default | `{color.brand.white}` (fill), `{color.brand.purple}` (border) | `{color.brand.black}` |
+| | Hover | `{color.ramp.neutral.150}` (fill), `{color.ramp.purple.750}` (border) | `{color.brand.black}` |
+| | Pressed | `{color.ramp.neutral.200}` (fill), `{color.ramp.purple.850}` (border) | `{color.brand.black}` |
+| **Link** | Default | - | `{color.ramp.purple.850}` |
+| | Hover | - | `{color.ramp.purple.750}` |
+| | Visited | - | `{color.ramp.purple.700}` |
 
-**Note:** The `semantic.elevation` tokens have been removed. All surface tokens now directly reference brand colors (`color.brand.white`, `color.brand.cream`, `color.brand.black`) for simplicity and maintainability.
+#### Input Components
+Input tokens define the visual states for form fields, ensuring clarity and accessibility.
 
-#### Surface Accents
-- `surface.accent.low`: `{color.ramp.pink.400}` (approx 82.5% lightness) - Low intensity accent for subtle highlights or backgrounds.
-- `surface.accent.medium`: `{color.ramp.pink.600}` (approx 67.5% lightness) - Medium intensity accent for moderate highlights.
-- `surface.accent.high`: `{color.ramp.pink.650}` (approx 62.5% lightness) - High intensity accent for strong highlights or badges.
+| State | Fill | Border | Text |
+|-------|------|--------|------|
+| Default | `{color.ramp.neutral.100}` | `{color.ramp.neutral.950}` | `{color.ramp.neutral.850}` |
+| Hover | `{color.ramp.neutral.150}` | `{color.ramp.neutral.1000}` | `{color.ramp.neutral.900}` |
+| Active | `{color.ramp.neutral.200}` | `{color.ramp.pink.650}` | `{color.ramp.neutral.1050}` |
+| Success | `{color.ramp.green.150}` | `{color.ramp.green.950}` | `{color.ramp.green.800}` |
+| Error | `{color.ramp.red.150}` | `{color.ramp.red.950}` | `{color.ramp.red.800}` |
+| Disabled | `{disabled.a}` | - | `{disabled.c}` |
+
+#### Feedback States
+Feedback tokens communicate system status (error, success, warning, info) through consistent color application.
+
+| Type | Fill | Text/Icon | Border |
+|------|------|-----------|--------|
+| **Error** | `{color.ramp.red.100}` | `{color.ramp.red.800}` | `{color.ramp.red.950}` |
+| **Success** | `{color.ramp.green.100}` | `{color.ramp.green.800}` | `{color.ramp.green.950}` |
+| **Warning** | `{color.ramp.yellow.100}` | `{color.ramp.orange.800}` | `{color.ramp.orange.950}` |
+| **Info** | `{color.ramp.dark-blue.100}` | `{color.ramp.dark-blue.800}` | `{color.ramp.dark-blue.950}` |
+
+#### Disabled States
+Universal disabled states for consistent UI behavior.
+
+- `disabled.a`: `{color.ramp.neutral.200}` (Fill - 89% lightness)
+- `disabled.b`: `{color.ramp.neutral.300}` (Border - 79% lightness)
+- `disabled.c`: `{color.ramp.neutral.400}` (Text - 69% lightness)
+
+### Typography
+
+Typography uses a mathematical scaling system with viewport-specific multipliers for responsive design.
+
+#### Viewport Typography Multipliers
+- **Small**: base_font_size = 14px, multiplier = 1.0
+- **Medium**: base_font_size = 16px, multiplier = 1.0
+- **Large**: base_font_size = 16px, multiplier = 1.125
+- **XLarge**: base_font_size = 16px, multiplier = 1.25
+
+#### Font Size Scale Factors
+| Token | Scale Factor | Small (0-767) | Medium (768-1023) | Large (1024-1439) | XLarge (1440+) |
+|-------|--------------|---------------|-------------------|-------------------|----------------|
+| `xxs` | 0.5 | 8px | 8px | 8px | 10px |
+| `xs` | 0.75 | 10px | 12px | 14px | 14px |
+| `sm` | 0.875 | 12px | 14px | 16px | 18px |
+| `md` | 1.0 | 14px | 16px | 18px | 20px |
+| `lg` | 1.125 | 16px | 18px | 20px | 22px |
+| `xl` | 1.25 | 18px | 20px | 22px | 24px |
+| `xxl` | 1.375 | 20px | 22px | 24px | 26px |
+| `3xl` | 1.5 | 20px | 24px | 26px | 28px |
+| `4xl` | 1.75 | 24px | 28px | 30px | 34px |
+| `5xl` | 2.0 | 28px | 32px | 36px | 40px |
+| `6xl` | 2.125 | 30px | 34px | 38px | 42px |
+| `7xl` | 2.25 | 32px | 36px | 40px | 44px |
+
+#### Composite Typography Tokens
+These tokens combine font properties into complete styles, referencing viewport-specific values.
+
+| Token | Font Size | Line Height | Weight | Description |
+|-------|-----------|-------------|--------|-------------|
+| `styles.link.large` | `{fontSize.lg}` | `{lineHeight.loose}` | Regular | Large link text |
+| `styles.link.medium` | `{fontSize.md}` | `{lineHeight.normal}` | Regular | Standard link text |
+| `styles.link.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Regular | Small link text |
+| `styles.body.large` | `{fontSize.lg}` | `{lineHeight.loose}` | Regular | Lead paragraphs |
+| `styles.body.medium` | `{fontSize.md}` | `{lineHeight.normal}` | Regular | Primary body text |
+| `styles.body.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Regular | Secondary text |
+| `styles.label.large` | `{fontSize.lg}` | `{lineHeight.tight}` | Bold | Prominent labels |
+| `styles.label.medium` | `{fontSize.md}` | `{lineHeight.tight}` | Bold | Standard labels |
+| `styles.label.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Bold | Compact labels |
 ### Interactive Components
 
 #### Primary Buttons
@@ -442,6 +521,53 @@ General border tokens for UI separation, containers, and visual hierarchy. These
 
 
 
+### Input Components
+
+Input tokens provide semantic styling for form fields and input components across all states, following the simplified naming pattern `input.[property].[state]`.
+
+#### Token Reference Table
+
+| Token | Reference Token | Contrast Ratio (vs White) | Description |
+|-------|----------------|---------------------------|-------------|
+| **Fill Tokens** | | | |
+| `input.fill.default` | `{color.ramp.neutral.100}` | 1:1 | Default background for input fields in their standard state. |
+| `input.fill.hover` | `{color.ramp.neutral.150}` | 1.2:1 | Background for input fields when hovered by the user. |
+| `input.fill.active` | `{color.ramp.neutral.200}` | 1.5:1 | Background for input fields when active (pressed) or focused. |
+| `input.fill.success` | `{color.ramp.green.150}` | 2.0:1 | Background for input fields in a success validation state (darker green for better visibility). |
+| `input.fill.error` | `{color.ramp.red.150}` | 2.0:1 | Background for input fields in an error validation state (darker red for better visibility). |
+| `input.fill.disabled` | `{disabled.a}` | Not required (disabled) | Background for input fields when disabled. |
+| **Text Tokens** | | | |
+| `input.text.primary` | `{color.ramp.neutral.850}` | 8:1 | Primary text color for input fields in their standard state. |
+| `input.text.hover` | `{color.ramp.neutral.900}` | 11:1 | Text color for input fields when hovered by the user. |
+| `input.text.active` | `{color.ramp.neutral.1050}` | 21:1 | Text color for input fields when active (pressed) or focused. |
+| `input.text.success` | `{color.ramp.green.800}` | 12:1 | Text color for input fields in a success validation state. |
+| `input.text.error` | `{color.ramp.red.800}` | 12:1 | Text color for input fields in an error validation state. |
+| `input.text.disabled` | `{disabled.c}` | Not required (disabled) | Text color for input fields when disabled. |
+| `input.text.secondary` | `{color.ramp.neutral.450}` | 2.6:1 | Text color for placeholder or secondary text in input fields. |
+| **Border Tokens** | | | |
+| `input.border.default` | `{color.ramp.neutral.950}` | 5.25:1 | Border color for input fields in their standard state (15% lightness, WCAG AA compliant). |
+| `input.border.hover` | `{color.ramp.neutral.1000}` | 7.0:1 | Border color for input fields when hovered by the user (10% lightness, enhanced contrast). |
+| `input.border.active` | `{color.ramp.pink.650}` | 8.2:1 | Border color for input fields when active (pressed) or focused. Uses brand pink for clear visual indication. |
+| `input.border.success` | `{color.ramp.green.950}` | 15:1 | Border color for input fields in a success validation state. |
+| `input.border.error` | `{color.ramp.red.950}` | 15:1 | Border color for input fields in an error validation state. |
+| **Icon Tokens** | | | |
+| `input.icon.primary` | `{input.text.primary}` | 8:1 | Primary icon color for input fields. References input.text.primary for consistency. |
+| `input.icon.hover` | `{input.text.hover}` | 11:1 | Icon color for input fields when hovered by the user. References input.text.hover for consistency. |
+| `input.icon.secondary` | `{input.text.secondary}` | 3.5:1 | Secondary icon color for input fields (e.g., placeholder icons). References input.text.secondary for consistency. |
+| `input.icon.active` | `{input.text.active}` | 21:1 | Icon color for input fields when active (pressed) or focused. References input.text.active for consistency. |
+| `input.icon.success` | `{input.text.success}` | 12:1 | Icon color for input fields in a success validation state. References input.text.success for consistency. |
+| `input.icon.error` | `{input.text.error}` | 12:1 | Icon color for input fields in an error validation state. References input.text.error for consistency. |
+| `input.icon.disabled` | `{disabled.c}` | Not required (disabled) | Icon color for input fields when disabled. |
+
+#### Usage Notes
+- **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
+- **Disabled States**: Removed from input grouping - use universal `disabled.a`, `disabled.b`, `disabled.c` tokens instead
+- **Validation States**: Success/error fills use `green.150` and `red.150` for better visibility
+- **Border Contrast**: `input.border.default` (`neutral.950`, 5.25:1) and `input.border.hover` (`neutral.1000`, 7:1) meet WCAG AA requirements
+- **Border Active**: `input.border.active` now uses `color.ramp.pink.650` (brand pink, 8.2:1 contrast) for clear focus indication
+- **Icon Tokens**: Icon colors now reference their corresponding text tokens for consistency and easier maintenance
+- **Focus State**: Active state uses brand pink for clear visual indication
+
 ### Focus Tokens
 
 Focus tokens provide consistent styling for keyboard navigation and accessibility focus indicators.
@@ -454,6 +580,22 @@ Focus tokens provide consistent styling for keyboard navigation and accessibilit
 - **Accessibility:** Use `focus.border` for all focus indicators to ensure 4.5:1 contrast ratio on white backgrounds.
 - **Implementation:** Apply as `outline: 2px solid var(--focus-border)` with `outline-offset: 2px` for visible focus indicators.
 - **Consistency:** This token should be used across all interactive components for keyboard navigation focus states.
+
+### Disabled States
+
+#### Universal Disabled Tokens
+Disabled states use a universal palette that works across all component types:
+
+| Token | Reference | Description |
+|-------|-----------|-------------|
+| `disabled.a` | `{color.ramp.neutral.200}` | Light disabled background (89% lightness) |
+| `disabled.b` | `{color.ramp.neutral.300}` | Medium disabled background (79% lightness) |
+| `disabled.c` | `{color.ramp.neutral.400}` | Dark disabled text/icons (69% lightness) |
+
+**Usage Notes:**
+- **Universal Application:** These tokens work for all disabled states across buttons, inputs, and other components
+- **No Contrast Requirements:** Disabled states are exempt from WCAG contrast requirements
+- **Consistent Palette:** Use `disabled.a` for backgrounds, `disabled.b` for borders, `disabled.c` for text/icons
 
 ### Input Tokens
 
@@ -510,78 +652,7 @@ Input tokens provide semantic styling for form fields and input components acros
 - **Validation States**: Success/error states reference established feedback color ramps
 - **Focus State**: Active state uses `color.brand.purple` for clear visual indication
 
----
 
-## Typography Styles
-
-### Font Families & Weights
-
-#### Brand Font Family
-- `brand.fontFamily.a`: `"IBM Plex Sans"` - Primary UI font
-- **Figma Type:** `FONT_FAMILY`
-- **CSS Var:** `--font-family-primary`
-
-#### Font Weights
-- `brand.fontWeight.regular`: `"Regular"` (400) - Body text
-- `brand.fontWeight.bold`: `"Bold"` (700) - Headings, emphasis
-- **Figma Type:** `FONT_WEIGHT`
-
-### Typography Scale
-
-#### Base & Ratio
-- `scale.base`: `1` - Multiplier for all typography
-- `scale.ratio`: `1.125` - Major Second scale ratio
-
-#### Font Sizes (px values)
-| Token | Calculation | Actual Size | Purpose |
-|-------|-------------|-------------|----------|
-| `fontSize.xxs` | base × 8 | 8px | Micro labels, captions |
-| `fontSize.xs` | base × 12 | 12px | Small UI text, helper text |
-| `fontSize.sm` | base × 14 | 14px | Secondary body text, small labels |
-| `fontSize.md` | base × 16 | 16px | **Primary body copy** |
-| `fontSize.lg` | base × 18 | 18px | Lead paragraphs, subheadings |
-| `fontSize.xl` | base × 20 | 20px | Prominent headings |
-| `fontSize.xxl` | base × 22 | 22px | Section headings |
-| `fontSize.3xl` | base × 24 | 24px | Display headings (small devices) |
-| `fontSize.4xl` | base × 28 | 28px | Large display headings |
-| `fontSize.5xl` | base × 32 | 32px | Large hero headings |
-| `fontSize.6xl` | base × 34 | 34px | Marketing hero text |
-| `fontSize.7xl` | base × 36 | 36px | Large marketing display text |
-
-#### Line Heights
-| Token | Calculation | Actual Size | Purpose |
-|-------|-------------|-------------|----------|
-| `lineHeight.tight` | base × 16 | 16px | Compact UI text, labels |
-| `lineHeight.snug` | base × 18 | 18px | Small paragraph text |
-| `lineHeight.normal` | base × 20 | 20px | **Default body text** |
-| `lineHeight.comfortable` | base × 22 | 22px | Subheadings, medium headlines |
-| `lineHeight.relaxed` | base × 24 | 24px | Relaxed reading |
-| `lineHeight.loose` | base × 28 | 28px | Loose spacing |
-| `lineHeight.extra-loose` | base × 32 | 32px | Extra loose spacing |
-
-### Typography Style Combinations
-
-For Figma Make optimization, typography tokens combine:
-- `fontFamily`: References `{brand.fontFamily.a}`
-- `fontWeight`: References `{brand.fontWeight.regular}` or `{brand.fontWeight.bold}`
-- `fontSize`: References appropriate size token
-- `lineHeight`: References appropriate line height token
-
-**Example Structure:**
-```json
-"headline": {
-  "large": {
-    "value": {
-      "fontFamily": "{brand.fontFamily.a}",
-      "fontWeight": "{brand.fontWeight.bold}",
-      "fontSize": "{scale.fontSize.xl}",
-      "lineHeight": "{scale.lineHeight.comfortable}"
-    },
-    "type": "typography",
-    "description": "Headline Large (20px/22px, Bold). Purpose: Section headings..."
-  }
-}
-```
 
 ---
 
