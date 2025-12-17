@@ -428,6 +428,50 @@ Typography uses a mathematical scaling system with viewport-specific multipliers
 | `6xl` | 2.125 | 30px | 34px | 38px | 42px |
 | `7xl` | 2.25 | 32px | 36px | 40px | 44px |
 
+### Typography Tokens
+
+**Grouping:** `viewport.{viewport}.typography.*`
+
+Font sizes calculated using multipliers, line heights are consistent across viewports.
+
+| Token Path | Small (14px × 1.0) | Medium (16px × 1.0) | Large (16px × 1.125) | XLarge (16px × 1.25) | Type |
+|------------|---------------------|----------------------|-----------------------|-----------------------|------|
+| `viewport.small.typography.fontSize.xxs` | 8 | 8 | 8 | 10 | fontSizes |
+| `viewport.small.typography.fontSize.xs` | 10 | 12 | 14 | 14 | fontSizes |
+| `viewport.small.typography.fontSize.sm` | 12 | 14 | 16 | 18 | fontSizes |
+| `viewport.small.typography.fontSize.md` | 14 | 16 | 18 | 20 | fontSizes |
+| `viewport.small.typography.fontSize.lg` | 16 | 18 | 20 | 22 | fontSizes |
+| `viewport.small.typography.fontSize.xl` | 18 | 20 | 22 | 24 | fontSizes |
+| `viewport.small.typography.fontSize.xxl` | 20 | 22 | 24 | 26 | fontSizes |
+| `viewport.small.typography.fontSize.3xl` | 20 | 24 | 26 | 28 | fontSizes |
+| `viewport.small.typography.fontSize.4xl` | 24 | 28 | 30 | 34 | fontSizes |
+| `viewport.small.typography.fontSize.5xl` | 28 | 32 | 36 | 40 | fontSizes |
+| `viewport.small.typography.fontSize.6xl` | 30 | 34 | 38 | 42 | fontSizes |
+| `viewport.small.typography.fontSize.7xl` | 32 | 36 | 40 | 44 | fontSizes |
+| `viewport.small.typography.lineHeight.tight` | 1.0 | 1.0 | 1.0 | 1.0 | lineHeights |
+| `viewport.small.typography.lineHeight.normal` | 1.125 | 1.125 | 1.125 | 1.125 | lineHeights |
+| `viewport.small.typography.lineHeight.loose` | 1.25 | 1.25 | 1.25 | 1.25 | lineHeights |
+| `viewport.small.typography.lineHeight.extra-loose` | 1.5 | 1.5 | 1.5 | 1.5 | lineHeights |
+
+### Fluid Spacing Tokens
+
+**Grouping:** `viewport.{viewport}.spacing.fluid.*`
+
+Fluid spacing calculated using multipliers for proportional scaling.
+
+| Token Path | Small (4px × 1.0) | Medium (4px × 1.0) | Large (4px × 1.25) | XLarge (4px × 1.5) | Type |
+|------------|-------------------|---------------------|---------------------|---------------------|------|
+| `viewport.small.spacing.fluid.010` | 2 | 2 | 2 | 2 | spacing |
+| `viewport.small.spacing.fluid.020` | 4 | 4 | 4 | 6 | spacing |
+| `viewport.small.spacing.fluid.040` | 8 | 8 | 10 | 12 | spacing |
+| `viewport.small.spacing.fluid.060` | 12 | 12 | 14 | 18 | spacing |
+| `viewport.small.spacing.fluid.080` | 16 | 16 | 20 | 24 | spacing |
+| `viewport.small.spacing.fluid.100` | 20 | 20 | 24 | 30 | spacing |
+| `viewport.small.spacing.fluid.120` | 24 | 24 | 28 | 36 | spacing |
+| `viewport.small.spacing.fluid.160` | 32 | 32 | 40 | 48 | spacing |
+| `viewport.small.spacing.fluid.240` | 48 | 48 | 60 | 72 | spacing |
+| `viewport.small.spacing.fluid.320` | 64 | 64 | 80 | 96 | spacing |
+
 #### Composite Typography Tokens
 These tokens combine font properties into complete styles, referencing viewport-specific values.
 
