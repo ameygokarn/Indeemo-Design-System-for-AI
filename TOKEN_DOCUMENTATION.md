@@ -17,13 +17,13 @@ This document provides comprehensive documentation for all design tokens in the 
 5. [Semantic Tokens](#semantic-tokens)
    - [Colour](#colour)
    - [Typography](#typography)
-   - [Spacing](#spacing)
+   - [Spacing](#spacing-scale)
    - [Border](#border)
 6. [Dynamic Relationships in Interactive Tokens](#dynamic-relationships-in-interactive-tokens)
-6. [Shadow & Elevation Effects](#shadow--elevation-effects)
-7. [CSS Variable Reference](#css-variable-reference)
-8. [Accessibility Information](#accessibility-information)
-9. [Usage Examples](#usage-examples)
+7. [Shadow & Elevation Effects](#shadow--elevation-effects)
+8. [CSS Variable Reference](#css-variable-reference)
+9. [Accessibility Information](#accessibility-information)
+10. [Usage Examples](#usage-examples)
 
 ---
 
@@ -408,47 +408,43 @@ Universal disabled states for consistent UI behavior.
 Typography uses a mathematical scaling system with viewport-specific multipliers for responsive design.
 
 #### Viewport Typography Multipliers
-- **Small**: base_font_size = 14px, multiplier = 1.0
-- **Medium**: base_font_size = 16px, multiplier = 1.0
-- **Large**: base_font_size = 16px, multiplier = 1.125
-- **XLarge**: base_font_size = 16px, multiplier = 1.25
+- **Small**: Custom progression starting from 6px
+- **Medium**: Custom progression starting from 8px
+- **Large**: Target progression: 8px, 10px, 12px, 16px, 20px, 24px, 28px, 32px, 38px, 40px
+- **XLarge**: Extended progression starting from 10px
 
 #### Font Size Scale Factors
-| Token | Scale Factor | Small (0-767) | Medium (768-1023) | Large (1024-1439) | XLarge (1440+) |
-|-------|--------------|---------------|-------------------|-------------------|----------------|
-| `xxs` | 0.5 | 8px | 8px | 8px | 10px |
-| `xs` | 0.75 | 10px | 12px | 14px | 14px |
-| `sm` | 0.875 | 12px | 14px | 16px | 18px |
-| `md` | 1.0 | 14px | 16px | 18px | 20px |
-| `lg` | 1.125 | 16px | 18px | 20px | 22px |
-| `xl` | 1.25 | 18px | 20px | 22px | 24px |
-| `xxl` | 1.375 | 20px | 22px | 24px | 26px |
-| `3xl` | 1.5 | 20px | 24px | 26px | 28px |
-| `4xl` | 1.75 | 24px | 28px | 30px | 34px |
-| `5xl` | 2.0 | 28px | 32px | 36px | 40px |
-| `6xl` | 2.125 | 30px | 34px | 38px | 42px |
-| `7xl` | 2.25 | 32px | 36px | 40px | 44px |
+| Token | Small (0-767) | Medium (768-1023) | Large (1024-1439) | XLarge (1440+) |
+|-------|---------------|-------------------|-------------------|----------------|
+| `xxs` | 6px | 8px | 8px | 10px |
+| `xs` | 8px | 10px | 10px | 12px |
+| `sm` | 10px | 12px | 12px | 16px |
+| `md` | 12px | 14px | 16px | 18px |
+| `lg` | 14px | 16px | 20px | 20px |
+| `xl` | 16px | 18px | 24px | 24px |
+| `xxl` | 18px | 20px | 28px | 28px |
+| `3xl` | 20px | 24px | 32px | 32px |
+| `4xl` | 24px | 28px | 38px | 38px |
+| `5xl` | 28px | 32px | 40px | 40px |
 
 ### Typography Tokens
 
 **Grouping:** `viewport.{viewport}.typography.*`
 
-Font sizes calculated using multipliers, line heights are consistent across viewports.
+Font sizes use custom progressions per viewport, line heights are consistent across viewports.
 
-| Token Path | Small (14px × 1.0) | Medium (16px × 1.0) | Large (16px × 1.125) | XLarge (16px × 1.25) | Type |
-|------------|---------------------|----------------------|-----------------------|-----------------------|------|
-| `viewport.small.typography.fontSize.xxs` | 8 | 8 | 8 | 10 | fontSizes |
-| `viewport.small.typography.fontSize.xs` | 10 | 12 | 14 | 14 | fontSizes |
-| `viewport.small.typography.fontSize.sm` | 12 | 14 | 16 | 18 | fontSizes |
-| `viewport.small.typography.fontSize.md` | 14 | 16 | 18 | 20 | fontSizes |
-| `viewport.small.typography.fontSize.lg` | 16 | 18 | 20 | 22 | fontSizes |
-| `viewport.small.typography.fontSize.xl` | 18 | 20 | 22 | 24 | fontSizes |
-| `viewport.small.typography.fontSize.xxl` | 20 | 22 | 24 | 26 | fontSizes |
-| `viewport.small.typography.fontSize.3xl` | 20 | 24 | 26 | 28 | fontSizes |
-| `viewport.small.typography.fontSize.4xl` | 24 | 28 | 30 | 34 | fontSizes |
-| `viewport.small.typography.fontSize.5xl` | 28 | 32 | 36 | 40 | fontSizes |
-| `viewport.small.typography.fontSize.6xl` | 30 | 34 | 38 | 42 | fontSizes |
-| `viewport.small.typography.fontSize.7xl` | 32 | 36 | 40 | 44 | fontSizes |
+| Token Path | Small (6px base) | Medium (8px base) | Large (8px base) | XLarge (10px base) | Type |
+|------------|------------------|-------------------|------------------|---------------------|------|
+| `viewport.small.typography.fontSize.xxs` | 6 | 8 | 8 | 10 | fontSizes |
+| `viewport.small.typography.fontSize.xs` | 8 | 10 | 10 | 12 | fontSizes |
+| `viewport.small.typography.fontSize.sm` | 10 | 12 | 12 | 16 | fontSizes |
+| `viewport.small.typography.fontSize.md` | 12 | 14 | 16 | 18 | fontSizes |
+| `viewport.small.typography.fontSize.lg` | 14 | 16 | 20 | 20 | fontSizes |
+| `viewport.small.typography.fontSize.xl` | 16 | 18 | 24 | 24 | fontSizes |
+| `viewport.small.typography.fontSize.xxl` | 18 | 20 | 28 | 28 | fontSizes |
+| `viewport.small.typography.fontSize.3xl` | 20 | 24 | 32 | 32 | fontSizes |
+| `viewport.small.typography.fontSize.4xl` | 24 | 28 | 38 | 38 | fontSizes |
+| `viewport.small.typography.fontSize.5xl` | 28 | 32 | 40 | 40 | fontSizes |
 | `viewport.small.typography.lineHeight.tight` | 1.0 | 1.0 | 1.0 | 1.0 | lineHeights |
 | `viewport.small.typography.lineHeight.normal` | 1.125 | 1.125 | 1.125 | 1.125 | lineHeights |
 | `viewport.small.typography.lineHeight.loose` | 1.25 | 1.25 | 1.25 | 1.25 | lineHeights |
@@ -781,60 +777,6 @@ Disabled states use a universal palette that works across all component types:
 - **No Contrast Requirements:** Disabled states are exempt from WCAG contrast requirements
 - **Consistent Palette:** Use `disabled.a` for backgrounds, `disabled.b` for borders, `disabled.c` for text/icons
 
-### Input Tokens
-
-Input tokens provide semantic styling for form fields and input components across all states, following the simplified naming pattern `input.[property].[state]`.
-
-#### Token Reference Table
-
-| Token | Reference Token | Contrast Ratio (vs White) | Description |
-|-------|----------------|---------------------------|-------------|
-| **Fill Tokens** | | | |
-| `input.fill.default` | `{color.ramp.neutral.100}` | 1:1 | Default background for input fields in their standard state. |
-| `input.fill.hover` | `{color.ramp.neutral.150}` | 1.2:1 | Background for input fields when hovered by the user. |
-| `input.fill.active` | `{color.ramp.neutral.200}` | 1.5:1 | Background for input fields when active (pressed) or focused. |
-| `input.fill.success` | `{color.ramp.green.150}` | 2.0:1 | Background for input fields in a success validation state (darker green for better visibility). |
-| `input.fill.error` | `{color.ramp.red.150}` | 2.0:1 | Background for input fields in an error validation state (darker red for better visibility). |
-| `input.fill.disabled` | `{disabled.a}` | Not required (disabled) | Background for input fields when disabled. |
-| **Text Tokens** | | | |
-| `input.text.primary` | `{color.ramp.neutral.850}` | 8:1 | Primary text color for input fields in their standard state. |
-| `input.text.hover` | `{color.ramp.neutral.900}` | 11:1 | Text color for input fields when hovered by the user. |
-| `input.text.active` | `{color.ramp.neutral.1050}` | 21:1 | Text color for input fields when active (pressed) or focused. |
-| `input.text.success` | `{color.ramp.green.800}` | 12:1 | Text color for input fields in a success validation state. |
-| `input.text.error` | `{color.ramp.red.800}` | 12:1 | Text color for input fields in an error validation state. |
-| `input.text.disabled` | `{disabled.c}` | Not required (disabled) | Text color for input fields when disabled. |
-| `input.text.secondary` | `{color.ramp.neutral.450}` | 2.6:1 | Text color for placeholder or secondary text in input fields. |
-| **Border Tokens** | | | |
-| `input.border.default` | `{color.ramp.neutral.950}` | 5.25:1 | Border color for input fields in their standard state (15% lightness, WCAG AA compliant). |
-| `input.border.hover` | `{color.ramp.neutral.1000}` | 7.0:1 | Border color for input fields when hovered by the user (10% lightness, enhanced contrast). |
-| `input.border.active` | `{color.ramp.pink.650}` | 8.2:1 | Border color for input fields when active (pressed) or focused. Uses brand pink for clear visual indication. |
-| `input.border.success` | `{color.ramp.green.950}` | 15:1 | Border color for input fields in a success validation state. |
-| `input.border.error` | `{color.ramp.red.950}` | 15:1 | Border color for input fields in an error validation state. |
-| **Icon Tokens** | | | |
-| `input.icon.primary` | `{input.text.primary}` | 8:1 | Primary icon color for input fields. References input.text.primary for consistency. |
-| `input.icon.hover` | `{input.text.hover}` | 11:1 | Icon color for input fields when hovered by the user. References input.text.hover for consistency. |
-| `input.icon.secondary` | `{input.text.secondary}` | 3.5:1 | Secondary icon color for input fields (e.g., placeholder icons). References input.text.secondary for consistency. |
-| `input.icon.active` | `{input.text.active}` | 21:1 | Icon color for input fields when active (pressed) or focused. References input.text.active for consistency. |
-| `input.icon.success` | `{input.text.success}` | 12:1 | Icon color for input fields in a success validation state. References input.text.success for consistency. |
-| `input.icon.error` | `{input.text.error}` | 12:1 | Icon color for input fields in an error validation state. References input.text.error for consistency. |
-| `input.icon.disabled` | `{disabled.c}` | Not required (disabled) | Icon color for input fields when disabled. |
-
-#### Usage Notes
-- **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
-- **Disabled States**: Removed from input grouping - use universal `disabled.a`, `disabled.b`, `disabled.c` tokens instead
-- **Validation States**: Success/error fills use `green.150` and `red.150` for better visibility
-- **Border Contrast**: `input.border.default` (`neutral.950`, 5.25:1) and `input.border.hover` (`neutral.1000`, 7:1) meet WCAG AA requirements
-- **Border Active**: `input.border.active` now uses `color.ramp.pink.650` (brand pink, 8.2:1 contrast) for clear focus indication
-- **Icon Tokens**: Icon colors now reference their corresponding text tokens for consistency and easier maintenance
-- **Focus State**: Active state uses brand pink for clear visual indication### Usage Notes
-- **Contrast Compliance**: All tokens (except disabled states) meet WCAG AA requirements (4.5:1 for text, 3:1 for UI components)
-- **Disabled States**: Removed from input grouping - use universal `disabled.a`, `disabled.b`, `disabled.c` tokens instead
-- **Validation States**: Success/error fills use `green.150` and `red.150` for better visibility
-- **Border Contrast**: `input.border.default` (`neutral.950`, 5.25:1) and `input.border.hover` (`neutral.1000`, 7:1) meet WCAG AA requirements
-- **Focus State**: Active state uses `color.brand.purple` for clear visual indication
-- **Disabled States**: Do not require contrast compliance; use `disabled.a`, `disabled.b`, `disabled.c` palette
-- **Validation States**: Success/error states reference established feedback color ramps
-- **Focus State**: Active state uses `color.brand.purple` for clear visual indication
 
 
 
@@ -949,19 +891,17 @@ CSS variables follow kebab-case derived from token paths:
 --font-weight-regular: 400;
 --font-weight-bold: 700;
 
-/* Font Sizes */
+/* Font Sizes (Large viewport progression) */
 --font-size-xxs: 8px;
---font-size-xs: 12px;
---font-size-sm: 14px;
+--font-size-xs: 10px;
+--font-size-sm: 12px;
 --font-size-md: 16px;
---font-size-lg: 18px;
---font-size-xl: 20px;
---font-size-xxl: 22px;
---font-size-3xl: 24px;
---font-size-4xl: 28px;
---font-size-5xl: 32px;
---font-size-6xl: 34px;
---font-size-7xl: 36px;
+--font-size-lg: 20px;
+--font-size-xl: 24px;
+--font-size-xxl: 28px;
+--font-size-3xl: 32px;
+--font-size-4xl: 38px;
+--font-size-5xl: 40px;
 
 /* Line Heights */
 --line-height-tight: 16px;
