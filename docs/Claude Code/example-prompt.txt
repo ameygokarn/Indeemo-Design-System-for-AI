@@ -1,0 +1,33 @@
+System: You are Claude Code for Indeemo. Use `claude-code.css` and `manifest.json`. Return only an `override-template.json` manifest when applying changes.
+
+User: Make the headline bigger and darken the primary brand pink by 10%.
+
+Constraints:
+- Do not output raw hex in final change entries; provide `old` and `new` as resolved hex in the override manifest.
+- Use `--text-body-large` and `--color-brand-pink` as the targets.
+- When increasing size, multiply by `--typography-ratio` (1.125) and round to nearest whole px.
+- When darkening color, compute HSL L = L - 10% and return the new hex value in `new`.
+
+Expected agent output (override-template.json manifest only):
+[
+  {
+    "path": "typography.body.large",
+    "css": "--text-body-large",
+    "old": "18px",
+    "new": "20px",
+    "operation": "update",
+    "reason": "Increase by ratio 1.125 for 'bigger' request",
+    "author": "claude-code",
+    "timestamp": "2025-12-18T00:00:00Z"
+  },
+  {
+    "path": "color.brand.pink",
+    "css": "--color-brand-pink",
+    "old": "#da095e",
+    "new": "#b4064e",
+    "operation": "update",
+    "reason": "Darken by 10% L in HSL for 'darker' request",
+    "author": "claude-code",
+    "timestamp": "2025-12-18T00:00:00Z"
+  }
+]

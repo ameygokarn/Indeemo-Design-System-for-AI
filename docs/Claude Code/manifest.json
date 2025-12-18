@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2025-12-18T00:00:00Z",
+  "description": "Compact machine-readable manifest mapping tokens to CSS variables for Claude Code automation.",
+  "entries": [
+    {
+      "path": "color.brand.pink",
+      "css": "--color-brand-pink",
+      "resolved": "#da095e",
+      "raw": "hsl(335,92%,57%)",
+      "type": "color",
+      "description": "Primary brand pink",
+      "theme": "Foundation",
+      "resolved": true
+    },
+    {
+      "path": "color.ramp.pink.750",
+      "css": "--color-ramp-pink-750",
+      "resolved": "#b0064a",
+      "raw": "{color.brand.pink} darken(20%)",
+      "type": "color",
+      "description": "Darker pink for hover/pressed",
+      "theme": "Foundation",
+      "resolved": true
+    },
+    {
+      "path": "typography.body.large",
+      "css": "--text-body-large",
+      "resolved": "18px",
+      "raw": "{typography.base} * 1.125^1",
+      "type": "typography",
+      "description": "Body large — reference for headline scaling",
+      "theme": "Styles",
+      "resolved": true
+    }
+  ]
+}
