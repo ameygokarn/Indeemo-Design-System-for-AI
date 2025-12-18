@@ -19,7 +19,7 @@ This document provides comprehensive documentation for all design tokens in the 
    - [Typography](#typography)
    - [Spacing](#spacing)
    - [Border](#border)
-   - [Dynamic Relationships in Interactive Tokens](#dynamic-relationships-in-interactive-tokens)
+6. [Dynamic Relationships in Interactive Tokens](#dynamic-relationships-in-interactive-tokens)
 6. [Shadow & Elevation Effects](#shadow--elevation-effects)
 7. [CSS Variable Reference](#css-variable-reference)
 8. [Accessibility Information](#accessibility-information)
@@ -458,20 +458,20 @@ Font sizes calculated using multipliers, line heights are consistent across view
 
 **Grouping:** `viewport.{viewport}.spacing.fluid.*`
 
-Fluid spacing calculated using multipliers for proportional scaling.
+Fluid spacing calculated using multipliers for proportional scaling. All fluid spacing values now use even numbers for consistency and predictability.
 
 | Token Path | Small (4px × 1.0) | Medium (4px × 1.0) | Large (4px × 1.25) | XLarge (4px × 1.5) | Type |
 |------------|-------------------|---------------------|---------------------|---------------------|------|
 | `viewport.small.spacing.fluid.010` | 2 | 2 | 2 | 2 | spacing |
-| `viewport.small.spacing.fluid.020` | 4 | 4 | 4 | 6 | spacing |
-| `viewport.small.spacing.fluid.040` | 8 | 8 | 10 | 12 | spacing |
-| `viewport.small.spacing.fluid.060` | 12 | 12 | 14 | 18 | spacing |
-| `viewport.small.spacing.fluid.080` | 16 | 16 | 20 | 24 | spacing |
-| `viewport.small.spacing.fluid.100` | 20 | 20 | 24 | 30 | spacing |
-| `viewport.small.spacing.fluid.120` | 24 | 24 | 28 | 36 | spacing |
-| `viewport.small.spacing.fluid.160` | 32 | 32 | 40 | 48 | spacing |
-| `viewport.small.spacing.fluid.240` | 48 | 48 | 60 | 72 | spacing |
-| `viewport.small.spacing.fluid.320` | 64 | 64 | 80 | 96 | spacing |
+| `viewport.small.spacing.fluid.020` | 4 | 4 | 4 | 4 | spacing |
+| `viewport.small.spacing.fluid.040` | 6 | 6 | 8 | 10 | spacing |
+| `viewport.small.spacing.fluid.060` | 10 | 10 | 12 | 14 | spacing |
+| `viewport.small.spacing.fluid.080` | 14 | 14 | 16 | 20 | spacing |
+| `viewport.small.spacing.fluid.100` | 16 | 16 | 20 | 24 | spacing |
+| `viewport.small.spacing.fluid.120` | 20 | 20 | 24 | 30 | spacing |
+| `viewport.small.spacing.fluid.160` | 26 | 26 | 32 | 38 | spacing |
+| `viewport.small.spacing.fluid.240` | 30 | 30 | 36 | 44 | spacing |
+| `viewport.small.spacing.fluid.320` | 32 | 32 | 40 | 48 | spacing |
 
 #### Composite Typography Tokens
 These tokens combine font properties into complete styles, referencing viewport-specific values.
