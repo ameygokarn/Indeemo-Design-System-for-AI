@@ -1,0 +1,2113 @@
+{
+  "generatedAt": "2025-12-18T00:00:00Z",
+  "group": "brand",
+  "count": 234,
+  "entries": [
+    {
+      "path": "brand.color.brand.black",
+      "css": "--brand-color-brand-black",
+      "raw": "#000000",
+      "resolved": "#000000",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.cream",
+      "css": "--brand-color-brand-cream",
+      "raw": "#fffdf2",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.dark-blue",
+      "css": "--brand-color-brand-dark-blue",
+      "raw": "hsl(237, 31%, 45%)",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Dark blue brand color (45% lightness). Adjusted to maintain consistent ramp progression.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.green",
+      "css": "--brand-color-brand-green",
+      "raw": "#2B5926",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.orange",
+      "css": "--brand-color-brand-orange",
+      "raw": "#ff6b14",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.pink",
+      "css": "--brand-color-brand-pink",
+      "raw": "#da095e",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.purple",
+      "css": "--brand-color-brand-purple",
+      "raw": "hsl(312, 100%, 50%)",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Purple brand color (50% lightness). Adjusted to maintain consistent ramp progression.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.red",
+      "css": "--brand-color-brand-red",
+      "raw": "#ff2734",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.white",
+      "css": "--brand-color-brand-white",
+      "raw": "#ffffff",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.brand.yellow",
+      "css": "--brand-color-brand-yellow",
+      "raw": "#ffc700",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.100",
+      "css": "--brand-color-ramp-cream-100",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.1000",
+      "css": "--brand-color-ramp-cream-1000",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.1050",
+      "css": "--brand-color-ramp-cream-1050",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.150",
+      "css": "--brand-color-ramp-cream-150",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.200",
+      "css": "--brand-color-ramp-cream-200",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.250",
+      "css": "--brand-color-ramp-cream-250",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.300",
+      "css": "--brand-color-ramp-cream-300",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.350",
+      "css": "--brand-color-ramp-cream-350",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.400",
+      "css": "--brand-color-ramp-cream-400",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.450",
+      "css": "--brand-color-ramp-cream-450",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.500",
+      "css": "--brand-color-ramp-cream-500",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.550",
+      "css": "--brand-color-ramp-cream-550",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.600",
+      "css": "--brand-color-ramp-cream-600",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.650",
+      "css": "--brand-color-ramp-cream-650",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.700",
+      "css": "--brand-color-ramp-cream-700",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.750",
+      "css": "--brand-color-ramp-cream-750",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.800",
+      "css": "--brand-color-ramp-cream-800",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.850",
+      "css": "--brand-color-ramp-cream-850",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.900",
+      "css": "--brand-color-ramp-cream-900",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.cream.950",
+      "css": "--brand-color-ramp-cream-950",
+      "raw": "{color.brand.cream}",
+      "resolved": "#fffdf2",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.100",
+      "css": "--brand-color-ramp-dark-blue-100",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.1000",
+      "css": "--brand-color-ramp-dark-blue-1000",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.1050",
+      "css": "--brand-color-ramp-dark-blue-1050",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.150",
+      "css": "--brand-color-ramp-dark-blue-150",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.200",
+      "css": "--brand-color-ramp-dark-blue-200",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.250",
+      "css": "--brand-color-ramp-dark-blue-250",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.300",
+      "css": "--brand-color-ramp-dark-blue-300",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.350",
+      "css": "--brand-color-ramp-dark-blue-350",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.400",
+      "css": "--brand-color-ramp-dark-blue-400",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.450",
+      "css": "--brand-color-ramp-dark-blue-450",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.500",
+      "css": "--brand-color-ramp-dark-blue-500",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.550",
+      "css": "--brand-color-ramp-dark-blue-550",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.600",
+      "css": "--brand-color-ramp-dark-blue-600",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.650",
+      "css": "--brand-color-ramp-dark-blue-650",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.700",
+      "css": "--brand-color-ramp-dark-blue-700",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.750",
+      "css": "--brand-color-ramp-dark-blue-750",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.800",
+      "css": "--brand-color-ramp-dark-blue-800",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.850",
+      "css": "--brand-color-ramp-dark-blue-850",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.900",
+      "css": "--brand-color-ramp-dark-blue-900",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.dark-blue.950",
+      "css": "--brand-color-ramp-dark-blue-950",
+      "raw": "{color.brand.dark-blue}",
+      "resolved": "hsl(237, 31%, 45%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.100",
+      "css": "--brand-color-ramp-green-100",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.1000",
+      "css": "--brand-color-ramp-green-1000",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.1050",
+      "css": "--brand-color-ramp-green-1050",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.150",
+      "css": "--brand-color-ramp-green-150",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.200",
+      "css": "--brand-color-ramp-green-200",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.250",
+      "css": "--brand-color-ramp-green-250",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.300",
+      "css": "--brand-color-ramp-green-300",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.350",
+      "css": "--brand-color-ramp-green-350",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.400",
+      "css": "--brand-color-ramp-green-400",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.450",
+      "css": "--brand-color-ramp-green-450",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.500",
+      "css": "--brand-color-ramp-green-500",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.550",
+      "css": "--brand-color-ramp-green-550",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.600",
+      "css": "--brand-color-ramp-green-600",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.650",
+      "css": "--brand-color-ramp-green-650",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.700",
+      "css": "--brand-color-ramp-green-700",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.750",
+      "css": "--brand-color-ramp-green-750",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.800",
+      "css": "--brand-color-ramp-green-800",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.850",
+      "css": "--brand-color-ramp-green-850",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.900",
+      "css": "--brand-color-ramp-green-900",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.green.950",
+      "css": "--brand-color-ramp-green-950",
+      "raw": "{color.brand.green}",
+      "resolved": "#2B5926",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.100",
+      "css": "--brand-color-ramp-neutral-100",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: 1:1 (🔴) vs white, 21:1 vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.1000",
+      "css": "--brand-color-ramp-neutral-1000",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.1050",
+      "css": "--brand-color-ramp-neutral-1050",
+      "raw": "{color.brand.black}",
+      "resolved": "#000000",
+      "type": "color",
+      "description": "Contrast: 21:1 vs white, 1:1 (🔴) vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.150",
+      "css": "--brand-color-ramp-neutral-150",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.200",
+      "css": "--brand-color-ramp-neutral-200",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.250",
+      "css": "--brand-color-ramp-neutral-250",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.300",
+      "css": "--brand-color-ramp-neutral-300",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.350",
+      "css": "--brand-color-ramp-neutral-350",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.400",
+      "css": "--brand-color-ramp-neutral-400",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.450",
+      "css": "--brand-color-ramp-neutral-450",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.500",
+      "css": "--brand-color-ramp-neutral-500",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.550",
+      "css": "--brand-color-ramp-neutral-550",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.600",
+      "css": "--brand-color-ramp-neutral-600",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.650",
+      "css": "--brand-color-ramp-neutral-650",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.700",
+      "css": "--brand-color-ramp-neutral-700",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.750",
+      "css": "--brand-color-ramp-neutral-750",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.800",
+      "css": "--brand-color-ramp-neutral-800",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.850",
+      "css": "--brand-color-ramp-neutral-850",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.900",
+      "css": "--brand-color-ramp-neutral-900",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.neutral.950",
+      "css": "--brand-color-ramp-neutral-950",
+      "raw": "{color.brand.white}",
+      "resolved": "#ffffff",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.100",
+      "css": "--brand-color-ramp-orange-100",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.1000",
+      "css": "--brand-color-ramp-orange-1000",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.1050",
+      "css": "--brand-color-ramp-orange-1050",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.150",
+      "css": "--brand-color-ramp-orange-150",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.200",
+      "css": "--brand-color-ramp-orange-200",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.250",
+      "css": "--brand-color-ramp-orange-250",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.300",
+      "css": "--brand-color-ramp-orange-300",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.350",
+      "css": "--brand-color-ramp-orange-350",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.400",
+      "css": "--brand-color-ramp-orange-400",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.450",
+      "css": "--brand-color-ramp-orange-450",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.500",
+      "css": "--brand-color-ramp-orange-500",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.550",
+      "css": "--brand-color-ramp-orange-550",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.600",
+      "css": "--brand-color-ramp-orange-600",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.650",
+      "css": "--brand-color-ramp-orange-650",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.700",
+      "css": "--brand-color-ramp-orange-700",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.750",
+      "css": "--brand-color-ramp-orange-750",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.800",
+      "css": "--brand-color-ramp-orange-800",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.850",
+      "css": "--brand-color-ramp-orange-850",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.900",
+      "css": "--brand-color-ramp-orange-900",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.orange.950",
+      "css": "--brand-color-ramp-orange-950",
+      "raw": "{color.brand.orange}",
+      "resolved": "#ff6b14",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.100",
+      "css": "--brand-color-ramp-pink-100",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.1000",
+      "css": "--brand-color-ramp-pink-1000",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.1050",
+      "css": "--brand-color-ramp-pink-1050",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.150",
+      "css": "--brand-color-ramp-pink-150",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.200",
+      "css": "--brand-color-ramp-pink-200",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.250",
+      "css": "--brand-color-ramp-pink-250",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.300",
+      "css": "--brand-color-ramp-pink-300",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.350",
+      "css": "--brand-color-ramp-pink-350",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.400",
+      "css": "--brand-color-ramp-pink-400",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.450",
+      "css": "--brand-color-ramp-pink-450",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.500",
+      "css": "--brand-color-ramp-pink-500",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.550",
+      "css": "--brand-color-ramp-pink-550",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.600",
+      "css": "--brand-color-ramp-pink-600",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.650",
+      "css": "--brand-color-ramp-pink-650",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.700",
+      "css": "--brand-color-ramp-pink-700",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.750",
+      "css": "--brand-color-ramp-pink-750",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.800",
+      "css": "--brand-color-ramp-pink-800",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.850",
+      "css": "--brand-color-ramp-pink-850",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.900",
+      "css": "--brand-color-ramp-pink-900",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.pink.950",
+      "css": "--brand-color-ramp-pink-950",
+      "raw": "{color.brand.pink}",
+      "resolved": "#da095e",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.100",
+      "css": "--brand-color-ramp-purple-100",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.1000",
+      "css": "--brand-color-ramp-purple-1000",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.1050",
+      "css": "--brand-color-ramp-purple-1050",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.150",
+      "css": "--brand-color-ramp-purple-150",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.200",
+      "css": "--brand-color-ramp-purple-200",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.250",
+      "css": "--brand-color-ramp-purple-250",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.300",
+      "css": "--brand-color-ramp-purple-300",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.350",
+      "css": "--brand-color-ramp-purple-350",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.400",
+      "css": "--brand-color-ramp-purple-400",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.450",
+      "css": "--brand-color-ramp-purple-450",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.500",
+      "css": "--brand-color-ramp-purple-500",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.550",
+      "css": "--brand-color-ramp-purple-550",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.600",
+      "css": "--brand-color-ramp-purple-600",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.650",
+      "css": "--brand-color-ramp-purple-650",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.700",
+      "css": "--brand-color-ramp-purple-700",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.750",
+      "css": "--brand-color-ramp-purple-750",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.800",
+      "css": "--brand-color-ramp-purple-800",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.850",
+      "css": "--brand-color-ramp-purple-850",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.900",
+      "css": "--brand-color-ramp-purple-900",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.purple.950",
+      "css": "--brand-color-ramp-purple-950",
+      "raw": "{color.brand.purple}",
+      "resolved": "hsl(312, 100%, 50%)",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.100",
+      "css": "--brand-color-ramp-red-100",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.1000",
+      "css": "--brand-color-ramp-red-1000",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.1050",
+      "css": "--brand-color-ramp-red-1050",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.150",
+      "css": "--brand-color-ramp-red-150",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.200",
+      "css": "--brand-color-ramp-red-200",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.250",
+      "css": "--brand-color-ramp-red-250",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.300",
+      "css": "--brand-color-ramp-red-300",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.350",
+      "css": "--brand-color-ramp-red-350",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.400",
+      "css": "--brand-color-ramp-red-400",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.450",
+      "css": "--brand-color-ramp-red-450",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.500",
+      "css": "--brand-color-ramp-red-500",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.550",
+      "css": "--brand-color-ramp-red-550",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.600",
+      "css": "--brand-color-ramp-red-600",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.650",
+      "css": "--brand-color-ramp-red-650",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.700",
+      "css": "--brand-color-ramp-red-700",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.750",
+      "css": "--brand-color-ramp-red-750",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.800",
+      "css": "--brand-color-ramp-red-800",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.850",
+      "css": "--brand-color-ramp-red-850",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.900",
+      "css": "--brand-color-ramp-red-900",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.red.950",
+      "css": "--brand-color-ramp-red-950",
+      "raw": "{color.brand.red}",
+      "resolved": "#ff2734",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.100",
+      "css": "--brand-color-ramp-yellow-100",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.1000",
+      "css": "--brand-color-ramp-yellow-1000",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.1050",
+      "css": "--brand-color-ramp-yellow-1050",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.150",
+      "css": "--brand-color-ramp-yellow-150",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.200",
+      "css": "--brand-color-ramp-yellow-200",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.250",
+      "css": "--brand-color-ramp-yellow-250",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.300",
+      "css": "--brand-color-ramp-yellow-300",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.350",
+      "css": "--brand-color-ramp-yellow-350",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.400",
+      "css": "--brand-color-ramp-yellow-400",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.450",
+      "css": "--brand-color-ramp-yellow-450",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.500",
+      "css": "--brand-color-ramp-yellow-500",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.550",
+      "css": "--brand-color-ramp-yellow-550",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.600",
+      "css": "--brand-color-ramp-yellow-600",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.650",
+      "css": "--brand-color-ramp-yellow-650",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.700",
+      "css": "--brand-color-ramp-yellow-700",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.750",
+      "css": "--brand-color-ramp-yellow-750",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.800",
+      "css": "--brand-color-ramp-yellow-800",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.850",
+      "css": "--brand-color-ramp-yellow-850",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.900",
+      "css": "--brand-color-ramp-yellow-900",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.color.ramp.yellow.950",
+      "css": "--brand-color-ramp-yellow-950",
+      "raw": "{color.brand.yellow}",
+      "resolved": "#ffc700",
+      "type": "color",
+      "description": "Contrast: vs white, vs black",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.100",
+      "css": "--brand-modifier-100",
+      "raw": "0.1",
+      "resolved": "0.1",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.1000",
+      "css": "--brand-modifier-1000",
+      "raw": "0.1*10",
+      "resolved": "1.0",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.150",
+      "css": "--brand-modifier-150",
+      "raw": "0.1*1.5",
+      "resolved": "0.15000000000000002",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.200",
+      "css": "--brand-modifier-200",
+      "raw": "0.1*2",
+      "resolved": "0.2",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.250",
+      "css": "--brand-modifier-250",
+      "raw": "0.1*2.5",
+      "resolved": "0.25",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.300",
+      "css": "--brand-modifier-300",
+      "raw": "0.1*3",
+      "resolved": "0.30000000000000004",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.350",
+      "css": "--brand-modifier-350",
+      "raw": "0.1*3.5",
+      "resolved": "0.35000000000000003",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.400",
+      "css": "--brand-modifier-400",
+      "raw": "0.1*4",
+      "resolved": "0.4",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.450",
+      "css": "--brand-modifier-450",
+      "raw": "0.1*4.5",
+      "resolved": "0.45",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.50",
+      "css": "--brand-modifier-50",
+      "raw": "0.1*0.5",
+      "resolved": "0.05",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.500",
+      "css": "--brand-modifier-500",
+      "raw": "0.1*5",
+      "resolved": "0.5",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.550",
+      "css": "--brand-modifier-550",
+      "raw": "0.1*5.5",
+      "resolved": "0.55",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.600",
+      "css": "--brand-modifier-600",
+      "raw": "0.1*6",
+      "resolved": "0.6000000000000001",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.650",
+      "css": "--brand-modifier-650",
+      "raw": "0.1*6.5",
+      "resolved": "0.65",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.700",
+      "css": "--brand-modifier-700",
+      "raw": "0.1*7",
+      "resolved": "0.7000000000000001",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.750",
+      "css": "--brand-modifier-750",
+      "raw": "0.1*7.5",
+      "resolved": "0.75",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.800",
+      "css": "--brand-modifier-800",
+      "raw": "0.1*8",
+      "resolved": "0.8",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.850",
+      "css": "--brand-modifier-850",
+      "raw": "0.1*8.5",
+      "resolved": "0.8500000000000001",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.900",
+      "css": "--brand-modifier-900",
+      "raw": "0.1*9",
+      "resolved": "0.9",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.950",
+      "css": "--brand-modifier-950",
+      "raw": "0.1*9.5",
+      "resolved": "0.9500000000000001",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.interactive.hover",
+      "css": "--brand-modifier-interactive-hover",
+      "raw": "{modifier.150}",
+      "resolved": "0.15000000000000002",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.modifier.interactive.pressed",
+      "css": "--brand-modifier-interactive-pressed",
+      "raw": "{modifier.250}",
+      "resolved": "0.25",
+      "type": "other",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.base",
+      "css": "--brand-spacing-base",
+      "raw": "2",
+      "resolved": "2px",
+      "type": "spacing",
+      "description": "Base spacing unit (2px). All spacing scales are multiples of this value. Figma variable type: SPACING.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.010",
+      "css": "--brand-spacing-scale-010",
+      "raw": "{spacing.base} * 1",
+      "resolved": "2px",
+      "type": "spacing",
+      "description": "010 spacing (2px). Use for micro spacing needs.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.020",
+      "css": "--brand-spacing-scale-020",
+      "raw": "{spacing.base} * 2",
+      "resolved": "4px",
+      "type": "spacing",
+      "description": "020 spacing (4px). Use for tight spacing between small elements.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.030",
+      "css": "--brand-spacing-scale-030",
+      "raw": "{spacing.base} * 4",
+      "resolved": "8px",
+      "type": "spacing",
+      "description": "030 spacing (8px). Use for padding inside compact components.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.040",
+      "css": "--brand-spacing-scale-040",
+      "raw": "{spacing.base} * 8",
+      "resolved": "16px",
+      "type": "spacing",
+      "description": "040 spacing (16px). Use for default padding and margins.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.050",
+      "css": "--brand-spacing-scale-050",
+      "raw": "{spacing.base} * 12",
+      "resolved": "24px",
+      "type": "spacing",
+      "description": "050 spacing (24px). Use for section padding and larger margins.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.060",
+      "css": "--brand-spacing-scale-060",
+      "raw": "{spacing.base} * 16",
+      "resolved": "32px",
+      "type": "spacing",
+      "description": "060 spacing (32px). Use for major section spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.070",
+      "css": "--brand-spacing-scale-070",
+      "raw": "{spacing.base} * 20",
+      "resolved": "40px",
+      "type": "spacing",
+      "description": "070 spacing (40px). Use for large vertical rhythm.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.080",
+      "css": "--brand-spacing-scale-080",
+      "raw": "{spacing.base} * 24",
+      "resolved": "48px",
+      "type": "spacing",
+      "description": "080 spacing (48px). Use for major vertical spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.090",
+      "css": "--brand-spacing-scale-090",
+      "raw": "{spacing.base} * 32",
+      "resolved": "64px",
+      "type": "spacing",
+      "description": "090 spacing (64px). Use for hero section spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.100",
+      "css": "--brand-spacing-scale-100",
+      "raw": "{spacing.base} * 40",
+      "resolved": "80px",
+      "type": "spacing",
+      "description": "100 spacing (80px). Use for large hero spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.110",
+      "css": "--brand-spacing-scale-110",
+      "raw": "{spacing.base} * 48",
+      "resolved": "96px",
+      "type": "spacing",
+      "description": "110 spacing (96px). Use for extra large spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.120",
+      "css": "--brand-spacing-scale-120",
+      "raw": "{spacing.base} * 64",
+      "resolved": "128px",
+      "type": "spacing",
+      "description": "120 spacing (128px). Use for massive spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.130",
+      "css": "--brand-spacing-scale-130",
+      "raw": "{spacing.base} * 80",
+      "resolved": "160px",
+      "type": "spacing",
+      "description": "130 spacing (160px). Use for extreme spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.spacing.scale.140",
+      "css": "--brand-spacing-scale-140",
+      "raw": "{spacing.base} * 96",
+      "resolved": "192px",
+      "type": "spacing",
+      "description": "140 spacing (192px). Use for maximum spacing.",
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.fontFamily.a",
+      "css": "--brand-typography-fontfamily-a",
+      "raw": "IBM Plex Sans",
+      "resolved": "IBM Plex Sans",
+      "type": "fontFamilies",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.fontWeight.bold",
+      "css": "--brand-typography-fontweight-bold",
+      "raw": "700",
+      "resolved": "700px",
+      "type": "fontWeights",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.fontWeight.regular",
+      "css": "--brand-typography-fontweight-regular",
+      "raw": "400",
+      "resolved": "400px",
+      "type": "fontWeights",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.lineHeight.l",
+      "css": "--brand-typography-lineheight-l",
+      "raw": "125%",
+      "resolved": "125%",
+      "type": "lineHeights",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.lineHeight.m",
+      "css": "--brand-typography-lineheight-m",
+      "raw": "112.5%",
+      "resolved": "112.5%",
+      "type": "lineHeights",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.lineHeight.s",
+      "css": "--brand-typography-lineheight-s",
+      "raw": "100%",
+      "resolved": "100%",
+      "type": "lineHeights",
+      "description": null,
+      "resolvedFlag": true
+    },
+    {
+      "path": "brand.typography.lineHeight.xl",
+      "css": "--brand-typography-lineheight-xl",
+      "raw": "150%",
+      "resolved": "150%",
+      "type": "lineHeights",
+      "description": null,
+      "resolvedFlag": true
+    }
+  ]
+}
