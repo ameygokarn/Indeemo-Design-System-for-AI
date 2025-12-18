@@ -68,3 +68,92 @@
 .text-link{ color: var(--semantic-interactive-link); text-decoration: underline; }
 .btn-primary{ background: var(--semantic-interactive-primary-fill); color: var(--semantic-interactive-primary-text); border: none; padding: 8px 12px; font-family: var(--font-family-base); font-size: var(--font-size-md); }
 .container{ background: var(--surface-canvas); color: var(--text-primary); }
+
+/* Extended semantic & typography variables for natural-language prompts */
+:root{
+  /* Semantic surfaces */
+  --surface-undercanvas: var(--surface-canvas); /* fallback mapping */
+  --surface-canvas: #ffffff;
+  --surface-level-1: #ffffff;
+  --surface-level-2: #ffffff;
+  --surface-inverse: #000000;
+
+  /* Interactive */
+  --semantic-interactive-primary-fill: #da095e;
+  --semantic-interactive-primary-text: #ffffff;
+  --semantic-interactive-secondary-fill: #f3e6f0;
+  --semantic-interactive-secondary-border: #e6cce6;
+  --semantic-interactive-link: #A30083;
+
+  /* Feedback */
+  --feedback-error: #e44; 
+  --feedback-success: #0a8a3f;
+  --feedback-warning: #f59e0b;
+
+  /* Focus & accessibility */
+  --focus-ring: #2563eb; /* blue-600 */
+  --focus-ring-width: 3px;
+
+  /* Typography foundation */
+  --font-family-base: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Semantic typography tokens (map to `styles` set) */
+  --font-size-body-sm: 14px;
+  --font-size-body-md: 16px;
+  --font-size-body-lg: 18px;
+
+  --line-height-body-sm: 18px;
+  --line-height-body-md: 20px;
+  --line-height-body-lg: 22px;
+
+  --font-size-label-sm: 14px;
+  --font-size-label-md: 16px;
+  --font-size-label-lg: 18px;
+
+  --font-size-headline-sm: 20px;
+  --font-size-headline-md: 24px;
+  --font-size-headline-lg: 28px;
+
+  /* Typographic scale control for natural-language "bigger/smaller" */
+  --type-scale-base: 1; /* baseline multiplier */
+  --type-scale-step: 1.125; /* major second default */
+
+  /* Spacing scale (resolved examples) */
+  --space-010: 2px;
+  --space-020: 4px;
+  --space-030: 8px;
+  --space-040: 16px;
+  --space-050: 24px;
+
+  /* Neutral ramp (resolved examples) */
+  --neutral-100: #ffffff;
+  --neutral-200: #f6f6f7;
+  --neutral-300: #ededee;
+  --neutral-400: #e0e0e2;
+  --neutral-500: #c7c7cb;
+  --neutral-600: #9a9aa0;
+  --neutral-700: #6b6b72;
+  --neutral-800: #3f3f44;
+  --neutral-900: #1d1d20;
+
+  /* Utility: prefer creating override variables for transformations */
+  --semantic-interactive-primary-fill-darker: color-mix(in srgb, var(--semantic-interactive-primary-fill) 85%, #000 15%);
+  --semantic-interactive-primary-fill-lighter: color-mix(in srgb, var(--semantic-interactive-primary-fill) 85%, #fff 15%);
+}
+
+/* Examples showing how Claude should reference tokens (do not hardcode hexs) */
+.btn-primary{ background: var(--semantic-interactive-primary-fill); color: var(--semantic-interactive-primary-text); border: none; padding: var(--space-030) var(--space-040); font-family: var(--font-family-base); font-size: var(--font-size-body-md); }
+.headline-lg{ font-size: calc(var(--font-size-headline-lg) * var(--type-scale-base)); line-height: var(--line-height-body-lg); font-weight: var(--font-weight-bold); }
+.body-md{ font-size: var(--font-size-body-md); line-height: var(--line-height-body-md); }
+
+/* Focus example using variables */
+.focus-ring:focus-visible{ outline: var(--focus-ring-width) solid var(--focus-ring); outline-offset: 2px; }
+
+/* When asked to "make headline bigger", Claude should update --type-scale-base or create an override like --type-scale-base: 1.125; */
+
+/* Guidance for color adjustments: prefer override variables instead of inserting raw hex values.
+   Example: create `--semantic-interactive-primary-fill-darker` and use that where darker color is requested. */
+

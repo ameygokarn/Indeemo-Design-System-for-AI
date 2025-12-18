@@ -90,4 +90,48 @@ CSS-specific examples (brief)
 
 - When producing component code, prefer referencing variables instead of inlining values. Provide a companion `claude-code.resolved.css` only if requested.
 
+Natural-language → variable mapping (use this mapping so Claude does not invent raw hex values)
+
+When prompts include natural-language size/color adjustments, map them to variable operations rather than raw values. Use the following canonical intents and operations:
+
+Examples (intent mapping):
+
+1) "Make headline bigger" → operation: multiply `--type-scale-base` by `--type-scale-step` (or increment headline token)
+```
+{ "intent": "increase-headline", "variable": "--type-scale-base", "operation": "multiply", "factor": 1.125 }
+```
+
+2) "Make color darker" → operation: create/return an override variable that uses `color-mix()` with black, or request a `--<token>-darker` override.
+```
+{ "intent": "darken-color", "variable": "--semantic-interactive-primary-fill", "operation": "color-mix", "args": { "mixWith": "#000000", "percent": 15 } }
+```
+
+3) "Use a slightly lighter link color" → operation: create `--semantic-interactive-link-lighter` using `color-mix()` with white.
+
+Rules for Claude Code to follow when interpreting NL prompts:
+- Do not output raw hex unless the user explicitly requests a resolved stylesheet. Instead, produce or update CSS variable overrides.
+- When asked to change size (bigger/smaller): prefer adjusting `--type-scale-base` or the specific semantic token (e.g., `--font-size-headline-lg`) and return the manifest with the updated `:root` CSS.
+- When asked to change color brightness/tint: produce an override variable (e.g., `--semantic-interactive-primary-fill-darker`) that uses `color-mix(in srgb, var(--semantic-interactive-primary-fill) 85%, #000 15%)` and reference that override where appropriate.
+
+How to return changes (manifest rules)
+- When returning CSS changes, include a file entry named `claude-code.resolved.css` or `claude-code.override.css` containing the `:root` block with the new/updated variables and any example classes using them.
+- The manifest `description` should mention whether the file is "resolved" (contains hex/px) or "variable-first" (contains only var(...) rules and overrides).
+
+Example manifest entry for a requested headline increase:
+
+```
+[
+  {
+    "path": "claude-code.override.css",
+    "description": "Override variables for increased headline scale (variable-first)",
+    "content": ":root{ --type-scale-base: 1.125; --font-size-headline-lg: calc(28px * var(--type-scale-base)); }"
+  }
+]
+```
+
+Accessibility & verification reminder
+- If a color override reduces contrast below WCAG AA, include a short note in the manifest `description` flagging it (do not return prose outside the manifest). Prefer offering an alternate variable that meets contrast.
+
+Last updated: December 18, 2025
+
 Last updated: December 18, 2025
