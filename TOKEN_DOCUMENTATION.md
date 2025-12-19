@@ -310,6 +310,34 @@ The spacing system uses a 2px base unit (`brand.spacing.base`) with a 14-step sc
 3. **Token References**: Always use spacing tokens (e.g., `{spacing.md}`) instead of hardcoded values
 4. **Figma Variables**: These tokens export as Figma spacing variables (type: `SPACING`)
 
+### Input widths (viewport multipliers)
+
+We standardize input field widths per viewport by treating the smallest input width (`xs`) as the base and deriving larger sizes via multipliers:
+
+- `s = 1.5×`
+- `m = 2×`
+- `l = 2.5×`
+- `xl = 3×`
+
+Rounded integer values are used for pixel-perfect layouts. The `viewport/large` values were updated per request with `s = 204`. Calculations:
+
+- viewport/large
+  - xs (base) = 136  (204 / 1.5)
+  - s = 204  (1.5 × 136)
+  - m = 272  (2 × 136)
+  - l = 340  (2.5 × 136)
+  - xl = 408 (3 × 136)
+
+Reference tokens (examples):
+
+ - `{viewport/large.spacing.width.input.xs}` -> 136
+ - `{viewport/large.spacing.width.input.s}`  -> 204
+ - `{viewport/large.spacing.width.input.m}`  -> 272
+ - `{viewport/large.spacing.width.input.l}`  -> 340
+ - `{viewport/large.spacing.width.input.xl}` -> 408
+
+If you prefer a different naming set (e.g., keep only 4 sizes) or alternate multipliers, tell me and I will update the tokens and documentation accordingly.
+
 ### CSS Variables
 ```css
 /* Spacing Variables */
