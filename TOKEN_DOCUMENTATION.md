@@ -6,19 +6,6 @@ This document provides comprehensive documentation for all design tokens in the 
 **Token Version:** Refer to tokens.json metadata  
 **Primary Format:** Token Studio JSON (compatible with Figma)
 
-## Recent Token Changes
-
-- Fixes and schema alignment (commit: a92cb1c): repaired a JSON parse error in `brand.color.ramp.neutral.150` and converted modifier tokens from `type: "other"` to `type: "number"` (evaluated simple arithmetic expressions to canonical numeric values).
-- Color ramp normalization (commit: b70f526): normalized each `brand.color.ramp` to the 20 keys from `100` to `1000` (increment 50). Missing keys were filled by copying nearest existing shades; no color hue/lightness arithmetic was performed.
-- Label sizing made fixed across viewports (commit: 71e4c10): added `typography.label.large|medium|small` (18/16/14) and updated `styles.label.*` to reference these tokens so label grouping does not scale per viewport.
-- Repository synced (commit: 87add5a): pulled remote fixes and aligned local tokens with `origin/main`.
-
-Notes:
-- I intentionally limited changes to structural fixes and consistent keying. If you prefer a narrower revert (only the JSON parse fix), tell me and I will revert the other edits into a branch for review.
-- Please run Token Studio import/validator; if it still flags schema issues, paste the validator output and I'll iterate.
-
----
-
 ## Table of Contents
 
 1. [Token Structure Overview](#token-structure-overview)
@@ -121,6 +108,10 @@ Tokens follow this general pattern (not all attributes are required for every to
 ### Token Reference Format
 
 All references use **flattened format** (set name omitted in reference):
+
+### Presentation Rule
+- **Tokens Table Requirement:** All token listings and examples in this document MUST be presented as a table with one row per token and viewport columns (Small, Medium, Large, XLarge) showing resolved values. This ensures consistent, copyable references for designers and developers.
+
 
 #### Same-Set References
 ```json
@@ -531,7 +522,7 @@ One authoritative table showing each composite typography style and its resolved
 | `styles.label.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `bold` | — | Compact labels |
 | `styles.link.large` | 14px | 16px | 20px | 20px | `{lineHeight.loose}` | `regular` | — | Large link text |
 | `styles.link.medium` | 12px | 14px | 16px | 18px | `{lineHeight.m}` | `regular` | — | Standard link text |
-| `styles.link.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `regular` | — | Small link text |
+| `styles.link.small` | 10px | 12px | 12px | 12px | `{lineHeight.tight}` | `regular` | — | Small link text |
 | `styles.link.xsmall` | 8px | 10px | 10px | 12px | `{lineHeight.m}` | `regular` | — | Extra-small link |
 
 ### Interactive Components
