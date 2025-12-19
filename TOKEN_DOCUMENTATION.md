@@ -483,6 +483,32 @@ These tokens combine font properties into complete styles, referencing viewport-
 | `styles.label.large` | `{fontSize.lg}` | `{lineHeight.tight}` | Bold | Prominent labels |
 | `styles.label.medium` | `{fontSize.md}` | `{lineHeight.tight}` | Bold | Standard labels |
 | `styles.label.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Bold | Compact labels |
+#### Typography Styles by Viewport
+
+This table shows the resolved font-size (px) for each composite typography style across viewports.
+
+| Style | Small (0-767) | Medium (768-1023) | Large (1024-1439) | XLarge (1440+) |
+|-------|---------------:|------------------:|-----------------:|---------------:|
+| `styles.link.large` | 14px | 16px | 20px | 20px |
+| `styles.link.medium` | 12px | 14px | 16px | 18px |
+| `styles.link.small` | 10px | 12px | 12px | 16px |
+| `styles.link.xsmall` | 8px | 10px | 10px | 12px |
+| `styles.body.large` | 14px | 16px | 20px | 20px |
+| `styles.body.medium` | 12px | 14px | 16px | 18px |
+| `styles.body.small` | 10px | 12px | 12px | 16px |
+| `styles.label.large` | 14px | 16px | 20px | 20px |
+| `styles.label.medium` | 12px | 14px | 16px | 18px |
+| `styles.label.small` | 10px | 12px | 12px | 16px |
+| `styles.headline.large` | 20px | 24px | 32px | 32px |
+| `styles.headline.medium` | 16px | 18px | 24px | 24px |
+| `styles.headline.small` | 14px | 16px | 20px | 20px |
+| `styles.subheadline.large` | 18px | 20px | 28px | 28px |
+| `styles.subheadline.medium` | 16px | 18px | 24px | 24px |
+| `styles.subheadline.small` | 14px | 16px | 20px | 20px |
+| `styles.subheadline.xsmal` | 10px | 12px | 12px | 16px |
+| `styles.caption.medium` | 8px | 10px | 10px | 12px |
+| `styles.caption.small` | 6px | 8px | 8px | 10px |
+
 ### Interactive Components
 
 #### Primary Buttons
