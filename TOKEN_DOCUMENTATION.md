@@ -469,45 +469,36 @@ Fluid spacing calculated using multipliers for proportional scaling. All fluid s
 | `viewport.small.spacing.fluid.240` | 30 | 30 | 36 | 44 | spacing |
 | `viewport.small.spacing.fluid.320` | 32 | 32 | 40 | 48 | spacing |
 
-#### Composite Typography Tokens
-These tokens combine font properties into complete styles, referencing viewport-specific values.
+#### Composite Typography — Resolved by Viewport
 
-| Token | Font Size | Line Height | Weight | Description |
-|-------|-----------|-------------|--------|-------------|
-| `styles.link.large` | `{fontSize.lg}` | `{lineHeight.loose}` | Regular | Large link text |
-| `styles.link.medium` | `{fontSize.md}` | `{lineHeight.normal}` | Regular | Standard link text |
-| `styles.link.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Regular | Small link text |
-| `styles.body.large` | `{fontSize.lg}` | `{lineHeight.loose}` | Regular | Lead paragraphs |
-| `styles.body.medium` | `{fontSize.md}` | `{lineHeight.normal}` | Regular | Primary body text |
-| `styles.body.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Regular | Secondary text |
-| `styles.label.large` | `{fontSize.lg}` | `{lineHeight.tight}` | Bold | Prominent labels |
-| `styles.label.medium` | `{fontSize.md}` | `{lineHeight.tight}` | Bold | Standard labels |
-| `styles.label.small` | `{fontSize.sm}` | `{lineHeight.tight}` | Bold | Compact labels |
-#### Typography Styles by Viewport
+One authoritative table showing each composite typography style and its resolved font-size across viewports, plus key token references (line-height, weight, letter-spacing) and a short description. Rows are ordered: headline → subheadline → caption → body → label → link.
 
-This table shows the resolved font-size (px) for each composite typography style across viewports.
+| Style | Small | Medium | Large | XLarge | Line Height | Weight | Letter Spacing | Description |
+|------|------:|------:|-----:|------:|-------------|--------|---------------:|-------------|
+| `styles.headline.large` | 20px | 24px | 32px | 28px | `{lineHeight.s}` | `regular` | `-1%` | High-impact heading |
+| `styles.headline.medium` | 18px | 20px | 24px | 24px | `{lineHeight.s}` | `regular` | `-1%` | Standard page heading |
+| `styles.headline.small` | 16px | 18px | 20px | 22px | `{lineHeight.s}` | `regular` | `-1%` | Section heading |
 
-| Style | Small (0-767) | Medium (768-1023) | Large (1024-1439) | XLarge (1440+) |
-|-------|---------------:|------------------:|-----------------:|---------------:|
-| `styles.link.large` | 14px | 16px | 20px | 20px |
-| `styles.link.medium` | 12px | 14px | 16px | 18px |
-| `styles.link.small` | 10px | 12px | 12px | 16px |
-| `styles.link.xsmall` | 8px | 10px | 10px | 12px |
-| `styles.body.large` | 14px | 16px | 20px | 20px |
-| `styles.body.medium` | 12px | 14px | 16px | 18px |
-| `styles.body.small` | 10px | 12px | 12px | 16px |
-| `styles.label.large` | 14px | 16px | 20px | 20px |
-| `styles.label.medium` | 12px | 14px | 16px | 18px |
-| `styles.label.small` | 10px | 12px | 12px | 16px |
-| `styles.headline.large` | 20px | 24px | 32px | 28px |
-| `styles.headline.medium` | 18px | 20px | 24px | 24px |
-| `styles.headline.small` | 16px | 18px | 20px | 22px |
-| `styles.subheadline.large` | 18px | 20px | 28px | 28px |
-| `styles.subheadline.medium` | 16px | 18px | 24px | 24px |
-| `styles.subheadline.small` | 14px | 16px | 20px | 20px |
-| `styles.subheadline.xsmal` | 10px | 12px | 12px | 16px |
-| `styles.caption.medium` | 8px | 10px | 10px | 12px |
-| `styles.caption.small` | 6px | 8px | 8px | 10px |
+| `styles.subheadline.large` | 18px | 20px | 28px | 28px | `{lineHeight.l}` | `medium` | — | Prominent subsection title |
+| `styles.subheadline.medium` | 16px | 18px | 24px | 24px | `{lineHeight.l}` | `medium` | — | Standard subsection title |
+| `styles.subheadline.small` | 14px | 16px | 20px | 20px | `{lineHeight.l}` | `medium` | — | Minor subsection title |
+| `styles.subheadline.xsmal` | 10px | 12px | 12px | 16px | `{lineHeight.l}` | `medium` | — | Compact subheadline |
+
+| `styles.caption.medium` | 8px | 10px | 10px | 12px | `{lineHeight.m}` | `bold` | — | Explanatory caption text |
+| `styles.caption.small` | 6px | 8px | 8px | 10px | `{lineHeight.m}` | `bold` | — | Micro caption / UI labels |
+
+| `styles.body.large` | 14px | 16px | 20px | 20px | `{lineHeight.loose}` | `regular` | — | Lead paragraphs |
+| `styles.body.medium` | 12px | 14px | 16px | 18px | `{lineHeight.normal}` | `regular` | — | Primary body text |
+| `styles.body.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `regular` | — | Secondary body text |
+
+| `styles.label.large` | 14px | 16px | 20px | 20px | `{lineHeight.tight}` | `bold` | — | Prominent labels |
+| `styles.label.medium` | 12px | 14px | 16px | 18px | `{lineHeight.tight}` | `bold` | — | Standard labels |
+| `styles.label.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `bold` | — | Compact labels |
+
+| `styles.link.large` | 14px | 16px | 20px | 20px | `{lineHeight.loose}` | `regular` | — | Large link text |
+| `styles.link.medium` | 12px | 14px | 16px | 18px | `{lineHeight.m}` | `regular` | — | Standard link text |
+| `styles.link.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `regular` | — | Small link text |
+| `styles.link.xsmall` | 8px | 10px | 10px | 12px | `{lineHeight.m}` | `regular` | — | Extra-small link |
 
 ### Interactive Components
 
