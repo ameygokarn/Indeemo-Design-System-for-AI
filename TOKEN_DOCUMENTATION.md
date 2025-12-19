@@ -499,9 +499,9 @@ This table shows the resolved font-size (px) for each composite typography style
 | `styles.label.large` | 14px | 16px | 20px | 20px |
 | `styles.label.medium` | 12px | 14px | 16px | 18px |
 | `styles.label.small` | 10px | 12px | 12px | 16px |
-| `styles.headline.large` | 20px | 24px | 32px | 32px |
-| `styles.headline.medium` | 16px | 18px | 24px | 24px |
-| `styles.headline.small` | 14px | 16px | 20px | 20px |
+| `styles.headline.large` | 20px | 24px | 32px | 28px |
+| `styles.headline.medium` | 18px | 20px | 24px | 24px |
+| `styles.headline.small` | 16px | 18px | 20px | 22px |
 | `styles.subheadline.large` | 18px | 20px | 28px | 28px |
 | `styles.subheadline.medium` | 16px | 18px | 24px | 24px |
 | `styles.subheadline.small` | 14px | 16px | 20px | 20px |
