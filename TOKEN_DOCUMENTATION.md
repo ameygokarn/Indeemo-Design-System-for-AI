@@ -478,23 +478,18 @@ One authoritative table showing each composite typography style and its resolved
 | `styles.headline.large` | 20px | 24px | 32px | 28px | `{lineHeight.s}` | `regular` | `-1%` | High-impact heading |
 | `styles.headline.medium` | 18px | 20px | 24px | 24px | `{lineHeight.s}` | `regular` | `-1%` | Standard page heading |
 | `styles.headline.small` | 16px | 18px | 20px | 22px | `{lineHeight.s}` | `regular` | `-1%` | Section heading |
-
 | `styles.subheadline.large` | 18px | 20px | 28px | 28px | `{lineHeight.l}` | `medium` | — | Prominent subsection title |
 | `styles.subheadline.medium` | 16px | 18px | 24px | 24px | `{lineHeight.l}` | `medium` | — | Standard subsection title |
 | `styles.subheadline.small` | 14px | 16px | 20px | 20px | `{lineHeight.l}` | `medium` | — | Minor subsection title |
 | `styles.subheadline.xsmal` | 10px | 12px | 12px | 16px | `{lineHeight.l}` | `medium` | — | Compact subheadline |
-
 | `styles.caption.medium` | 8px | 10px | 10px | 12px | `{lineHeight.m}` | `bold` | — | Explanatory caption text |
 | `styles.caption.small` | 6px | 8px | 8px | 10px | `{lineHeight.m}` | `bold` | — | Micro caption / UI labels |
-
 | `styles.body.large` | 14px | 16px | 20px | 20px | `{lineHeight.loose}` | `regular` | — | Lead paragraphs |
 | `styles.body.medium` | 12px | 14px | 16px | 18px | `{lineHeight.normal}` | `regular` | — | Primary body text |
 | `styles.body.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `regular` | — | Secondary body text |
-
 | `styles.label.large` | 14px | 16px | 20px | 20px | `{lineHeight.tight}` | `bold` | — | Prominent labels |
 | `styles.label.medium` | 12px | 14px | 16px | 18px | `{lineHeight.tight}` | `bold` | — | Standard labels |
 | `styles.label.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `bold` | — | Compact labels |
-
 | `styles.link.large` | 14px | 16px | 20px | 20px | `{lineHeight.loose}` | `regular` | — | Large link text |
 | `styles.link.medium` | 12px | 14px | 16px | 18px | `{lineHeight.m}` | `regular` | — | Standard link text |
 | `styles.link.small` | 10px | 12px | 12px | 16px | `{lineHeight.tight}` | `regular` | — | Small link text |
